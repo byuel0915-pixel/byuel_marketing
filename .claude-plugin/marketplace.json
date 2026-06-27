@@ -1,0 +1,19 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "byuel-marketing",
+  "description": "마케팅 발표덱·개인 포트폴리오 제작 플러그인 마켓플레이스",
+  "owner": {
+    "name": "byuel0915-pixel"
+  },
+  "plugins": [
+    {
+      "name": "deck-portfolio-studio",
+      "description": "면접 발표덱(/interview-deck) + 개인 포트폴리오 브랜드 자산(/brand-accelerator) + 마케터 말투 톤(/speech-style)을 한 번에. 병렬 리서치→서사 설계→브랜드 톤 단일 HTML 덱 빌드→GitHub Pages 배포까지. deck-researcher·deck-deployer 서브에이전트 포함.",
+      "author": {
+        "name": "hound600al"
+      },
+      "category": "productivity",
+      "source": "./plugins/deck-portfolio-studio"
+    }
+  ]
+}

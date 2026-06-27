@@ -1,0 +1,8 @@
+{
+  "name": "deck-portfolio-studio",
+  "description": "마케팅 발표덱과 개인 포트폴리오 자산을 검증된 디자인 시스템으로 제작하는 플러그인. /interview-deck(면접 발표덱 파이프라인) + /brand-accelerator(개인 포트폴리오 브랜드 템플릿) + /speech-style(마케터 말투 톤) 3개 스킬과 deck-researcher·deck-deployer 서브에이전트를 묶었습니다.",
+  "author": {
+    "name": "hound600al"
+  },
+  "version": "1.0.0"
+}
