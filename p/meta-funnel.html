@@ -1,42 +1,89 @@
 <!doctype html><html lang="ko"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>리드가 많다에 속지 않고 종료를 제안한 분석 | 박성진</title>
-<meta name="description" content="메타/구글폼 DB → 쿠폰 전환 퍼널을 직접 자동화로 구축했지만, 실구매 보정·동일조건 대조로 구조적 효율 열위를 가려내 스스로 종료를 제안한 퍼널 분석">
+<title>퍼널 직접 설계·CPA 대조 분석 후 자체 종료 제안 | 박성진</title>
+<meta name="description" content="저CPC DB 수집→알림톡 전환 퍼널을 직접 구축하고, 동일조건 dcj 대조로 CPA 1.22배 열위 확인 후 스스로 종료를 제안한 퍼포먼스 분석">
 <link rel="stylesheet" href="../assets/style.css">
 </head><body><div class="wrap">
 
 <div class="head">
   <div class="head-meta"><span class="kicker amber">CRM · 퍼포먼스 · 그로스</span><span class="date-meta">2026.05–06</span></div>
-  <h1>‘리드가 많다’에 속지 않고 <span class="hl-r">스스로 종료를 제안</span>한 분석</h1>
-  <p class="sub">저CPC 리드로 DB를 수집하고 알림톡 쿠폰으로 전환시키면 기본 매체 CPA를 이길 수 있다는 가설에서 출발. 구글폼 → 스프레드시트 → Apps Script 5분 트리거 → 비즈엠 API 알림톡 자동화를 <b>직접 구축</b>해 재실험했지만, 실구매 보정·동일조건 대조로 진짜 효율을 가려내자 구조적 열위가 드러났습니다.</p>
+  <h1>퍼널 직접 설계하고 <span class="hl-r">CPA 대조로 구조적 열위를 가려내</span> 자체 종료 제안</h1>
+  <p class="sub">저CPC 리드로 DB를 수집하고 알림톡 쿠폰으로 전환시키면 기본 매체 CPA를 이길 수 있다는 가설에서 출발. 구글폼 → 스프레드시트 → Apps Script → 비즈엠 API 알림톡 자동화를 <b>직접 구축</b>해 실험했고, 동일 광고비·동일 지역 dcj 캠페인과 CPA를 직접 대조했습니다.</p>
 </div>
 
 <div class="grid g3">
-  <div class="stat"><div class="lbl">신청 → 발급 누수</div><div class="num r">72<span class="u">%</span></div><div class="cap">퍼널 중간 이탈</div></div>
-  <div class="stat"><div class="lbl">리드→CRM CPA</div><div class="num r">1.22<span class="u">×</span></div><div class="cap">일반 dcj 광고 대비, 지수</div></div>
-  <div class="stat"><div class="lbl">자동화 직접 구축</div><div class="num r">3<span class="u">단계</span></div><div class="cap">구글폼→Apps Script→비즈엠 API</div></div>
+  <div class="stat"><div class="lbl">앞단 모객 효율</div><div class="num g">6,592<span class="u">원</span></div><div class="cap">신청 1건당 · 앞단은 양호했다</div></div>
+  <div class="stat"><div class="lbl">리드→CRM CPA</div><div class="num r">dcj 대비 1.22<span class="u">×</span></div><div class="cap">동일조건 대조 기준 · 구조적 열위</div></div>
+  <div class="stat"><div class="lbl">결론</div><div class="num b">자체 종료</div><div class="cap">효율 열위 확인 후 직접 종료 제안</div></div>
 </div>
 
-<div class="sect"><h2>신청 → 발급 퍼널 누수</h2><span class="tag">리드 확보 = 지수 100 · 절대 금액 비공개</span></div>
-<div class="card pad chart">
-  <div class="funnel">
-    <div class="seg" style="width:100%;background:linear-gradient(90deg,#3B7BF6,#2563EB)">리드 확보<small>지수 100</small></div>
-    <div class="seg" style="width:55%;background:linear-gradient(90deg,#A78BFA,#7C5CFC)">쿠폰 신청<small>퍼널 진입</small></div>
-    <div class="seg" style="width:28%;background:linear-gradient(90deg,#F87171,#EF4444)">발급 완료<small>−72% 누수</small></div>
-  </div>
-  <p class="note"><span class="dot" style="background:#2563EB"></span>리드 확보 &nbsp; <span class="dot" style="background:#7C5CFC"></span>쿠폰 신청 &nbsp; <span class="dot" style="background:#EF4444"></span>발급 완료 &nbsp;·&nbsp; 광고 시청 후 구글폼 리드 대비, 알림톡 쿠폰을 실제 발급까지 받은 비중은 28%에 그쳐 중간 단계에서 72%가 이탈했습니다.</p>
+<div class="sect"><h2>퍼널 단계별 실측 지표</h2><span class="tag">신청 수 기준 지수화 · 절대 금액 비공개</span></div>
+<div class="card pad">
+  <table class="mtx">
+    <thead>
+      <tr><th>단계</th><th>인원</th><th>전환율</th><th>주요 지표</th><th>해석</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>① 리드 확보</td>
+        <td>—</td>
+        <td>—</td>
+        <td>CPC 6,592원/신청</td>
+        <td><span class="win">앞단 효율 양호</span></td>
+      </tr>
+      <tr>
+        <td>② 쿠폰 신청</td>
+        <td>403명</td>
+        <td>—</td>
+        <td>구글폼 신청</td>
+        <td>모객은 작동</td>
+      </tr>
+      <tr>
+        <td>③ 발급 완료</td>
+        <td>113명</td>
+        <td>28%</td>
+        <td><b style="color:var(--red)">72% 이탈</b></td>
+        <td>앱설치·쿠폰등록 마찰</td>
+      </tr>
+      <tr>
+        <td>④ 구매 완료</td>
+        <td>43건</td>
+        <td>38%</td>
+        <td>신규 19명·재구매 24명</td>
+        <td>발급 이후 전환은 양호</td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="note" style="margin-top:12px">앞단(리드→신청)과 뒷단(발급→구매)은 작동했지만, <b>신청→발급 72% 이탈</b>이 전체 CPA를 역전시켰습니다.</p>
 </div>
 
-<div class="sect"><h2>CPA 지수 비교</h2><span class="tag">일반 dcj 광고 = 100 지수 · 절대 금액 비공개</span></div>
+<div class="sect"><h2>CPA 직접 대조 — 동일조건 dcj 캠페인과 비교</h2><span class="tag">일반 dcj 광고 = 100 지수 · 절대 금액 비공개</span></div>
 <div class="card pad chart">
   <div class="bar-row"><div class="name">일반 dcj 광고</div><div class="bar-track"><div class="bar-fill bf-blue" style="width:82%">100</div></div></div>
-  <div class="bar-row"><div class="name">리드→CRM 퍼널</div><div class="bar-track"><div class="bar-fill bf-red" style="width:100%">122</div></div></div>
-  <p class="note">CPA 지수(일반 dcj=100) · 절대 금액 비공개 &nbsp;·&nbsp; 리드 한 건은 싸 보였지만, 실구매까지 보정하면 같은 성과를 내는 데 일반 dcj 광고보다 1.22배 비싼 구조였습니다.</p>
+  <div class="bar-row"><div class="name">리드→CRM 퍼널</div><div class="bar-track"><div class="bar-fill bf-red" style="width:100%">122 (1.22배)</div></div></div>
+  <p class="note">동일 광고비·동일 지역 기준 dcj 캠페인과 재산정 비교. 저CPC 이점이 발급 단계 마찰 손실 + 수동 발송 운영 코스트에 상쇄되어 구조적으로 이길 수 없는 구조였습니다. 절대 금액 비공개.</p>
 </div>
 
-<div class="insight red" style="margin-top:18px">
-  <div class="ic">🧭</div>
-  <div class="tx">‘리드가 많다’는 표면 지표에 속지 않고 실구매 보정·동일조건 대조로 진짜 효율을 가려낸 분석이었습니다. 직접 구축한 자동화는 기술 실행력의 증거지만, 구조적 효율 열위라는 결론을 내고 <b>스스로 종료를 제안한 판단</b>이 더 값집니다. ‘만든 것을 접을 줄 아는’ 의사결정.</div>
+<div class="sect"><h2>레슨런</h2><span class="tag">이 실험에서 가져가야 할 것</span></div>
+<div class="steps s3">
+  <div class="step">
+    <div class="n">1</div>
+    <div class="st">앞단 CPC가 싸도 중간 마찰이 있으면 CPA가 역전된다</div>
+    <div class="sd">리드 단가만 보면 효율적으로 보인다. 실구매까지 보정한 전체 퍼널 CPA로 판단해야 한다.</div>
+    <span class="sm">CPA 왜곡 경계</span>
+  </div>
+  <div class="step">
+    <div class="n">2</div>
+    <div class="st">마찰 지점 제거 없이는 자동화 스케일이 무의미하다</div>
+    <div class="sd">Apps Script·비즈엠 자동화를 구축했어도 신청→발급 72% 이탈이 선결 과제. 자동화보다 마찰 해소가 먼저다.</div>
+    <span class="sm">실행 순서</span>
+  </div>
+  <div class="step">
+    <div class="n">3</div>
+    <div class="st">직접 만든 것도 효율 열위면 끊을 줄 알아야 한다</div>
+    <div class="sd">구조적 열위를 확인한 뒤 스스로 종료를 제안했다. '만든 것을 계속 굴리는' 타성을 끊는 판단.</div>
+    <span class="sm">의사결정</span>
+  </div>
 </div>
 
 <div class="foot">
