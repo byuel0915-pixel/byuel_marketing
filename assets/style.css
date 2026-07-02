@@ -37,13 +37,18 @@ body{
 
 /* 헤더 */
 .head{margin-bottom:22px}
-.kicker{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:700;letter-spacing:.02em;
-  color:var(--blue);background:var(--blue-soft);padding:5px 11px;border-radius:999px}
-.kicker.green{color:var(--green);background:var(--green-soft)}
-.kicker.amber{color:#B4730B;background:var(--amber-soft)}
-.kicker.violet{color:var(--violet);background:var(--violet-soft)}
-.kicker.red{color:var(--red);background:var(--red-soft)}
-h1{font-size:clamp(24px,4.6vw,38px);font-weight:800;letter-spacing:-.02em;line-height:1.18;margin:14px 0 8px}
+.head-meta{display:flex;align-items:center;gap:12px;margin-bottom:16px;flex-wrap:wrap;}
+.kicker{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:800;letter-spacing:.01em;
+  color:#fff;background:var(--blue);padding:7px 14px;border-radius:6px;line-height:1}
+.kicker::before{content:'';width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,0.55);flex-shrink:0}
+.kicker.green{background:var(--green)}
+.kicker.amber{background:var(--amber)}
+.kicker.violet{background:var(--violet)}
+.kicker.red{background:var(--red)}
+.date-meta{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;
+  letter-spacing:.04em;color:var(--ink-3)}
+.date-meta::before{content:'';display:inline-block;width:18px;height:1.5px;background:var(--line)}
+h1{font-size:clamp(24px,4.6vw,38px);font-weight:800;letter-spacing:-.02em;line-height:1.18;margin:0 0 8px}
 h1 .hl{color:var(--blue)}
 h1 .hl-g{color:var(--green)}
 h1 .hl-r{color:var(--red)}
@@ -58,7 +63,7 @@ h1 .hl-r{color:var(--red)}
 /* 스탯(상대지표 강조) */
 .stat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 18px 16px}
 .stat .lbl{font-size:12.5px;font-weight:600;color:var(--ink-3);margin-bottom:8px}
-.stat .num{font-size:clamp(30px,5.4vw,44px);font-weight:800;letter-spacing:-.025em;line-height:1;font-feature-settings:'tnum'}
+.stat .num{font-size:clamp(22px,2.8vw,36px);font-weight:800;letter-spacing:-.025em;line-height:1;font-feature-settings:'tnum'}
 .stat .num.b{color:var(--blue)} .stat .num.g{color:var(--green)} .stat .num.r{color:var(--red)} .stat .num.v{color:var(--violet)} .stat .num.a{color:var(--amber)}
 .stat .cap{font-size:12.5px;color:var(--ink-2);margin-top:8px}
 .stat .num .u{font-size:.46em;font-weight:700;margin-left:2px;letter-spacing:0}
