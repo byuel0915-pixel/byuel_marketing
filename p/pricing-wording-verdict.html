@@ -1,0 +1,63 @@
+<!doctype html><html lang="ko"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>요금 워딩 A/B — 가설 검증 결과 | 박성진</title>
+<meta name="description" content="'방문요금 0원'이 '기본요금 0원'보다 직관적일 것이라는 원가설을 5개 지표로 검증한 결과">
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+  .wrap{padding:14px 16px}
+  .ct{display:flex;align-items:baseline;justify-content:space-between;gap:9px;margin-bottom:4px}
+  .ct h3{margin:0;font-size:15px;font-weight:800;letter-spacing:-.015em}
+  .ct .dir{font-size:11px;font-weight:700;color:var(--ink-3);white-space:nowrap}
+  .grp{margin:0 0 16px}
+  .grp:last-of-type{margin-bottom:6px}
+  .bar-row{grid-template-columns:74px 1fr;gap:10px;margin:6px 0}
+  .bar-row .name{font-size:12px}
+  .bar-track{height:28px}
+  .bar-fill{font-size:12.5px;padding-right:10px}
+  .verdict{display:flex;align-items:center;gap:8px;margin-bottom:14px;padding:9px 12px;
+    background:var(--red-soft);border-radius:9px;font-size:13px;font-weight:700;color:var(--red)}
+  .verdict .tag{font-size:11px;font-weight:800;background:var(--red);color:#fff;padding:2px 8px;border-radius:5px}
+  .hyp{font-size:12.5px;color:var(--ink-2);border-left:3px solid var(--line);padding-left:11px;margin:0 0 14px}
+  .note{margin-top:12px}
+  @media(max-width:520px){.bar-row{grid-template-columns:62px 1fr;gap:7px}.bar-row .name{font-size:10.5px}.ct{flex-direction:column;align-items:flex-start;gap:2px}}
+</style>
+</head><body><div class="wrap">
+<div class="card pad chart">
+
+  <div class="verdict"><span class="tag">원가설 기각</span>5개 지표 전부 '기본요금'이 앞섰습니다 — 예측과 반대</div>
+
+  <p class="hyp"><b>원가설</b> — '방문요금 0원'이 '기본요금 0원'보다 직관적이므로, 앱 설치 수와 구매 CVR이 더 높을 것이다.</p>
+
+  <div class="grp">
+    <div class="ct"><h3>구매 CPA</h3><span class="dir">낮을수록 좋음 · 에어브릿지 기준</span></div>
+    <div class="bar-row"><div class="name">기본요금</div><div class="bar-track"><div class="bar-fill bf-green" style="width:74.8%">35,925원</div></div></div>
+    <div class="bar-row"><div class="name">방문요금</div><div class="bar-track"><div class="bar-fill bf-red" style="width:100%">48,004원</div></div></div>
+  </div>
+
+  <div class="grp">
+    <div class="ct"><h3>앱 설치</h3><span class="dir">높을수록 좋음 · 광고비는 거의 동일</span></div>
+    <div class="bar-row"><div class="name">기본요금</div><div class="bar-track"><div class="bar-fill bf-green" style="width:100%">876</div></div></div>
+    <div class="bar-row"><div class="name">방문요금</div><div class="bar-track"><div class="bar-fill bf-red" style="width:52.9%">464</div></div></div>
+  </div>
+
+  <div class="grp">
+    <div class="ct"><h3>재구매율 (iOS)</h3><span class="dir">높을수록 좋음 · 후행 지표</span></div>
+    <div class="bar-row"><div class="name">기본요금</div><div class="bar-track"><div class="bar-fill bf-green" style="width:100%">57.1%</div></div></div>
+    <div class="bar-row"><div class="name">방문요금</div><div class="bar-track"><div class="bar-fill bf-red" style="width:70.1%">40.0%</div></div></div>
+  </div>
+
+  <div class="grp">
+    <div class="ct"><h3>유입자 1인당 재구매</h3><span class="dir">높을수록 좋음 · 후행 지표</span></div>
+    <div class="bar-row"><div class="name">기본요금</div><div class="bar-track"><div class="bar-fill bf-green" style="width:100%">1.24건</div></div></div>
+    <div class="bar-row"><div class="name">방문요금</div><div class="bar-track"><div class="bar-fill bf-red" style="width:48.4%">0.60건</div></div></div>
+  </div>
+
+  <div class="grp">
+    <div class="ct"><h3>Revenue / CPA</h3><span class="dir">높을수록 좋음 · 1.0 = 광고비 회수</span></div>
+    <div class="bar-row"><div class="name">기본요금</div><div class="bar-track"><div class="bar-fill bf-green" style="width:100%">1.500</div></div></div>
+    <div class="bar-row"><div class="name">방문요금</div><div class="bar-track"><div class="bar-fill bf-red" style="width:88.1%">1.322</div></div></div>
+  </div>
+
+  <p class="note">직관적일 것으로 예측한 <b>'방문요금'이 전 지표에서 뒤졌습니다.</b> 단기 CPA 격차(−25.2%)보다 유입자 1인당 재구매 격차(2.07배)가 더 큽니다. 다만 iOS 방문요금 base가 15명이라 통계적 유의성은 확보하지 못해 <b>방향성 기각</b>까지만 선언했습니다. <a href="pricing-wording-ab.html" style="font-weight:700;color:var(--blue);text-decoration:none">전체 데이터 →</a></p>
+</div>
+</div></body></html>
