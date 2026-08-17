@@ -1,7 +1,7 @@
 <!doctype html><html lang="ko"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>이거알아 — 시청 지속 | 박성진</title>
-<meta name="description" content="나레이션 없는 30초 자막 반복형과 1분 나레이션 페이드형의 시청 지속 비교. 영상 길이를 보정한 같은 초 도달률 기준">
+<title>이거알아 iOS — 앞단 지표와 시청 지속 | 박성진</title>
+<meta name="description" content="iOS 리타겟 앱트래픽에서 자막 반복형의 앞단 지표(CTR·CPC) 판정과, 영상 길이를 보정한 시청 지속 비교">
 <link rel="stylesheet" href="../assets/style.css">
 <style>
   .wrap{padding:14px 16px}
@@ -13,29 +13,53 @@
   .bar-row .name{font-size:12px}
   .bar-track{height:28px}
   .bar-fill{font-size:12.5px;padding-right:10px}
-  .lead{display:flex;align-items:center;gap:8px;margin-bottom:6px;padding:9px 12px;
-    background:var(--green-soft);border-radius:9px;font-size:13px;font-weight:700;color:var(--green)}
-  .lead .tag{font-size:11px;font-weight:800;background:var(--green);color:#fff;padding:2px 8px;border-radius:5px}
+  .lead{display:flex;align-items:center;gap:8px;margin-bottom:14px;padding:9px 12px;
+    background:var(--red-soft);border-radius:9px;font-size:13px;font-weight:700;color:var(--red)}
+  .lead .tag{font-size:11px;font-weight:800;background:var(--red);color:#fff;padding:2px 8px;border-radius:5px}
+  .hyp{font-size:12.5px;color:var(--ink-2);border-left:3px solid var(--line);padding-left:11px;margin:0 0 14px}
   .warn{font-size:12px;color:var(--ink-2);background:#F6F8FB;border-radius:9px;padding:10px 12px;margin:0 0 16px}
   .same{display:flex;align-items:center;gap:7px;font-size:11.5px;font-weight:800;color:var(--ink-3);margin:-2px 0 14px}
   .same::before{content:'=';font-size:14px;color:var(--ink-3)}
+  .vd{display:inline-block;font-size:10.5px;font-weight:800;padding:2px 7px;border-radius:5px;margin-left:7px;vertical-align:middle}
+  .vd.o{background:var(--green-soft);color:var(--green)}
+  .vd.x{background:var(--red-soft);color:var(--red)}
+  .vd.q{background:#EEF1F6;color:var(--ink-3)}
   .note{margin-top:12px}
   @media(max-width:520px){.bar-row{grid-template-columns:78px 1fr;gap:7px}.bar-row .name{font-size:10.5px}.ct{flex-direction:column;align-items:flex-start;gap:2px}}
 </style>
 </head><body><div class="wrap">
 <div class="card pad chart">
 
-  <div class="lead"><span class="tag">가설 참</span>단, CTR·CPC가 아니라 <b style="color:inherit">시청 지속</b>에서만 갈렸습니다</div>
-  <p class="note" style="margin:0 0 16px">이거알아 3종(30초 · 나레이션 없음 · 자막 반복) vs 같은 캠페인 대조군 8종(1분 · 나레이션 · 페이드)</p>
+  <div class="lead"><span class="tag">iOS 가설 절반 기각</span>CTR은 올랐지만 CPC가 비싸졌고, 구매 CPA는 측정 불가</div>
+  <p class="hyp"><b>iOS 원가설</b> — 앱트래픽 목적이므로 <b>앞단 지표(CTR·CPC)가 먼저 개선되고, 그 결과 구매 CPA까지 개선될 것이다.</b><br>대조군은 같은 캠페인·같은 리타겟 모수로 돌던 1분 나레이션 페이드형 8종입니다.</p>
 
   <div class="grp">
-    <div class="ct"><h3>훅률 — 재생 시작</h3><span class="dir">재생 / 노출 · 지면이 결정</span></div>
-    <div class="bar-row"><div class="name">이거알아</div><div class="bar-track"><div class="bar-fill bf-gray" style="width:100%">82.5%</div></div></div>
-    <div class="bar-row"><div class="name">대조군</div><div class="bar-track"><div class="bar-fill bf-gray" style="width:100%">82.5%</div></div></div>
-    <div class="same">출발선 동일. 차이는 재생이 시작된 뒤에 생겼습니다</div>
+    <div class="ct"><h3>CTR<span class="vd o">개선</span></h3><span class="dir">높을수록 좋음 · 전체 클릭 기준</span></div>
+    <div class="bar-row"><div class="name">이거알아</div><div class="bar-track"><div class="bar-fill bf-green" style="width:100%">1.63%</div></div></div>
+    <div class="bar-row"><div class="name">대조군</div><div class="bar-track"><div class="bar-fill bf-gray" style="width:85.3%">1.39%</div></div></div>
+    <p class="note" style="margin-top:4px">1.17배 — 방향은 맞지만 폭이 작습니다</p>
   </div>
 
-  <p class="warn"><b>길이 보정.</b> 30초 소재의 50%와 1분 소재의 25%는 둘 다 15초 지점입니다. 마일스톤 %를 그대로 비교하면 짧은 소재가 자동으로 유리해지므로, <b>같은 초</b>로 환산해 비교했습니다.</p>
+  <div class="grp">
+    <div class="ct"><h3>CPC<span class="vd x">악화</span></h3><span class="dir">낮을수록 좋음</span></div>
+    <div class="bar-row"><div class="name">대조군</div><div class="bar-track"><div class="bar-fill bf-green" style="width:82.4%">761원</div></div></div>
+    <div class="bar-row"><div class="name">이거알아</div><div class="bar-track"><div class="bar-fill bf-red" style="width:100%">923원</div></div></div>
+    <p class="note" style="margin-top:4px">+21% — <b>앞단 개선 → 구매 CPA 개선</b>이라는 경로가 여기서 끊겼습니다</p>
+  </div>
+
+  <div class="grp">
+    <div class="ct"><h3>구매 CPA<span class="vd q">검증 불가</span></h3><span class="dir">MMP 미측정 구간</span></div>
+    <p class="note" style="margin-top:2px">에어브릿지 iOS 전환은 소재명 기준 2025년 11월부터 집계됩니다. 이 소재는 25.05라 <b>메타 구간 전체가 설치·가입·구매 0</b>입니다. 매체 기준 구매 360건(CPA 13,720원)은 있으나 대조군에 같은 기준의 구매값이 없어 판정에 쓰지 않았습니다.</p>
+  </div>
+
+  <div class="grp" style="border-top:1px solid var(--line);padding-top:16px">
+    <div class="ct"><h3>그런데 시청 지속은 갈렸습니다</h3><span class="dir">포맷 효과가 남은 지점</span></div>
+    <div class="bar-row" style="margin-top:10px"><div class="name">훅률 · 이거알아</div><div class="bar-track"><div class="bar-fill bf-gray" style="width:100%">82.5%</div></div></div>
+    <div class="bar-row"><div class="name">훅률 · 대조군</div><div class="bar-track"><div class="bar-fill bf-gray" style="width:100%">82.5%</div></div></div>
+    <div class="same">출발선 동일. 재생 시작은 지면이 결정합니다</div>
+  </div>
+
+  <p class="warn"><b>길이 보정.</b> 30초 소재의 50%와 1분 소재의 25%는 둘 다 15초 지점입니다. 마일스톤 %를 그대로 비교하면 짧은 소재가 자동으로 유리해지므로 <b>같은 초</b>로 환산했습니다.</p>
 
   <div class="grp">
     <div class="ct"><h3>15초 도달률</h3><span class="dir">높을수록 좋음 · 길이 보정</span></div>
@@ -48,15 +72,9 @@
     <div class="ct"><h3>30초 도달률</h3><span class="dir">높을수록 좋음 · 길이 보정</span></div>
     <div class="bar-row"><div class="name">이거알아</div><div class="bar-track"><div class="bar-fill bf-green" style="width:100%">2.72%</div></div></div>
     <div class="bar-row"><div class="name">대조군</div><div class="bar-track"><div class="bar-fill bf-gray" style="width:80.1%">2.18%</div></div></div>
-    <p class="note" style="margin-top:4px"><b>1.25배</b> · 이거알아 완주 vs 대조군 50% 지점 — 격차가 좁혀집니다</p>
+    <p class="note" style="margin-top:4px"><b>1.25배</b> · 격차가 좁혀집니다. 강점은 초반 15초에 몰려 있습니다</p>
   </div>
 
-  <div class="grp">
-    <div class="ct"><h3>CPC — 오히려 비쌌다</h3><span class="dir">낮을수록 좋음</span></div>
-    <div class="bar-row"><div class="name">대조군</div><div class="bar-track"><div class="bar-fill bf-green" style="width:82.4%">761원</div></div></div>
-    <div class="bar-row"><div class="name">이거알아</div><div class="bar-track"><div class="bar-fill bf-red" style="width:100%">923원</div></div></div>
-  </div>
-
-  <p class="note"><b>강점은 초반 15초에 몰려 있습니다.</b> 나레이션을 뺀 값은 클릭 단가가 아니라 시청 시간으로 돌아왔습니다. CPC로만 판단했다면 21% 비싼 실패 소재였습니다. <a href="thisknow-retarget.html" style="font-weight:700;color:var(--blue);text-decoration:none">전체 데이터 →</a></p>
+  <p class="note"><b>iOS 가설은 절반만 맞았습니다.</b> CTR은 올랐지만 CPC가 비싸져 "앞단 개선 → 구매 CPA 개선" 경로가 성립하지 않았고, 구매 CPA는 애초에 측정할 수 없는 구간이었습니다. 포맷 효과는 CTR·CPC가 아니라 <b>시청 지속</b>에 남았습니다. <a href="thisknow-retarget.html" style="font-weight:700;color:var(--blue);text-decoration:none">전체 데이터 →</a></p>
 </div>
 </div></body></html>
