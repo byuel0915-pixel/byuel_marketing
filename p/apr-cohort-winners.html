@@ -1,0 +1,44 @@
+<!doctype html><html lang="ko"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>친환경 A/B — 코호트별 승자 | 박성진</title>
+<meta name="description" content="같은 20% 할인에 상세페이지만 바꾼 A/B의 코호트별 승자 정리">
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+  .wrap{padding:14px 16px}
+  .tblwrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .mtx.narrow th,.mtx.narrow td{padding:9px 11px;font-size:13px;white-space:nowrap}
+  .mtx tr.tot td{font-weight:800;border-top:2px solid var(--ink);background:#FAFBFD}
+  .mtx td.neg{color:var(--ink-3)}
+  .mtx .sub{display:block;font-size:11px;color:var(--ink-3);font-weight:600;margin-top:2px}
+  .mtx td.wrapcell{white-space:normal;min-width:190px}
+  .ct{display:flex;align-items:baseline;gap:9px;margin-bottom:12px}
+  .ct h3{margin:0;font-size:14.5px;font-weight:800;letter-spacing:-.015em}
+  .ct .dir{font-size:11.5px;font-weight:700;color:var(--ink-3)}
+  .bar-row{grid-template-columns:118px 1fr;gap:11px;margin:9px 0}
+  .bar-row .name{font-size:12px}
+  .bar-track{height:30px}
+  @media(max-width:520px){.bar-row{grid-template-columns:90px 1fr;gap:8px}.bar-row .name{font-size:11px}}
+</style>
+</head><body><div class="wrap">
+
+<div class="card pad">
+  <div class="ct"><h3>코호트별 승자</h3><span class="dir">같은 20% 할인 · 상세페이지만 다름</span></div>
+  <div class="tblwrap">
+  <table class="mtx narrow">
+    <thead><tr><th>코호트</th><th>지표</th><th>A · 친환경</th><th>B · 일반 할인</th><th>승자</th></tr></thead>
+    <tbody>
+      <tr><td rowspan="3">광고 유입 신규</td><td>쿠폰 발급 수</td><td>42건</td><td class="win">82건</td><td>B (+95%)</td></tr>
+      <tr><td>쿠폰 전환율</td><td class="win">70.83%</td><td>57.69%</td><td>A (+13.14%p)</td></tr>
+      <tr><td>신규 가입 전환</td><td>24명</td><td class="win">52명</td><td>B</td></tr>
+      <tr><td rowspan="3">가입·미이용 (기존)</td><td>쿠폰 발급 수</td><td>136건</td><td class="win">140건</td><td>B (+2.9%)</td></tr>
+      <tr><td>쿠폰 전환율</td><td>32.35%</td><td class="win">38.24%</td><td>B (+5.89%p)</td></tr>
+      <tr><td>CRM 오픈 당일 구매</td><td class="win">57명</td><td>50명</td><td>A</td></tr>
+      <tr class="tot"><td rowspan="3">종합</td><td>쿠폰 발급 수</td><td>178건</td><td>222건</td><td>B (+24.7%)</td></tr>
+      <tr class="tot"><td>쿠폰 전환율</td><td>39.7%</td><td>44.8%</td><td>B (+5.1%p)</td></tr>
+      <tr class="tot"><td>ARPU</td><td>19,041원</td><td>17,855원</td><td>A (+1,186원)</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="note"><b>신규에서만 친환경이 이깁니다.</b> 볼륨·기존 유저·종합은 전부 일반 할인이 이겼고, 광고로 처음 들어온 유저의 전환 품질만 친환경이 13.14%p 앞섰습니다.</p>
+</div>
+</div></body></html>
