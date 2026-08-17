@@ -1,0 +1,62 @@
+<!doctype html><html lang="ko"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>이거알아 — 시청 지속 | 박성진</title>
+<meta name="description" content="나레이션 없는 30초 자막 반복형과 1분 나레이션 페이드형의 시청 지속 비교. 영상 길이를 보정한 같은 초 도달률 기준">
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+  .wrap{padding:14px 16px}
+  .ct{display:flex;align-items:baseline;justify-content:space-between;gap:9px;margin-bottom:4px}
+  .ct h3{margin:0;font-size:15px;font-weight:800;letter-spacing:-.015em}
+  .ct .dir{font-size:11px;font-weight:700;color:var(--ink-3);white-space:nowrap}
+  .grp{margin:0 0 16px}
+  .bar-row{grid-template-columns:96px 1fr;gap:10px;margin:6px 0}
+  .bar-row .name{font-size:12px}
+  .bar-track{height:28px}
+  .bar-fill{font-size:12.5px;padding-right:10px}
+  .lead{display:flex;align-items:center;gap:8px;margin-bottom:6px;padding:9px 12px;
+    background:var(--green-soft);border-radius:9px;font-size:13px;font-weight:700;color:var(--green)}
+  .lead .tag{font-size:11px;font-weight:800;background:var(--green);color:#fff;padding:2px 8px;border-radius:5px}
+  .warn{font-size:12px;color:var(--ink-2);background:#F6F8FB;border-radius:9px;padding:10px 12px;margin:0 0 16px}
+  .same{display:flex;align-items:center;gap:7px;font-size:11.5px;font-weight:800;color:var(--ink-3);margin:-2px 0 14px}
+  .same::before{content:'=';font-size:14px;color:var(--ink-3)}
+  .note{margin-top:12px}
+  @media(max-width:520px){.bar-row{grid-template-columns:78px 1fr;gap:7px}.bar-row .name{font-size:10.5px}.ct{flex-direction:column;align-items:flex-start;gap:2px}}
+</style>
+</head><body><div class="wrap">
+<div class="card pad chart">
+
+  <div class="lead"><span class="tag">가설 참</span>단, CTR·CPC가 아니라 <b style="color:inherit">시청 지속</b>에서만 갈렸습니다</div>
+  <p class="note" style="margin:0 0 16px">이거알아 3종(30초 · 나레이션 없음 · 자막 반복) vs 같은 캠페인 대조군 8종(1분 · 나레이션 · 페이드)</p>
+
+  <div class="grp">
+    <div class="ct"><h3>훅률 — 재생 시작</h3><span class="dir">재생 / 노출 · 지면이 결정</span></div>
+    <div class="bar-row"><div class="name">이거알아</div><div class="bar-track"><div class="bar-fill bf-gray" style="width:100%">82.5%</div></div></div>
+    <div class="bar-row"><div class="name">대조군</div><div class="bar-track"><div class="bar-fill bf-gray" style="width:100%">82.5%</div></div></div>
+    <div class="same">출발선 동일. 차이는 재생이 시작된 뒤에 생겼습니다</div>
+  </div>
+
+  <p class="warn"><b>길이 보정.</b> 30초 소재의 50%와 1분 소재의 25%는 둘 다 15초 지점입니다. 마일스톤 %를 그대로 비교하면 짧은 소재가 자동으로 유리해지므로, <b>같은 초</b>로 환산해 비교했습니다.</p>
+
+  <div class="grp">
+    <div class="ct"><h3>15초 도달률</h3><span class="dir">높을수록 좋음 · 길이 보정</span></div>
+    <div class="bar-row"><div class="name">이거알아</div><div class="bar-track"><div class="bar-fill bf-green" style="width:100%">7.46%</div></div></div>
+    <div class="bar-row"><div class="name">대조군</div><div class="bar-track"><div class="bar-fill bf-red" style="width:44.8%">3.34%</div></div></div>
+    <p class="note" style="margin-top:4px"><b>2.23배</b> · 이거알아 50% 지점 vs 대조군 25% 지점</p>
+  </div>
+
+  <div class="grp">
+    <div class="ct"><h3>30초 도달률</h3><span class="dir">높을수록 좋음 · 길이 보정</span></div>
+    <div class="bar-row"><div class="name">이거알아</div><div class="bar-track"><div class="bar-fill bf-green" style="width:100%">2.72%</div></div></div>
+    <div class="bar-row"><div class="name">대조군</div><div class="bar-track"><div class="bar-fill bf-gray" style="width:80.1%">2.18%</div></div></div>
+    <p class="note" style="margin-top:4px"><b>1.25배</b> · 이거알아 완주 vs 대조군 50% 지점 — 격차가 좁혀집니다</p>
+  </div>
+
+  <div class="grp">
+    <div class="ct"><h3>CPC — 오히려 비쌌다</h3><span class="dir">낮을수록 좋음</span></div>
+    <div class="bar-row"><div class="name">대조군</div><div class="bar-track"><div class="bar-fill bf-green" style="width:82.4%">761원</div></div></div>
+    <div class="bar-row"><div class="name">이거알아</div><div class="bar-track"><div class="bar-fill bf-red" style="width:100%">923원</div></div></div>
+  </div>
+
+  <p class="note"><b>강점은 초반 15초에 몰려 있습니다.</b> 나레이션을 뺀 값은 클릭 단가가 아니라 시청 시간으로 돌아왔습니다. CPC로만 판단했다면 21% 비싼 실패 소재였습니다. <a href="thisknow-retarget.html" style="font-weight:700;color:var(--blue);text-decoration:none">전체 데이터 →</a></p>
+</div>
+</div></body></html>
