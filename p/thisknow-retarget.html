@@ -1,7 +1,7 @@
 <!doctype html><html lang="ko"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>이거알아 — 리타겟 자막 반복형 정량 결과 | 박성진</title>
-<meta name="description" content="나레이션 없는 30초 자막 반복형과 1분 나레이션 페이드형의 전체 수치. 대조군 설계, 소재별 원자료, 소구 3종 비교, 틱톡 재검증">
+<meta name="description" content="나레이션 없는 자막 반복형이 기존 리타겟 소재보다 영상 시청 시간을 오래 유지하는지 AOS·iOS 각각 검증. 대조군 설계, 소재별 원자료, 소구 3종 비교">
 <link rel="stylesheet" href="../assets/style.css">
 <style>
   .wrap{padding:26px 18px 40px}
@@ -11,12 +11,11 @@
   .mtx tr.total td,.mtx tr.total th{background:#F6F8FB;font-weight:800}
   .mtx .lose{color:var(--red);font-weight:700}
   .mtx tr.hl td{background:#EAF7F1}
-  .chip{display:inline-block;font-size:10.5px;font-weight:800;padding:2px 7px;border-radius:5px;margin-left:6px;vertical-align:middle}
-  .chip.g{background:var(--green-soft);color:var(--green)}
+  .mtx tr.sec td{background:#F1F4F9;font-weight:800;font-size:12px;color:var(--ink-3);text-align:left}
   .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;margin-bottom:6px}
   .stat{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
   .stat .lbl{font-size:12px;font-weight:700;color:var(--ink-3);margin-bottom:6px}
-  .stat .num{font-size:25px;font-weight:800;letter-spacing:-.02em;line-height:1.1;font-feature-settings:'tnum'}
+  .stat .num{font-size:23px;font-weight:800;letter-spacing:-.02em;line-height:1.1;font-feature-settings:'tnum'}
   .stat .cap{font-size:11.5px;color:var(--ink-2);margin-top:6px}
   ul.find{margin:12px 0 0;padding-left:19px;font-size:13.5px;color:var(--ink-2)}
   ul.find li{margin:6px 0}
@@ -31,141 +30,102 @@
 </head><body><div class="wrap">
 
 <div class="head">
-  <div class="head-meta"><span class="kicker">AOS 참 · iOS 절반 기각</span><span class="date-meta">2025.05.16 라이브</span></div>
-  <h1>AOS는 구매 CPA로, <span class="hl-g">iOS는 시청 지속</span>으로 갈렸다</h1>
-  <p class="sub">리타겟에 걸린 소재는 전부 논타겟에서 옮겨 온 1분 나레이션 페이드형이었습니다. 나레이션을 빼고 자막으로 같은 메시지를 반복하는 30초 포맷을 새로 만들었고, <b>OS별로 캠페인 목적이 달라 판정 경로를 나눠 세웠습니다.</b> 이 문서는 두 가설의 결과 수치와 대조군 설계 근거를 담습니다.</p>
+  <div class="head-meta"><span class="kicker green">가설 참 (CPC 제외)</span><span class="date-meta">2025.05.16 라이브</span></div>
+  <h1>나레이션을 빼자 <span class="hl-g">시청 시간</span>이 길어졌고, CTR이 따라왔다</h1>
+  <p class="sub">리타겟에 걸린 소재는 전부 논타겟에서 옮겨 온 나레이션 페이드형이었습니다. 나레이션을 빼고 자막으로 같은 메시지를 반복하는 포맷을 새로 만들었고, AOS·iOS 각각 <b>같은 캠페인 안의 기존 세트</b>와 비교했습니다. 이 문서는 그 결과 수치와 대조군 설계 근거를 담습니다.</p>
 </div>
 
 <div class="card pad" style="margin-bottom:6px">
   <p style="margin:0 0 10px;font-size:12px;font-weight:800;color:var(--ink-3)">원가설</p>
-  <div class="scroller">
+  <p style="margin:0;font-size:14.5px;color:var(--ink);border-left:3px solid var(--green);padding-left:13px;line-height:1.7">
+    나레이션 없이 자막으로 반복하는 소재가 기존 리타겟 소재보다 <b>영상 시청 시간을 더 오래 유지할 것이고, 그 결과 CTR·CPC도 따라올 것이다.</b>
+  </p>
+  <div class="scroller" style="margin-top:14px">
   <table class="mtx">
-    <thead><tr><th>OS</th><th>캠페인 목적</th><th style="text-align:left">가설</th><th>비교군</th><th>판정</th></tr></thead>
+    <thead><tr><th>OS</th><th>캠페인 목적</th><th>비교군 (같은 캠페인 내)</th><th class="num">시청 시간</th><th class="num">CTR</th><th class="num">CPC</th></tr></thead>
     <tbody>
-      <tr><td>AOS</td><td>리타겟 · 구매</td><td style="text-align:left;white-space:normal">직전 리타겟 주력 소재 대비 <b>구매 CPA가 개선될 것이다</b></td><td><code>리타겟콘텐츠</code> 25.02.07</td><td class="win">참</td></tr>
-      <tr><td>iOS</td><td>리타겟 · 앱트래픽</td><td style="text-align:left;white-space:normal"><b>앞단 지표(CTR·CPC)가 먼저 개선되고, 그 결과 구매 CPA까지 개선될 것이다</b></td><td>같은 캠페인 1분 나레이션형 8종</td><td class="lose">절반 기각</td></tr>
+      <tr><td>iOS</td><td>리타겟 · 앱트래픽</td><td>기존 포맷 8종</td><td class="num win">참 1.77배</td><td class="num win">참 1.17배</td><td class="num lose">거짓 +21.3%</td></tr>
+      <tr><td>AOS</td><td>리타겟 · 구매</td><td><code>리타겟콘텐츠_25.02.07</code> 5종</td><td class="num win">참 1.15배</td><td class="num win">참 1.25배</td><td class="num win">참 −7.6%</td></tr>
     </tbody>
   </table>
   </div>
 </div>
 
 <div class="stats">
-  <div class="stat"><div class="lbl">AOS 구매 CPA</div><div class="num" style="color:var(--green)">1,458원</div><div class="cap">리타겟콘텐츠 3,252원 대비 −55.2%</div></div>
-  <div class="stat"><div class="lbl">iOS CTR</div><div class="num" style="color:var(--green)">1.17배</div><div class="cap">1.63% vs 1.39% · 개선</div></div>
-  <div class="stat"><div class="lbl">iOS CPC</div><div class="num" style="color:var(--red)">+21%</div><div class="cap">923원 vs 761원 · 악화</div></div>
-  <div class="stat"><div class="lbl">iOS 15초 도달률</div><div class="num" style="color:var(--green)">2.23배</div><div class="cap">7.46% vs 3.34% · 길이 보정</div></div>
+  <div class="stat"><div class="lbl">iOS 평균 재생 시간</div><div class="num" style="color:var(--green)">1.77배</div><div class="cap">4.7초 vs 2.7초</div></div>
+  <div class="stat"><div class="lbl">AOS 평균 재생 시간</div><div class="num" style="color:var(--green)">1.15배</div><div class="cap">6.2초 vs 5.4초</div></div>
+  <div class="stat"><div class="lbl">CTR</div><div class="num" style="color:var(--green)">양쪽 참</div><div class="cap">iOS 1.17배 · AOS 1.25배</div></div>
+  <div class="stat"><div class="lbl">CPC</div><div class="num" style="color:var(--red)">AOS만 참</div><div class="cap">iOS +21.3% · AOS −7.6%</div></div>
 </div>
 
-<div class="sect"><h2>1. AOS — 구매 CPA 가설</h2><span class="tag">같은 캠페인 AOS_리타겟_구매_24.11.05 · 매체 기준</span></div>
+<div class="sect"><h2>1. 대조군 설계</h2><span class="tag">OS별로 캠페인이 달라 각각 잡았습니다</span></div>
 <div class="card pad">
-  <div class="scroller">
-  <table class="mtx">
-    <thead><tr><th>세트</th><th class="num">소재</th><th class="num">광고비</th><th class="num">노출</th><th class="num">클릭</th><th class="num">CTR</th><th class="num">CPC</th><th class="num">CPM</th><th class="num">구매</th><th class="num">구매 CPA</th><th class="num">ROAS</th></tr></thead>
-    <tbody>
-      <tr><td>리타겟콘텐츠 <span style="color:var(--ink-3);font-weight:400">25.02.07</span></td><td class="num">5</td><td class="num">530,005원</td><td class="num">24,029</td><td class="num">384</td><td class="num">1.60%</td><td class="num">1,380원</td><td class="num win">22,057원</td><td class="num">163</td><td class="num lose">3,252원</td><td class="num">2.46</td></tr>
-      <tr class="hl total"><td>이거알아 <span style="color:var(--ink-3);font-weight:400">25.05.16</span></td><td class="num">3</td><td class="num">325,092원</td><td class="num">12,794</td><td class="num">255</td><td class="num win">1.99%</td><td class="num win">1,275원</td><td class="num">25,410원</td><td class="num">223</td><td class="num win">1,458원</td><td class="num win">5.49</td></tr>
-      <tr><td>변화</td><td class="num">–</td><td class="num">−38.7%</td><td class="num">−46.8%</td><td class="num">−33.6%</td><td class="num">+0.40%p</td><td class="num">−7.6%</td><td class="num">+15.2%</td><td class="num">+36.8%</td><td class="num win">−55.2%</td><td class="num win">2.23배</td></tr>
-    </tbody>
-  </table>
-  </div>
-  <ul class="find">
-    <li><b>가설 참.</b> 구매 CPA 3,252원 → 1,458원으로 <b>55.2% 개선</b>. 광고비를 38.7% 적게 쓰고 구매는 36.8% 더 만들었습니다.</li>
-    <li>ROAS 2.46 → <b>5.49(2.23배)</b>, 전환매출 130.4만 → 178.4만원입니다.</li>
-    <li>CTR·CPC도 함께 좋아졌습니다(1.60%→1.99%, 1,380원→1,275원). CPM만 15.2% 올랐는데, 노출을 절반 이하로 줄이면서 도달 모수가 좁아진 영향으로 봅니다.</li>
-    <li><b>구매 CPA는 매체 기준으로 통일했습니다.</b> 리타겟콘텐츠(25.02.07)가 에어브릿지 시작일(2025-05-01) 이전 집행이라 MMP 값이 없습니다. 리타겟 매체 어트리뷰션은 과다집계가 커서 <b>1,458원·3,252원은 절대값이 아니라 상대 비교로만</b> 읽어야 합니다.</li>
+  <ul class="find" style="margin-top:0">
+    <li><b>원칙은 하나입니다 — "같은 캠페인 안에서, 같은 리타겟 모수에, 같은 목적으로 함께 돌던 기존 세트."</b> 캠페인이 OS별로 나뉘어 있어 비교군도 둘로 갈렸습니다.</li>
+    <li><b>iOS</b> — <code>iOS_리타겟_앱트래픽(링크클릭)_25.05.15</code> 캠페인의 나머지 2개 세트, 소재 8종. 세트가 이거알아 3종만으로 짜여 있어 세트 내 대조가 불가능해 한 단계 위로 올렸습니다.</li>
+    <li><b>AOS</b> — <code>AOS_리타겟_구매_24.11.05</code> 캠페인의 직전 주력 세트 <code>aos_purchase_re_vd_리타겟콘텐츠_25.02.07</code>, 소재 5종.</li>
   </ul>
-
-  <p class="note" style="margin-top:18px;margin-bottom:8px"><b>소재별 구매 CPA — 8종 전부</b></p>
-  <div class="scroller">
+  <div class="scroller" style="margin-top:16px">
   <table class="mtx">
-    <thead><tr><th>소재</th><th>세트</th><th class="num">광고비</th><th class="num">노출</th><th class="num">CTR</th><th class="num">CPC</th><th class="num">구매</th><th class="num">구매 CPA</th><th class="num">ROAS</th></tr></thead>
-    <tbody>
-      <tr class="hl"><td>이거알아(폐기물)1</td><td>이거알아</td><td class="num">105,277원</td><td class="num">4,078</td><td class="num">1.99%</td><td class="num">1,300원</td><td class="num">84</td><td class="num win">1,253원</td><td class="num win">6.38</td></tr>
-      <tr class="hl"><td>이거알아(반찬통)3</td><td>이거알아</td><td class="num">90,021원</td><td class="num">3,729</td><td class="num">1.69%</td><td class="num">1,429원</td><td class="num">67</td><td class="num win">1,344원</td><td class="num win">5.95</td></tr>
-      <tr class="hl"><td>이거알아(배달)2</td><td>이거알아</td><td class="num">129,794원</td><td class="num">4,987</td><td class="num win">2.23%</td><td class="num win">1,169원</td><td class="num">72</td><td class="num win">1,803원</td><td class="num">4.44</td></tr>
-      <tr><td>리타겟콘텐츠(자취생)2</td><td>리타겟콘텐츠</td><td class="num">166,709원</td><td class="num">8,750</td><td class="num">1.42%</td><td class="num">1,344원</td><td class="num">63</td><td class="num">2,646원</td><td class="num">3.02</td></tr>
-      <tr><td>리타겟콘텐츠(화장품)3</td><td>리타겟콘텐츠</td><td class="num">37,947원</td><td class="num">1,914</td><td class="num">1.46%</td><td class="num">1,355원</td><td class="num">14</td><td class="num">2,710원</td><td class="num">2.95</td></tr>
-      <tr><td>리타겟콘텐츠(분리수거)1</td><td>리타겟콘텐츠</td><td class="num">193,520원</td><td class="num">7,669</td><td class="num">1.63%</td><td class="num">1,548원</td><td class="num">62</td><td class="num">3,121원</td><td class="num">2.56</td></tr>
-      <tr><td>리타겟콘텐츠(냉장고)5</td><td>리타겟콘텐츠</td><td class="num">42,681원</td><td class="num">1,807</td><td class="num">1.44%</td><td class="num">1,642원</td><td class="num">11</td><td class="num lose">3,880원</td><td class="num">2.06</td></tr>
-      <tr><td>리타겟콘텐츠(배달음식)4</td><td>리타겟콘텐츠</td><td class="num">89,148원</td><td class="num">3,889</td><td class="num">2.08%</td><td class="num">1,101원</td><td class="num">13</td><td class="num lose">6,858원</td><td class="num lose">1.17</td></tr>
-    </tbody>
-  </table>
-  </div>
-  <ul class="find">
-    <li><b>이거알아 최악(1,803원)이 리타겟콘텐츠 최선(2,646원)보다 낮습니다.</b> 3종이 5종 전부를 앞선 완승입니다.</li>
-    <li>양쪽 다 <b>배달음식 소구가 세트 내 최하위</b>입니다(이거알아 1,803원 · 리타겟콘텐츠 6,858원). 리타겟 모수에서 배달음식 소구가 약하다는 신호로 봅니다.</li>
-    <li>리타겟콘텐츠(배달음식)4는 CTR 2.08%로 세트 1위인데 구매 CPA는 6,858원으로 꼴찌입니다. 클릭과 구매가 갈리는 전형적인 패턴입니다.</li>
-    <li><b>다만 AOS 세트는 라이브 10일 만에 OFF됐습니다.</b> 리타겟 AOS는 혜택이 초반에 나와야 하는데, 이 소재는 비밀 쿠폰이 영상 마지막에 등장하는 구성이었습니다. 같은 포맷이라도 OS별로 혜택 배치를 달리 가져가야 한다는 근거가 됐습니다.</li>
-  </ul>
-</div>
-
-<div class="sect"><h2>2. iOS — 대조군 설계</h2><span class="tag">앱트래픽 목적이라 대조군이 자동으로 정해지지 않음</span></div>
-<div class="card pad">
-  <div class="scroller">
-  <table class="mtx">
-    <thead><tr><th>대조군 후보</th><th>성립</th><th>판단</th></tr></thead>
+    <thead><tr><th>iOS 대조군 후보</th><th>성립</th><th>판단</th></tr></thead>
     <tbody>
       <tr><td>① 같은 세트 내 다른 소재</td><td class="lose">✗</td><td style="text-align:left;white-space:normal">세트가 이거알아 3종만으로 구성돼 세트 내 대조군이 아예 없음</td></tr>
-      <tr class="hl"><td>② 같은 캠페인 · 다른 세트</td><td class="win">✓ 채택</td><td style="text-align:left;white-space:normal">같은 리타겟 모수 · 같은 앱트래픽 목적 · 같은 시기(25.05~07). 기존 포맷 8종이 함께 돌았음</td></tr>
+      <tr class="hl"><td>② 같은 캠페인 · 다른 세트</td><td class="win">✓ 채택</td><td style="text-align:left;white-space:normal">같은 리타겟 모수 · 같은 앱트래픽 목적 · 같은 시기(25.05~07)</td></tr>
       <tr><td>③ 같은 시기 iOS 논타겟</td><td>△</td><td style="text-align:left;white-space:normal">모수가 달라 후킹 전제가 다름. 이 가설 검증에는 부적합</td></tr>
       <tr><td>④ sj1 태그 소재 전체</td><td>△ 보조</td><td style="text-align:left;white-space:normal">내 소재 베이스라인으로는 유용하나 기간(25.09~)이 어긋남</td></tr>
       <tr><td>⑤ 자막형 vs 나레이션형 전수</td><td class="lose">✗</td><td style="text-align:left;white-space:normal">나레이션 유무는 매체 데이터에 없어 소재명으로 판별 불가</td></tr>
     </tbody>
   </table>
   </div>
-  <ul class="find">
-    <li>채택한 대조군은 <code>iOS_리타겟_앱트래픽(링크클릭)_25.05.15</code> 캠페인의 나머지 2개 세트, <b>소재 8종</b>입니다.</li>
-    <li>8종은 전부 <b>1분 길이 · 나레이션 · 페이드 전환</b> 구성입니다. 프로모션 고지형(990원 3종), 짤형, 리뷰 캡처형, UGC형이 섞여 있습니다.</li>
-  </ul>
 </div>
 
-<div class="sect"><h2>3. iOS — 앞단 지표와 시청 지속</h2><span class="tag">Meta 리포트 · 2025-01-01 ~ 2026-08-10 누적</span></div>
+<div class="sect"><h2>2. 결과 — 시청 시간 · CTR · CPC</h2><span class="tag">Meta 리포트 기준</span></div>
 <div class="card pad">
   <div class="scroller">
   <table class="mtx">
-    <thead><tr><th>구분</th><th class="num">소재</th><th class="num">광고비</th><th class="num">노출</th><th class="num">CTR</th><th class="num">CPC</th><th class="num">훅률</th><th class="num">25%</th><th class="num">50%</th><th class="num">75%</th><th class="num">완주</th></tr></thead>
+    <thead><tr><th>구분</th><th class="num">소재</th><th class="num">광고비</th><th class="num">노출</th><th class="num">훅률</th><th class="num">평균 재생 시간</th><th class="num">CTR</th><th class="num">CPC</th><th class="num">CPM</th></tr></thead>
     <tbody>
-      <tr class="hl"><td>이거알아 · 30초 자막 반복형<span class="chip g">본건</span></td><td class="num">3</td><td class="num">4,939,256원</td><td class="num">328,123</td><td class="num win">1.63%</td><td class="num lose">923원</td><td class="num">82.5%</td><td class="num win">12.66%</td><td class="num win">7.46%</td><td class="num win">5.28%</td><td class="num win">2.72%</td></tr>
-      <tr><td>대조군 · 1분 나레이션 페이드형</td><td class="num">8</td><td class="num">1,795,395원</td><td class="num">169,361</td><td class="num">1.39%</td><td class="num win">761원</td><td class="num">82.5%</td><td class="num">3.34%</td><td class="num">2.18%</td><td class="num">1.19%</td><td class="num">0.59%</td></tr>
+      <tr class="sec"><td colspan="9">iOS · 리타겟 앱트래픽</td></tr>
+      <tr class="hl"><td>이거알아 3종</td><td class="num">3</td><td class="num">4,939,256원</td><td class="num">328,123</td><td class="num">82.5%</td><td class="num win">4.7초</td><td class="num win">1.63%</td><td class="num lose">923원</td><td class="num">15,053원</td></tr>
+      <tr><td>기존 포맷 8종</td><td class="num">8</td><td class="num">1,795,395원</td><td class="num">169,361</td><td class="num">82.5%</td><td class="num">2.7초</td><td class="num">1.39%</td><td class="num win">761원</td><td class="num win">10,601원</td></tr>
+      <tr class="total"><td>변화</td><td class="num">–</td><td class="num">–</td><td class="num">–</td><td class="num">동일</td><td class="num win">1.77배</td><td class="num win">1.17배</td><td class="num lose">+21.3%</td><td class="num">+42.0%</td></tr>
+      <tr class="sec"><td colspan="9">AOS · 리타겟 구매</td></tr>
+      <tr class="hl"><td>이거알아 3종</td><td class="num">3</td><td class="num">325,092원</td><td class="num">12,794</td><td class="num win">89.3%</td><td class="num win">6.2초</td><td class="num win">1.99%</td><td class="num win">1,275원</td><td class="num">25,410원</td></tr>
+      <tr><td>리타겟콘텐츠 5종</td><td class="num">5</td><td class="num">530,005원</td><td class="num">24,029</td><td class="num">83.3%</td><td class="num">5.4초</td><td class="num">1.60%</td><td class="num">1,380원</td><td class="num win">22,057원</td></tr>
+      <tr class="total"><td>변화</td><td class="num">–</td><td class="num">–</td><td class="num">–</td><td class="num win">+6.0%p</td><td class="num win">1.15배</td><td class="num win">1.25배</td><td class="num win">−7.6%</td><td class="num">+15.2%</td></tr>
     </tbody>
   </table>
   </div>
   <ul class="find">
-    <li><b>훅률이 82.5%로 소수점까지 같습니다.</b> 재생 시작률은 지면이 결정하는 값이라 소재 차이가 거의 없습니다. 출발선은 동일했습니다.</li>
-    <li>길이가 다르면 마일스톤 %는 같은 시간이 아닙니다. <b>30초 소재의 50%와 1분 소재의 25%가 둘 다 15초</b>입니다.</li>
-  </ul>
-
-  <div class="scroller" style="margin-top:18px">
-  <table class="mtx">
-    <thead><tr><th>도달 시점</th><th class="num">이거알아 (30초)</th><th class="num">대조군 (1분)</th><th class="num">격차</th></tr></thead>
-    <tbody>
-      <tr class="hl"><td>15초</td><td class="num win">7.46% <span style="color:var(--ink-3);font-weight:400">(50% 지점)</span></td><td class="num">3.34% <span style="color:var(--ink-3)">(25% 지점)</span></td><td class="num win">2.23배</td></tr>
-      <tr><td>30초</td><td class="num">2.72% <span style="color:var(--ink-3);font-weight:400">(완주)</span></td><td class="num">2.18% <span style="color:var(--ink-3)">(50% 지점)</span></td><td class="num">1.25배</td></tr>
-    </tbody>
-  </table>
-  </div>
-  <ul class="find">
-    <li><b>강점은 초반 15초에 몰려 있습니다.</b> 30초 지점에서는 1.25배로 좁혀집니다.</li>
-    <li>CPC는 오히려 21% 비쌌습니다(923원 vs 761원). CTR도 1.17배로 소폭 우위에 그쳤습니다.</li>
-    <li>보조 베이스라인 — sj1 태그 소재 300건(25.09~26.08) 중 iOS 리타겟 19건은 CTR 0.94% / CPC 1,415원. 이거알아는 CTR 1.73배 / CPC −35%이지만 기간이 어긋나 참고치입니다.</li>
+    <li><b>가설의 앞부분은 양쪽 다 맞았습니다.</b> 나레이션을 빼자 평균 재생 시간이 iOS 1.77배 · AOS 1.15배로 길어졌고, CTR도 각각 1.17배 · 1.25배 따라왔습니다.</li>
+    <li><b>CPC는 iOS에서 깨졌습니다.</b> 923원 vs 761원으로 21.3% 비쌌습니다. 시청 시간이 늘어난다고 클릭 단가까지 자동으로 싸지지는 않았습니다. AOS에서는 7.6% 싸졌습니다.</li>
+    <li><b>iOS 훅률은 82.5%로 소수점까지 같습니다.</b> 재생 시작률은 지면이 결정하는 값이라 출발선은 동일했고, 차이는 재생이 시작된 뒤에 생겼습니다. AOS는 훅률도 6.0%p 높았습니다.</li>
+    <li>CPM은 양쪽 다 올랐습니다(iOS +42.0%, AOS +15.2%). 리타겟 모수가 좁은 상태에서 노출을 밀어넣은 영향으로 봅니다.</li>
   </ul>
 </div>
 
-<div class="sect"><h2>4. 소구 3종 — 반복이 통하는 소구</h2><span class="tag">포맷·길이·CTA·세트 동일, 소구만 다름</span></div>
+<div class="sect"><h2>3. 소구 3종 — 반복이 통하는 소구</h2><span class="tag">포맷·길이·CTA·세트 동일, 소구만 다름</span></div>
 <div class="card pad">
   <div class="scroller">
   <table class="mtx">
-    <thead><tr><th>소구</th><th class="num">광고비</th><th class="num">예산 비중</th><th class="num">노출</th><th class="num">CTR</th><th class="num">CPC</th><th class="num">25% 시청</th><th class="num">75%</th><th class="num">완주</th></tr></thead>
+    <thead><tr><th>소구</th><th class="num">광고비</th><th class="num">예산 비중</th><th class="num">노출</th><th class="num">평균 재생 시간</th><th class="num">CTR</th><th class="num">CPC</th></tr></thead>
     <tbody>
-      <tr class="hl"><td>반찬통 Ver.3</td><td class="num">3,834,254원</td><td class="num win">77.6%</td><td class="num">224,956</td><td class="num">1.76%</td><td class="num">967원</td><td class="num win">16.00%</td><td class="num win">6.73%</td><td class="num win">3.43%</td></tr>
-      <tr><td>배달음식 Ver.2</td><td class="num">736,903원</td><td class="num">14.9%</td><td class="num">70,646</td><td class="num">1.11%</td><td class="num">938원</td><td class="num">5.87%</td><td class="num">2.36%</td><td class="num">1.28%</td></tr>
-      <tr><td>폐기물 Ver.1</td><td class="num">368,099원</td><td class="num">7.5%</td><td class="num">32,521</td><td class="num win">1.84%</td><td class="num win">613원</td><td class="num">5.08%</td><td class="num">1.97%</td><td class="num">1.10%</td></tr>
+      <tr class="sec"><td colspan="7">iOS</td></tr>
+      <tr class="hl"><td>반찬통 Ver.3</td><td class="num">3,834,254원</td><td class="num win">77.6%</td><td class="num">224,956</td><td class="num win">6초</td><td class="num">1.76%</td><td class="num">967원</td></tr>
+      <tr><td>배달음식 Ver.2</td><td class="num">736,903원</td><td class="num">14.9%</td><td class="num">70,646</td><td class="num lose">2초</td><td class="num">1.11%</td><td class="num">938원</td></tr>
+      <tr><td>폐기물 Ver.1</td><td class="num">368,099원</td><td class="num">7.5%</td><td class="num">32,521</td><td class="num lose">2초</td><td class="num win">1.84%</td><td class="num win">613원</td></tr>
+      <tr class="sec"><td colspan="7">AOS · 표본 작음</td></tr>
+      <tr><td>배달음식 Ver.2</td><td class="num">129,794원</td><td class="num">39.9%</td><td class="num">4,987</td><td class="num">8초</td><td class="num">2.23%</td><td class="num">1,169원</td></tr>
+      <tr><td>폐기물 Ver.1</td><td class="num">105,277원</td><td class="num">32.4%</td><td class="num">4,078</td><td class="num">5초</td><td class="num">1.99%</td><td class="num">1,300원</td></tr>
+      <tr><td>반찬통 Ver.3</td><td class="num">90,021원</td><td class="num">27.7%</td><td class="num">3,729</td><td class="num">5초</td><td class="num">1.69%</td><td class="num">1,429원</td></tr>
     </tbody>
   </table>
   </div>
   <ul class="find">
-    <li><b>CTR 1위는 폐기물인데 예산은 반찬통이 가져갔습니다.</b> 갈린 건 초반 유지입니다.</li>
+    <li><b>iOS에서 대조군 평균(2.7초)을 넘긴 건 반찬통 하나뿐입니다.</b> 배달음식·폐기물은 2초로 대조군과 같았습니다.</li>
+    <li><b>CTR 1위는 폐기물(1.84%)인데 예산은 반찬통이 77.6% 가져갔습니다.</b> 갈린 건 시청 시간입니다 — 폐기물은 후킹은 되고 붙잡지를 못했습니다.</li>
     <li>반찬통은 "냉장고 속 반찬통" 한 장면을 계속 변주할 수 있었고, 폐기물은 품목이 매 컷 바뀌면서 <b>반복이 아니라 열거</b>가 됐습니다.</li>
+    <li>AOS는 소재당 노출이 3,700~5,000으로 표본이 작고 순서도 다릅니다. 소구 판정은 볼륨이 큰 iOS 기준으로만 했습니다.</li>
   </ul>
 
   <p class="note" style="margin-top:18px;margin-bottom:8px"><b>반복 구조 — 실제 대본</b></p>
@@ -180,40 +140,56 @@
   <p class="note">인트로 3종(폐기물·배달·반찬통)만 갈아 끼우고 본문은 공통입니다. "이거 알아?"가 후킹이자 반복 단위입니다.</p>
 </div>
 
-<div class="sect"><h2>5. 대조군 소재별 원자료</h2><span class="tag">캠페인 전 소재 11건 · 광고비 순</span></div>
+<div class="sect"><h2>4. 소재별 원자료</h2><span class="tag">iOS 11건 · AOS 8건</span></div>
 <div class="card pad">
   <div class="scroller">
   <table class="mtx">
-    <thead><tr><th>소재</th><th>세트</th><th class="num">광고비</th><th class="num">노출</th><th class="num">CTR</th><th class="num">CPC</th><th class="num">25%</th><th class="num">75%</th><th class="num">완주</th></tr></thead>
+    <thead><tr><th>소재</th><th>세트</th><th class="num">광고비</th><th class="num">노출</th><th class="num">재생 시간</th><th class="num">CTR</th><th class="num">CPC</th></tr></thead>
     <tbody>
-      <tr class="hl"><td>ios_vd_이거알아(반찬통)3</td><td>이거알아</td><td class="num">3,834,254원</td><td class="num">224,956</td><td class="num">1.76%</td><td class="num">967원</td><td class="num">16.00%</td><td class="num">6.73%</td><td class="num">3.43%</td></tr>
-      <tr><td>ios_vd_990원(특가)1_25.05.15</td><td>상시용(990원)</td><td class="num">757,968원</td><td class="num">89,227</td><td class="num">1.50%</td><td class="num">567원</td><td class="num">2.72%</td><td class="num">0.75%</td><td class="num">0.33%</td></tr>
-      <tr class="hl"><td>ios_vd_이거알아(배달)2</td><td>이거알아</td><td class="num">736,903원</td><td class="num">70,646</td><td class="num">1.11%</td><td class="num">938원</td><td class="num">5.87%</td><td class="num">2.36%</td><td class="num">1.28%</td></tr>
-      <tr><td>ios_vd_990원(특가)1_25.07.02</td><td>고효율소재모음(1)</td><td class="num">663,531원</td><td class="num">38,520</td><td class="num">1.43%</td><td class="num">1,202원</td><td class="num">5.21%</td><td class="num">2.37%</td><td class="num">1.07%</td></tr>
-      <tr class="hl"><td>ios_vd_이거알아(폐기물)1</td><td>이거알아</td><td class="num">368,099원</td><td class="num">32,521</td><td class="num">1.84%</td><td class="num">613원</td><td class="num">5.08%</td><td class="num">1.97%</td><td class="num">1.10%</td></tr>
-      <tr><td>ios_vd_990원(드디어)3</td><td>상시용(990원)</td><td class="num">244,196원</td><td class="num">29,404</td><td class="num">1.22%</td><td class="num">678원</td><td class="num">1.87%</td><td class="num">0.66%</td><td class="num">0.43%</td></tr>
-      <tr><td>ios_vd_짤(8장)1</td><td>고효율소재모음(1)</td><td class="num">74,390원</td><td class="num">4,892</td><td class="num">1.02%</td><td class="num">1,488원</td><td class="num">9.37%</td><td class="num">3.19%</td><td class="num">2.25%</td></tr>
-      <tr><td>ios_vd_990원(떴네요)2</td><td>상시용(990원)</td><td class="num">37,668원</td><td class="num">5,869</td><td class="num">0.83%</td><td class="num">769원</td><td class="num">1.76%</td><td class="num">1.05%</td><td class="num">0.61%</td></tr>
-      <tr><td>ios_vd_불편해(유통기한)2</td><td>고효율소재모음(1)</td><td class="num">6,907원</td><td class="num">509</td><td class="num">0.39%</td><td class="num">3,454원</td><td class="num">12.16%</td><td class="num">2.29%</td><td class="num">1.15%</td></tr>
-      <tr><td>ios_vd_리뷰(일쓰)1</td><td>고효율소재모음(1)</td><td class="num">5,615원</td><td class="num">477</td><td class="num">0.63%</td><td class="num">1,872원</td><td class="num">0.74%</td><td class="num">0.00%</td><td class="num">0.00%</td></tr>
-      <tr><td>ios_vd_신껍질디벨롭(배달음식과태료)2</td><td>고효율소재모음(1)</td><td class="num">5,120원</td><td class="num">463</td><td class="num">1.08%</td><td class="num">1,024원</td><td class="num">3.91%</td><td class="num">0.98%</td><td class="num">0.73%</td></tr>
+      <tr class="sec"><td colspan="7">iOS · 리타겟 앱트래픽 캠페인 전 소재</td></tr>
+      <tr class="hl"><td>ios_vd_이거알아(반찬통)3</td><td>이거알아</td><td class="num">3,834,254원</td><td class="num">224,956</td><td class="num win">6초</td><td class="num">1.76%</td><td class="num">967원</td></tr>
+      <tr><td>ios_vd_990원(특가)1_05.15</td><td>상시용(990원)</td><td class="num">757,968원</td><td class="num">89,227</td><td class="num">2초</td><td class="num">1.50%</td><td class="num">567원</td></tr>
+      <tr class="hl"><td>ios_vd_이거알아(배달)2</td><td>이거알아</td><td class="num">736,903원</td><td class="num">70,646</td><td class="num">2초</td><td class="num">1.11%</td><td class="num">938원</td></tr>
+      <tr><td>ios_vd_990원(특가)1_07.02</td><td>고효율소재모음(1)</td><td class="num">663,531원</td><td class="num">38,520</td><td class="num">5초</td><td class="num">1.43%</td><td class="num">1,202원</td></tr>
+      <tr class="hl"><td>ios_vd_이거알아(폐기물)1</td><td>이거알아</td><td class="num">368,099원</td><td class="num">32,521</td><td class="num">2초</td><td class="num win">1.84%</td><td class="num win">613원</td></tr>
+      <tr><td>ios_vd_990원(드디어)3</td><td>상시용(990원)</td><td class="num">244,196원</td><td class="num">29,404</td><td class="num lose">1초</td><td class="num">1.22%</td><td class="num">678원</td></tr>
+      <tr><td>ios_vd_짤(8장)1</td><td>고효율소재모음(1)</td><td class="num">74,390원</td><td class="num">4,892</td><td class="num">7초</td><td class="num">1.02%</td><td class="num">1,488원</td></tr>
+      <tr><td>ios_vd_990원(떴네요)2</td><td>상시용(990원)</td><td class="num">37,668원</td><td class="num">5,869</td><td class="num lose">1초</td><td class="num">0.83%</td><td class="num">769원</td></tr>
+      <tr><td>ios_vd_불편해(유통기한)2</td><td>고효율소재모음(1)</td><td class="num">6,907원</td><td class="num">509</td><td class="num">7초</td><td class="num lose">0.39%</td><td class="num lose">3,454원</td></tr>
+      <tr><td>ios_vd_리뷰(일쓰)1</td><td>고효율소재모음(1)</td><td class="num">5,615원</td><td class="num">477</td><td class="num">3초</td><td class="num">0.63%</td><td class="num">1,872원</td></tr>
+      <tr><td>ios_vd_신껍질디벨롭2</td><td>고효율소재모음(1)</td><td class="num">5,120원</td><td class="num">463</td><td class="num">3초</td><td class="num">1.08%</td><td class="num">1,024원</td></tr>
+      <tr class="sec"><td colspan="7">AOS · 리타겟 구매 — 이거알아 세트 + 비교군 세트</td></tr>
+      <tr class="hl"><td>aos_vd_이거알아(배달)2</td><td>이거알아</td><td class="num">129,794원</td><td class="num">4,987</td><td class="num win">8초</td><td class="num win">2.23%</td><td class="num win">1,169원</td></tr>
+      <tr class="hl"><td>aos_vd_이거알아(폐기물)1</td><td>이거알아</td><td class="num">105,277원</td><td class="num">4,078</td><td class="num">5초</td><td class="num">1.99%</td><td class="num">1,300원</td></tr>
+      <tr class="hl"><td>aos_vd_이거알아(반찬통)3</td><td>이거알아</td><td class="num">90,021원</td><td class="num">3,729</td><td class="num">5초</td><td class="num">1.69%</td><td class="num">1,429원</td></tr>
+      <tr><td>aos_vd_리타겟콘텐츠(분리수거)1</td><td>리타겟콘텐츠</td><td class="num">193,520원</td><td class="num">7,669</td><td class="num">5초</td><td class="num">1.63%</td><td class="num">1,548원</td></tr>
+      <tr><td>aos_vd_리타겟콘텐츠(자취생)2</td><td>리타겟콘텐츠</td><td class="num">166,709원</td><td class="num">8,750</td><td class="num">5초</td><td class="num lose">1.42%</td><td class="num">1,344원</td></tr>
+      <tr><td>aos_vd_리타겟콘텐츠(배달음식)4</td><td>리타겟콘텐츠</td><td class="num">89,148원</td><td class="num">3,889</td><td class="num">7초</td><td class="num">2.08%</td><td class="num">1,101원</td></tr>
+      <tr><td>aos_vd_리타겟콘텐츠(냉장고)5</td><td>리타겟콘텐츠</td><td class="num">42,681원</td><td class="num">1,807</td><td class="num lose">4초</td><td class="num">1.44%</td><td class="num lose">1,642원</td></tr>
+      <tr><td>aos_vd_리타겟콘텐츠(화장품)3</td><td>리타겟콘텐츠</td><td class="num">37,947원</td><td class="num">1,914</td><td class="num">7초</td><td class="num">1.46%</td><td class="num">1,355원</td></tr>
     </tbody>
   </table>
   </div>
   <ul class="find">
-    <li>대조군 8종 중 990원(특가) 2건이 광고비의 <b>79%</b>를 차지합니다. 소액 소재 4건은 노출 500 내외로 표본이 작습니다.</li>
+    <li>iOS 대조군 8종 중 990원(특가) 2건이 광고비의 79%를 차지합니다. 소액 소재 4건은 노출 500 내외로 표본이 작습니다.</li>
+    <li>영상 길이를 <code>30초시청 ÷ 완주</code> 비율로 추정하면 — <b>리타겟콘텐츠 5종은 전부 1.00으로 약 30초</b>, iOS 990원 3종은 2.9~5.5로 약 60초, 이거알아는 1.06~1.52로 30초 안팎입니다.</li>
   </ul>
 </div>
 
-<div class="sect"><h2>6. iOS 구매 CPA — 매체를 옮겨 재검증했다</h2><span class="tag">MMP 미측정 → 매체 이동 재검증</span></div>
+<div class="sect"><h2>5. 참고 — 매체 기준 구매</h2><span class="tag">판정에 쓰지 않았습니다</span></div>
 <div class="card pad">
   <ul class="find" style="margin-top:0">
-    <li>에어브릿지 iOS 전환은 소재명 기준 <b>2025년 11월부터</b> 집계됩니다. 이 소재는 25.05라 메타 구간 전체가 설치·가입·구매 0입니다(2025-05~10 iOS 63행 · 광고비 2,881만원 · 전환 0).</li>
-    <li>매체 기준 구매 360건은 근거로 쓰지 않았습니다.</li>
+    <li><b>구매 지표는 판정에서 뺐습니다.</b> 리타겟 캠페인의 매체 어트리뷰션은 자연 재구매를 끌어다 붙이는 과다집계가 크고(이거알아 AOS 세트 ROAS 4.4~6.4배), 세트마다 과다집계 정도도 달라 상대 비교조차 안전하지 않기 때문입니다.</li>
+    <li>MMP(에어브릿지)로 대체할 수도 없었습니다. <b>iOS는 소재명 기준 2025년 11월부터 집계</b>돼 이 소재(25.05) 구간이 전부 0이고, <b>AOS는 비교군 리타겟콘텐츠(25.02.07)가 리포트 시작일(2025-05-01) 이전</b> 집행이라 값이 없습니다.</li>
+    <li>참고치만 적어둡니다 — AOS 이거알아 구매 223건 · CPA 1,458원 / 리타겟콘텐츠 163건 · CPA 3,252원. iOS 이거알아 매체 기준 구매 360건.</li>
   </ul>
-  <div class="scroller" style="margin-top:14px">
+</div>
+
+<div class="sect"><h2>6. 틱톡으로 옮겼더니 구매가 따라왔다</h2><span class="tag">MMP 검증 가능 환경</span></div>
+<div class="card pad">
+  <div class="scroller">
   <table class="mtx">
-    <thead><tr><th>틱톡 재검증</th><th class="num">광고비</th><th class="num">설치</th><th class="num">가입</th><th class="num">구매</th><th class="num">CPI</th><th class="num">구매 CPA</th></tr></thead>
+    <thead><tr><th>틱톡</th><th class="num">광고비</th><th class="num">설치</th><th class="num">가입</th><th class="num">구매</th><th class="num">CPI</th><th class="num">구매 CPA</th></tr></thead>
     <tbody>
       <tr class="hl"><td>AOS_SPC_구매_26.04.29</td><td class="num">4,109,775원</td><td class="num">985</td><td class="num">543</td><td class="num win">114</td><td class="num win">4,138원</td><td class="num win">35,754원</td></tr>
       <tr><td>틱톡 계정 전체 평균</td><td class="num">264,884,029원</td><td class="num">26,678</td><td class="num">15,634</td><td class="num">5,364</td><td class="num">9,929원</td><td class="num">49,382원</td></tr>
@@ -221,7 +197,7 @@
   </table>
   </div>
   <ul class="find">
-    <li>에어브릿지 기준 구매 CPA <b>35,754원</b>으로 틱톡 계정 평균 대비 −27.6%, CPI는 −58%입니다.</li>
+    <li>같은 소재를 MMP가 정상 작동하는 틱톡 AOS로 옮기자, 에어브릿지 기준 <b>구매 CPA 35,754원(틱톡 계정 평균 대비 −27.6%) · CPI 4,138원(−58%)</b>이 나왔습니다.</li>
     <li>메타 iOS에서는 설치 없이 재구매만 만드는 소재였는데, 틱톡 AOS에서는 <b>설치 985건을 만드는 신규 획득 소재</b>로 작동했습니다.</li>
   </ul>
 </div>
@@ -230,42 +206,42 @@
 <div class="card pad">
   <dl class="fn">
     <dt>데이터 소스</dt>
-    <dd>Meta Marketing API, 광고계정 <code>act_225607806262602</code>(커버링), level=ad, 2025-01-01~2026-08-10 누적. 캠페인 <code>iOS_리타겟_앱트래픽(링크클릭)_25.05.15</code>(id 120227307472800514) 전 소재 11건. 보조 베이스라인은 소재명에 <code>sj1</code>을 포함하는 광고 300건(2025-09-01~2026-08-10).</dd>
+    <dd>Meta Marketing API, 광고계정 <code>act_225607806262602</code>(커버링), level=ad. iOS는 캠페인 <code>iOS_리타겟_앱트래픽(링크클릭)_25.05.15</code>(id 120227307472800514) 전 소재 11건, 2025-01-01~2026-08-10. AOS는 세트 <code>aos_purchase_re_vd_이거알아_25.05.16</code>(3건)와 <code>aos_purchase_re_vd_리타겟콘텐츠_25.02.07</code>(adset 120217941050370514, 5건), 둘 다 캠페인 <code>AOS_리타겟_구매_24.11.05</code> 소속, 2025-01-01~2025-12-31.</dd>
 
     <dt>지표 정의</dt>
-    <dd>CTR = 전체 클릭 / 노출, CPC = 광고비 / 전체 클릭. 훅률 = <code>video_play_actions</code> / 노출, 25~100% = <code>video_pNN_watched_actions</code> / 재생.</dd>
+    <dd><b>평균 재생 시간</b> = 매체 리포트의 '동영상 평균 재생 시간'을 재생 수로 가중평균. CTR = 전체 클릭 / 노출, CPC = 광고비 / 전체 클릭, CPM = 광고비 / 노출 × 1,000. 훅률 = <code>video_play_actions</code> / 노출.</dd>
+
+    <dt>평균 재생 시간의 정밀도</dt>
+    <dd>소재별 원값이 <b>정수(초)로 반올림</b>돼 제공됩니다. 가중평균 결과는 소수점 첫째 자리까지만 유효하며 ±0.5초 수준의 오차가 있습니다. iOS 이거알아 4.7초는 반찬통(6초, 재생의 68%)이 끌어올린 값입니다.</dd>
 
     <dt>원본 인사이트와 CTR이 다른 이유</dt>
     <dd>라이브 당시 인사이트는 '고유 링크 클릭' 기준(CTR 1.35% / CPC 1,113원)입니다. 이 문서는 대조군과 기준을 맞추기 위해 전체 클릭 기준으로 재계산했습니다.</dd>
 
-    <dt>길이 보정</dt>
-    <dd>이거알아 30초 / 대조군 약 1분 기준으로 환산했습니다. 소재별 정확한 길이는 매체 데이터에 없어 제작 기준을 사용했으므로 15초·30초 도달률은 근사치입니다.</dd>
-
-    <dt>AOS 비교군</dt>
-    <dd>세트 <code>aos_purchase_re_vd_리타겟콘텐츠_25.02.07</code>(adset 120217941050370514). 같은 캠페인 <code>AOS_리타겟_구매_24.11.05</code> 소속이라 모수·목적이 동일합니다. 양쪽 수치 모두 Meta 광고 리포트에서 직접 산출했습니다.</dd>
-
-    <dt>AOS 매체 어트리뷰션</dt>
-    <dd><b>AOS 구매 CPA는 매체 기준으로 통일했습니다.</b> 비교군 리타겟콘텐츠(25.02.07)가 에어브릿지 리포트 시작일(2025-05-01) 이전 집행이라 MMP 값이 없고, 한쪽만 MMP를 쓰면 비교가 성립하지 않습니다. 리타겟 캠페인의 매체 어트리뷰션은 자연 재구매를 끌어다 붙이는 과다집계가 커서(이거알아 세트 ROAS 4.4~6.4배) <b>1,458원·3,252원은 절대 CPA로 읽을 수 없습니다.</b> 같은 캠페인·같은 어트리뷰션끼리의 상대 비교만 근거로 삼았습니다. 이거알아 AOS(25.05.16)는 MMP 범위 안이지만 기준을 맞추기 위해 매체 값을 썼습니다.</dd>
+    <dt>구매 지표를 판정에서 뺀 이유</dt>
+    <dd>리타겟 매체 어트리뷰션의 과다집계, 그리고 iOS·AOS 양쪽 다 MMP 값이 없는 구간이라는 두 가지 이유입니다. 5번 항목에 상세히 적었습니다. <b>실험 설계 시점에 판정 지표가 측정 가능한 구간인지 확인하지 않은 것이 이 실험의 가장 큰 설계 결함입니다.</b></dd>
 
     <dt>나레이션 유무 판별</dt>
-    <dd>매체 데이터에 없습니다. 대조군 8종을 '자막 반복형이 아니다'로 분류한 근거는 제작 기록이며, 매체 지표로 검증한 것이 아닙니다.</dd>
+    <dd>매체 데이터에 없습니다. 대조군을 '나레이션 페이드형'으로 분류한 근거는 제작 기록이며, 매체 지표로 검증한 것이 아닙니다.</dd>
 
-    <dt>예산 편중</dt>
-    <dd>이거알아는 반찬통 1건이 세트 예산의 77.6%, 대조군은 990원(특가) 2건이 79%입니다. 두 합산 지표 모두 최대 지출 소재에 가까워집니다.</dd>
+    <dt>영상 길이 혼재</dt>
+    <dd><code>30초시청 ÷ 완주</code> 비율로 추정하면 iOS 대조군 8종은 길이가 섞여 있습니다(990원 3종 약 60초, 짤·신껍질 약 30초). 평균 재생 시간은 길이와 무관한 절대 초 단위라 이 혼재에 영향받지 않지만, 완주율·마일스톤 %는 비교가 성립하지 않아 판정에 쓰지 않았습니다.</dd>
 
-    <dt>iOS 전환 미측정 구간</dt>
-    <dd>에어브릿지 iOS 전환은 소재명 기준 2025년 11월부터 집계됩니다. 2025-05~10 iOS 63행(광고비 2,881만원) 전환 0. 매체 기준 구매 360건은 참고치로만 표기했습니다.</dd>
+    <dt>표본</dt>
+    <dd>AOS는 이거알아 세트가 10일 만에 OFF돼 광고비 32.5만원·노출 1.3만, 비교군은 53.0만원·노출 2.4만으로 양쪽 다 규모가 작습니다. iOS는 이거알아 494만원·노출 32.8만으로 충분합니다.</dd>
+
+    <dt>AOS 조기 종료</dt>
+    <dd>AOS 세트는 라이브 10일 만에 OFF됐습니다. 리타겟 AOS는 혜택이 초반에 나와야 하는데 이 소재는 비밀 쿠폰이 영상 마지막에 등장하는 구성이었습니다. 이후 iOS는 혜택 후반 / AOS는 혜택 초반으로 나눠 제작하는 기준을 세웠습니다.</dd>
 
     <dt>틱톡 직접 비교 불가</dt>
-    <dd>메타 25.05 / 틱톡 26.04 라이브로 시장 상황이 다릅니다. 두 매체 수치는 '같은 소재의 역할 차이'로만 읽어야 합니다. 틱톡 iOS는 에어브릿지 기준 구매 5건으로 표본이 작아 본문에서 제외했습니다.</dd>
+    <dd>메타 25.05 / 틱톡 26.04 라이브로 시장 상황이 다릅니다. '같은 소재의 역할 차이'로만 읽어야 합니다. 틱톡 iOS는 에어브릿지 기준 구매 5건으로 표본이 작아 제외했습니다.</dd>
 
     <dt>재편성 시도</dt>
-    <dd>이후 <code>ios_purchase_re_vd_고효율소재모음(2)</code>(광고비 18,619원)와 <code>ios_purchase_s.gyeonggi_vd_고효율소재모음(4)</code>(10,166원)에 편성됐지만 예산이 붙지 않아 세트 내 대조로 쓸 수 없었습니다.</dd>
+    <dd>이후 <code>ios_purchase_re_vd_고효율소재모음(2)</code>(18,619원)와 <code>ios_purchase_s.gyeonggi_vd_고효율소재모음(4)</code>(10,166원)에 편성됐지만 예산이 붙지 않아 세트 내 대조로 쓸 수 없었습니다.</dd>
   </dl>
 </div>
 
 <div class="foot">
-  <span class="nb">⚠️ 공개용 자료 — 반응 지표는 Meta 리포트, 전환·CPA는 에어브릿지(MMP) 기준입니다.</span>
+  <span class="nb">⚠️ 공개용 자료 — 판정 지표는 전부 Meta 리포트 기준입니다. 틱톡 전환만 에어브릿지(MMP) 기준입니다.</span>
   <a class="home" href="../data-room.html">← 박성진 데이터룸</a>
 </div>
 

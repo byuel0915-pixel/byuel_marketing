@@ -1,0 +1,85 @@
+<!doctype html><html lang="ko"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>이거알아 — 영상 시청 시간과 클릭 효율 | 박성진</title>
+<meta name="description" content="나레이션 없는 자막 반복형이 기존 리타겟 소재보다 영상 시청 시간을 오래 유지하는지, 그 결과 CTR·CPC가 따라오는지 AOS·iOS 각각 검증">
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+  .wrap{padding:14px 16px}
+  .ct{display:flex;align-items:baseline;justify-content:space-between;gap:9px;margin-bottom:4px}
+  .ct h3{margin:0;font-size:15px;font-weight:800;letter-spacing:-.015em}
+  .ct .dir{font-size:11px;font-weight:700;color:var(--ink-3);white-space:nowrap}
+  .grp{margin:0 0 18px}
+  .bar-row{grid-template-columns:150px 1fr;gap:10px;margin:5px 0}
+  .bar-row .name{font-size:11.5px}
+  .bar-track{height:27px}
+  .bar-fill{font-size:12.5px;padding-right:10px}
+  .lead{display:flex;align-items:center;gap:8px;margin-bottom:12px;padding:9px 12px;
+    background:var(--green-soft);border-radius:9px;font-size:13px;font-weight:700;color:var(--green)}
+  .lead .tag{font-size:11px;font-weight:800;background:var(--green);color:#fff;padding:2px 8px;border-radius:5px}
+  .hyp{font-size:12.5px;color:var(--ink-2);border-left:3px solid var(--line);padding-left:11px;margin:0 0 16px}
+  .osrow{display:flex;align-items:center;gap:7px;font-size:11px;font-weight:800;color:var(--ink-3);margin:10px 0 2px}
+  .osrow::after{content:'';flex:1;height:1px;background:var(--line)}
+  .vd{display:inline-block;font-size:10.5px;font-weight:800;padding:2px 7px;border-radius:5px;margin-left:7px;vertical-align:middle}
+  .vd.o{background:var(--green-soft);color:var(--green)}
+  .vd.x{background:var(--red-soft);color:var(--red)}
+  .verdict{width:100%;border-collapse:separate;border-spacing:0;font-size:12.5px;margin-top:4px}
+  .verdict th,.verdict td{padding:8px 10px;text-align:center;border-bottom:1px solid var(--line)}
+  .verdict th{font-size:11.5px;color:var(--ink-3);font-weight:700}
+  .verdict td:first-child,.verdict th:first-child{text-align:left;font-weight:700}
+  .verdict .o{color:var(--green);font-weight:800}
+  .verdict .x{color:var(--red);font-weight:800}
+  .note{margin-top:12px}
+  @media(max-width:520px){.bar-row{grid-template-columns:106px 1fr;gap:7px}.bar-row .name{font-size:10.5px}.ct{flex-direction:column;align-items:flex-start;gap:2px}}
+</style>
+</head><body><div class="wrap">
+<div class="card pad chart">
+
+  <div class="lead"><span class="tag">가설 참</span>시청 시간은 양쪽 다 길어졌고, CTR도 따라왔습니다</div>
+  <p class="hyp"><b>원가설</b> — 나레이션 없이 자막으로 반복하는 소재가 기존 리타겟 소재보다 <b>영상 시청 시간을 더 오래 유지할 것이고, 그 결과 CTR·CPC도 따라올 것이다.</b><br>비교군은 OS별로 <b>같은 캠페인 안의 기존 세트</b>입니다 — AOS는 <code>리타겟콘텐츠_25.02.07</code>(5종), iOS는 기존 포맷 8종.</p>
+
+  <div class="grp">
+    <div class="ct"><h3>평균 재생 시간<span class="vd o">참</span></h3><span class="dir">길수록 좋음 · 매체 리포트</span></div>
+    <div class="osrow">iOS · 리타겟 앱트래픽</div>
+    <div class="bar-row"><div class="name">이거알아 3종</div><div class="bar-track"><div class="bar-fill bf-green" style="width:75.8%">4.7초</div></div></div>
+    <div class="bar-row"><div class="name">기존 포맷 8종</div><div class="bar-track"><div class="bar-fill bf-red" style="width:43.5%">2.7초</div></div></div>
+    <p class="note" style="margin-top:2px"><b>1.77배</b></p>
+    <div class="osrow">AOS · 리타겟 구매</div>
+    <div class="bar-row"><div class="name">이거알아 3종</div><div class="bar-track"><div class="bar-fill bf-green" style="width:100%">6.2초</div></div></div>
+    <div class="bar-row"><div class="name">리타겟콘텐츠 5종</div><div class="bar-track"><div class="bar-fill bf-gray" style="width:87.1%">5.4초</div></div></div>
+    <p class="note" style="margin-top:2px"><b>1.15배</b> — 방향은 같지만 폭이 작습니다</p>
+  </div>
+
+  <div class="grp">
+    <div class="ct"><h3>CTR<span class="vd o">참</span></h3><span class="dir">높을수록 좋음 · 전체 클릭 기준</span></div>
+    <div class="osrow">iOS</div>
+    <div class="bar-row"><div class="name">이거알아</div><div class="bar-track"><div class="bar-fill bf-green" style="width:81.9%">1.63%</div></div></div>
+    <div class="bar-row"><div class="name">기존 포맷 8종</div><div class="bar-track"><div class="bar-fill bf-gray" style="width:69.8%">1.39%</div></div></div>
+    <div class="osrow">AOS</div>
+    <div class="bar-row"><div class="name">이거알아</div><div class="bar-track"><div class="bar-fill bf-green" style="width:100%">1.99%</div></div></div>
+    <div class="bar-row"><div class="name">리타겟콘텐츠</div><div class="bar-track"><div class="bar-fill bf-gray" style="width:80.4%">1.60%</div></div></div>
+    <p class="note" style="margin-top:2px">iOS <b>1.17배</b> · AOS <b>1.25배</b> — 양쪽 다 올랐습니다</p>
+  </div>
+
+  <div class="grp">
+    <div class="ct"><h3>CPC<span class="vd x">AOS만 참</span></h3><span class="dir">낮을수록 좋음</span></div>
+    <div class="osrow">iOS — 오히려 비싸졌습니다</div>
+    <div class="bar-row"><div class="name">기존 포맷 8종</div><div class="bar-track"><div class="bar-fill bf-green" style="width:55.1%">761원</div></div></div>
+    <div class="bar-row"><div class="name">이거알아</div><div class="bar-track"><div class="bar-fill bf-red" style="width:66.9%">923원</div></div></div>
+    <div class="osrow">AOS — 싸졌습니다</div>
+    <div class="bar-row"><div class="name">이거알아</div><div class="bar-track"><div class="bar-fill bf-green" style="width:92.4%">1,275원</div></div></div>
+    <div class="bar-row"><div class="name">리타겟콘텐츠</div><div class="bar-track"><div class="bar-fill bf-gray" style="width:100%">1,380원</div></div></div>
+    <p class="note" style="margin-top:2px">iOS <b>+21.3%</b> · AOS <b>−7.6%</b></p>
+  </div>
+
+  <table class="verdict">
+    <thead><tr><th>판정</th><th>평균 재생 시간</th><th>CTR</th><th>CPC</th></tr></thead>
+    <tbody>
+      <tr><td>iOS</td><td class="o">참 1.77배</td><td class="o">참 1.17배</td><td class="x">거짓 +21.3%</td></tr>
+      <tr><td>AOS</td><td class="o">참 1.15배</td><td class="o">참 1.25배</td><td class="o">참 −7.6%</td></tr>
+    </tbody>
+  </table>
+
+  <p class="note"><b>가설의 앞부분은 양쪽 다 맞았습니다.</b> 시청 시간이 길어졌고 CTR도 따라왔습니다. <b>다만 CPC는 iOS에서 깨졌습니다</b> — 시청 시간이 늘어도 클릭 단가까지 자동으로 싸지지는 않았습니다. <a href="thisknow-retarget.html" style="font-weight:700;color:var(--blue);text-decoration:none">전체 데이터 →</a></p>
+  <p class="note" style="font-size:11px">※ 평균 재생 시간은 매체 리포트의 '동영상 평균 재생 시간'을 재생 수로 가중평균한 값입니다. 소재별 원값이 정수(초)로 반올림돼 있어 소수점 첫째 자리까지만 유효합니다. 훅률은 iOS 82.5%로 양쪽 동일, AOS는 89.3% vs 83.3%입니다.</p>
+</div>
+</div></body></html>
