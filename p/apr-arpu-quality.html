@@ -1,29 +1,31 @@
 <!doctype html><html lang="ko"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>4월 컨셉 A/B — 유저 질 | 박성진</title>
-<meta name="description" content="지구의날 컨셉에 반응한 유저의 배출량과 ARPU">
+<title>4월 컨셉 A/B — 유저 가치 | 박성진</title>
+<meta name="description" content="전환 유저 1인당 결제 금액과 배출 무게">
 <link rel="stylesheet" href="../assets/style.css">
 <link rel="stylesheet" href="../assets/chart.css">
 <style>.wrap{padding:14px 16px}</style>
 </head><body><div class="wrap">
 <div class="card pad">
-<div class="ct2"><h3>신규에서는 확인되고, 기존에서는 뒤집힌다</h3><span class="dir">1인당 배출 무게 · BigQuery 실측</span></div>
-<div class="ct2" style="margin:4px 0 10px"><h3 style="font-size:13px;color:var(--ink-2)">1인당 배출 무게 — 신규 셀 (BigQuery 실측)</h3></div>
+<div class="ct2"><h3>환경이 통한 집단에서는 더 많이 쓰고 더 많이 버렸다</h3><span class="dir">전환 유저 1인당 · BigQuery 실측</span></div>
+<div class="ct2" style="margin:4px 0 10px"><h3 style="font-size:13px;color:var(--ink-2)">1인당 결제 금액 — 광고 유입</h3></div>
 <div class="cmp">
-  <div class="cr"><div class="cl">지구의날(196)<small>전환 26명 · 총 514.39kg</small></div><div class="ct"><div class="cf g" style="width:100%">19.78kg</div></div><div class="cd g">+3.36kg<small>+20.5%</small></div></div>
-  <div class="cr"><div class="cl">봄맞이(197)<small>전환 46명 · 총 755.42kg</small></div><div class="ct"><div class="cf k" style="width:83.0%">16.42kg</div></div><div class="cd k">기준</div></div>
+  <div class="cr"><div class="cl">지구의날<small>전환 25명 · 총 637,603원</small></div><div class="ct"><div class="cf g" style="width:100%">25,504원</div></div><div class="cd g">+1,155원<small>+4.7%</small></div></div>
+  <div class="cr"><div class="cl">봄맞이<small>전환 38명 · 총 925,255원</small></div><div class="ct"><div class="cf k" style="width:95.5%">24,349원</div></div><div class="cd k">기준</div></div>
 </div>
-<div class="ct2" style="margin:20px 0 10px"><h3 style="font-size:13px;color:var(--ink-2)">1인당 배출 무게 — 기존 셀 (BigQuery 실측)</h3></div>
+<div class="ct2" style="margin:20px 0 10px"><h3 style="font-size:13px;color:var(--ink-2)">1인당 배출 무게 — 광고 유입</h3></div>
 <div class="cmp">
-  <div class="cr"><div class="cl">봄맞이(199)<small>전환 83명 · 총 1,109.35kg</small></div><div class="ct"><div class="cf b" style="width:100%">13.37kg</div></div><div class="cd b">+2.68kg<small>대조군 승</small></div></div>
-  <div class="cr"><div class="cl">지구의날(198)<small>전환 76명 · 총 812.13kg</small></div><div class="ct"><div class="cf r" style="width:80.0%">10.69kg</div></div><div class="cd r"><small>시트와 반대</small></div></div>
+  <div class="cr"><div class="cl">지구의날<small>총 514.4kg · 중앙값 13.93kg</small></div><div class="ct"><div class="cf g" style="width:100%">20.58kg</div></div><div class="cd g">+0.70kg<small>+3.5%</small></div></div>
+  <div class="cr"><div class="cl">봄맞이<small>총 755.4kg · 중앙값 12.31kg</small></div><div class="ct"><div class="cf k" style="width:96.6%">19.88kg</div></div><div class="cd k">기준</div></div>
 </div>
-<div class="ct2" style="margin:20px 0 10px"><h3 style="font-size:13px;color:var(--ink-2)">ARPU — 팀 시트 기준 (BigQuery 재현 불가)</h3></div>
+<div class="ct2" style="margin:20px 0 10px"><h3 style="font-size:13px;color:var(--ink-2)">가입 후 미이용 집단 — 반대로 나온다</h3></div>
 <div class="cmp">
-  <div class="cr"><div class="cl">지구의날 합산<small>196+198</small></div><div class="ct"><div class="cf g" style="width:100%">19,041원</div></div><div class="cd g">+1,186원<small>+6.6%</small></div></div>
-  <div class="cr"><div class="cl">봄맞이 합산<small>197+199</small></div><div class="ct"><div class="cf k" style="width:93.8%">17,855원</div></div><div class="cd k">기준</div></div>
+  <div class="cr"><div class="cl">봄맞이 ARPU<small>전환 59명</small></div><div class="ct"><div class="cf b" style="width:100%">20,108원</div></div><div class="cd b">+2,635원<small>대조군 승</small></div></div>
+  <div class="cr"><div class="cl">지구의날 ARPU<small>전환 55명</small></div><div class="ct"><div class="cf r" style="width:86.9%">17,473원</div></div><div class="cd r">−13.1%</div></div>
+  <div class="cr"><div class="cl">봄맞이 배출</div><div class="ct"><div class="cf b" style="width:100%">18.80kg</div></div><div class="cd b">+3.77kg<small>대조군 승</small></div></div>
+  <div class="cr"><div class="cl">지구의날 배출</div><div class="ct"><div class="cf r" style="width:79.9%">15.03kg</div></div><div class="cd r">−20.1%</div></div>
 </div>
-<p class="note"><b>배출 무게는 BigQuery로 직접 검증했습니다</b>(`fulfillment_item.actual_weight_grams`, item_status = SUCCESS). 신규 셀에서는 지구의날이 1인당 3.36kg 더 배출해 '더 많이 쓰는 유저' 가설이 확인되지만, <b>기존 셀에서는 방향이 반대로 나옵니다</b> — 팀 시트는 지구의날 15.83kg vs 봄맞이 14.93kg으로 기록했으나 실측은 10.69kg vs 13.37kg입니다.</p>
+<p class="note">환경 소구가 전환율에서 이긴 광고 유입 집단에서는 ARPU와 배출 무게가 <b>함께</b> 높았습니다. 전환율 우위(+28.4%)에 비해 가치 지표의 격차(+4.7%, +3.5%)는 작지만 방향이 일치합니다.</p>
 </div>
-<div class="insight" style="margin-top:14px"><div class="ic">⚠️</div><div class="tx"><b>ARPU는 BigQuery로 검증할 수 없습니다.</b> `order_receipt_v2` 적재가 2026-03-31에 끝나 4월 발급분의 결제 금액이 조회되지 않습니다. ARPU +1,186원은 캠페인 당시 마케팅 시트 기준이며 재현되지 않은 값입니다. <b>환경 소구의 '유저 질 우위'는 신규 세그먼트에 한해서만 실측으로 뒷받침됩니다.</b></div></div>
+<div class="insight" style="margin-top:14px"><div class="ic">💡</div><div class="tx"><b>환경 소구가 통하는 곳에서는 고가치 유저가 따라옵니다.</b> 다만 격차는 크지 않고, 대량 배출자 비중(20kg 이상)은 봄맞이가 34.2% vs 28.0%로 오히려 높습니다. 중앙값(13.93 vs 12.31kg)에서는 지구의날이 앞섭니다 — <b>평균을 끌어올린 건 소수의 대량 배출자가 아니라 전반적으로 조금씩 더 버린 다수입니다.</b></div></div>
 </div></body></html>

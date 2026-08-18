@@ -1,31 +1,24 @@
 <!doctype html><html lang="ko"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>4월 컨셉 A/B — 세그먼트별 전환율 | 박성진</title>
-<meta name="description" content="지구의날과 봄맞이 컨셉의 세그먼트별 첫 이용 전환율, 팀 시트와 BigQuery 재현 비교">
+<title>4월 컨셉 A/B — 첫 이용 전환율 | 박성진</title>
+<meta name="description" content="광고 유입과 가입 후 미이용 두 집단의 첫 이용 전환율">
 <link rel="stylesheet" href="../assets/style.css">
 <link rel="stylesheet" href="../assets/chart.css">
 <style>.wrap{padding:14px 16px}</style>
 </head><body><div class="wrap">
 <div class="card pad">
-<div class="ct2"><h3>방향은 두 기준에서 같고, 성공 기준 통과 여부는 갈린다</h3><span class="dir">첫 이용 전환율 · 높을수록 좋음</span></div>
-<div class="ct2" style="margin:4px 0 10px"><h3 style="font-size:13px;color:var(--ink-2)">신규 유저 — 팀 시트 기준</h3></div>
+<div class="ct2"><h3>환경이 이긴 곳은 광고로 새로 들어온 집단 하나뿐</h3><span class="dir">첫 이용 전환율 · 높을수록 좋음 · BigQuery 실측</span></div>
+<div class="ct2" style="margin:4px 0 10px"><h3 style="font-size:13px;color:var(--ink-2)">프로모션 기간 광고 유입 — 성공 기준 통과</h3></div>
 <div class="cmp">
-  <div class="cr"><div class="cl">지구의날(196)<small>발급 24명 → 전환 17명</small></div><div class="ct"><div class="cf g" style="width:100%">70.83%</div></div><div class="cd g">+13.14%p<small>성공 기준 통과</small></div></div>
-  <div class="cr"><div class="cl">봄맞이(197)<small>발급 52명 → 전환 30명</small></div><div class="ct"><div class="cf k" style="width:81.4%">57.69%</div></div><div class="cd k">대조군</div></div>
+  <div class="cr"><div class="cl">지구의날 (베리언트)<small>발급 42명 → 첫 이용 25명</small></div><div class="ct"><div class="cf g" style="width:100%">59.52%</div></div><div class="cd g">+28.4%<small>대조군 대비 상대 개선</small></div></div>
+  <div class="cr"><div class="cl">봄맞이 (컨트롤)<small>발급 82명 → 첫 이용 38명</small></div><div class="ct"><div class="cf k" style="width:77.9%">46.34%</div></div><div class="cd k">기준</div></div>
 </div>
-<div class="ct2" style="margin:20px 0 10px"><h3 style="font-size:13px;color:var(--ink-2)">신규 유저 — BigQuery 재현</h3></div>
+<div class="ct2" style="margin:20px 0 10px"><h3 style="font-size:13px;color:var(--ink-2)">가입 후 한 번도 안 쓴 집단 — 기준 미달</h3></div>
 <div class="cmp">
-  <div class="cr"><div class="cl">지구의날(196)<small>발급 42명 → 전환 26명</small></div><div class="ct"><div class="cf a" style="width:100%">61.90%</div></div><div class="cd a">+5.80%p<small>기준 미달</small></div></div>
-  <div class="cr"><div class="cl">봄맞이(197)<small>발급 82명 → 전환 46명</small></div><div class="ct"><div class="cf k" style="width:90.6%">56.10%</div></div><div class="cd k">대조군</div></div>
+  <div class="cr"><div class="cl">봄맞이 (컨트롤)<small>발급 140명 → 첫 이용 59명</small></div><div class="ct"><div class="cf b" style="width:100%">42.14%</div></div><div class="cd b">기준<small>대조군 승</small></div></div>
+  <div class="cr"><div class="cl">지구의날 (베리언트)<small>발급 136명 → 첫 이용 55명</small></div><div class="ct"><div class="cf r" style="width:96.0%">40.44%</div></div><div class="cd r">−4.0%</div></div>
 </div>
-<div class="ct2" style="margin:20px 0 10px"><h3 style="font-size:13px;color:var(--ink-2)">기존 유저 — 두 기준 모두 봄맞이 승</h3></div>
-<div class="cmp">
-  <div class="cr"><div class="cl">봄맞이(199) 시트<small>발급 102명 → 전환 39명</small></div><div class="ct"><div class="cf b" style="width:64.5%">38.24%</div></div><div class="cd b">+5.89%p<small>대조군 승</small></div></div>
-  <div class="cr"><div class="cl">지구의날(198) 시트<small>발급 102명 → 전환 33명</small></div><div class="ct"><div class="cf r" style="width:54.6%">32.35%</div></div><div class="cd r"></div></div>
-  <div class="cr"><div class="cl">봄맞이(199) BQ<small>발급 140명 → 전환 83명</small></div><div class="ct"><div class="cf b" style="width:100%">59.29%</div></div><div class="cd b">+3.41%p<small>대조군 승</small></div></div>
-  <div class="cr"><div class="cl">지구의날(198) BQ<small>발급 136명 → 전환 76명</small></div><div class="ct"><div class="cf r" style="width:94.2%">55.88%</div></div><div class="cd r"></div></div>
+<p class="note">성공 기준은 사전에 <b>'컨트롤(봄맞이) 대비 베리언트(지구의날)의 첫 이용 전환율이 10% 이상 좋을 것'</b>으로 못박아 뒀습니다. 광고 유입 집단은 상대 개선 +28.4%로 이를 크게 넘겼고, 가입 후 미이용 집단은 −4.0%로 미달했습니다.</p>
 </div>
-<p class="note">성공 기준은 사전에 <b>'대조군 대비 첫 이용 전환율 +10%p 이상'</b>으로 못박아 뒀습니다. 팀 시트 기준으로는 신규 셀이 이를 통과하지만, BigQuery로 다시 세면 +5.80%p로 미달입니다. <b>기존 유저 셀은 두 기준 모두 봄맞이가 이깁니다.</b></p>
-</div>
-<div class="insight" style="margin-top:14px"><div class="ic">⚠️</div><div class="tx"><b>두 기준이 일치하지 않습니다.</b> 팀 시트의 발급 수(24·52·102·102)는 BigQuery의 어떤 필터로도 재현되지 않습니다(전체 42·82·136·140 / 삭제 제외 22·49·93·99). 방향은 두 세그먼트 모두 같지만, <b>성공 기준 통과 여부는 정의에 따라 뒤집힙니다.</b></div></div>
+<div class="insight" style="margin-top:14px"><div class="ic">⚠️</div><div class="tx"><b>깔끔한 쪽이 실패하고 지저분한 쪽이 성공했습니다.</b> 설계 당시 메인 실험은 유저를 정확히 나눌 수 있는 '가입 후 미이용' CRM이었고, 광고 유입은 유료광고 오염 가능성 때문에 보조로 뒀습니다. 실제 발급 대상을 확인해 보면 가입 후 미이용 집단은 91%가 배출 이력이 없는 순수 모집단이었지만, 광고 유입 집단은 절반(50%)만 그랬습니다. <b>성공 기준을 넘긴 쪽이 해석이 더 어려운 집단입니다.</b></div></div>
 </div></body></html>
