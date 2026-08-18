@@ -1,44 +1,29 @@
 <!doctype html><html lang="ko"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>많이 버리면 할인 — 혜택 구조 | 박성진</title>
-<meta name="description" content="혜택 대상은 절반으로 줄었는데 객단가는 오른 구조">
+<title>무게 허들 상향 — 재원 구조 | 박성진</title>
+<meta name="description" content="혜택 대상을 줄이고 단가를 키운 재원 재배치 구조">
 <link rel="stylesheet" href="../assets/style.css">
-<style>
-  .wrap{padding:14px 16px}
-  .tblwrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
-  .mtx.narrow th,.mtx.narrow td{padding:9px 11px;font-size:13px;white-space:nowrap}
-  .mtx tr.tot td{font-weight:800;border-top:2px solid var(--ink);background:#FAFBFD}
-  .mtx .sub{display:block;font-size:11px;color:var(--ink-3);font-weight:600;margin-top:2px}
-  .ct{display:flex;align-items:baseline;gap:9px;margin-bottom:12px}
-  .ct h3{margin:0;font-size:14.5px;font-weight:800;letter-spacing:-.015em}
-  .ct .dir{font-size:11.5px;font-weight:700;color:var(--ink-3)}
-  .bar-row{grid-template-columns:112px 1fr;gap:11px;margin:9px 0}
-  .bar-row .name{font-size:12px}
-  .bar-track{height:30px}
-  @media(max-width:520px){.bar-row{grid-template-columns:88px 1fr;gap:8px}.bar-row .name{font-size:11px}}
-</style>
+<link rel="stylesheet" href="../assets/chart.css">
+<style>.wrap{padding:14px 16px}</style>
 </head><body><div class="wrap">
-
 <div class="card pad">
-  <div class="tblwrap">
-  <table class="mtx narrow">
-    <thead><tr><th>구분</th><th>할인 기준</th><th>혜택 대상 주문</th><th>혜택 대상 유저</th><th>주문당 할인 원가</th></tr></thead>
-    <tbody>
-      <tr><td>프로모션 전<span class="sub">07.17~21</span></td><td>8kg 초과 · 500원</td><td>29.89%</td><td>31.72%</td><td>약 149원</td></tr>
-      <tr><td>프로모션 중<span class="sub">07.24~28</span></td><td>12kg 초과 · 1,000원</td><td class="win">16.54%</td><td class="win">17.56%</td><td>약 165원</td></tr>
-    </tbody>
-  </table>
-  </div>
+<div class="ct2"><h3>혜택 대상은 절반, 원가는 16원만 늘었다</h3><span class="dir">같은 재원으로 더 강한 앵커</span></div>
+<div class="ct2" style="margin:4px 0 10px"><h3 style="font-size:13px;color:var(--ink-2)">혜택 대상 유저 비중</h3></div>
+<div class="cmp">
+  <div class="cr"><div class="cl">8kg 초과 · 500원<small>프로모션 전 07.17~21</small></div><div class="ct"><div class="cf a" style="width:100%">31.72%</div></div><div class="cd k">기준</div></div>
+  <div class="cr"><div class="cl">12kg 초과 · 1,000원<small>프로모션 중 07.24~28</small></div><div class="ct"><div class="cf b" style="width:55.4%">17.56%</div></div><div class="cd b">−14.16%p<small>절반으로 축소</small></div></div>
 </div>
-
-<div class="grid" style="grid-template-columns:repeat(3,1fr);margin-top:14px">
-  <div class="stat"><div class="lbl">혜택 대상 유저</div><div class="num">31.7<span class="u">% → 17.6%</span></div><div class="cap">절반으로 축소</div></div>
-  <div class="stat"><div class="lbl">주문당 할인 원가</div><div class="num">149<span class="u">원 → 165원</span></div><div class="cap">+16원</div></div>
-  <div class="stat"><div class="lbl">객단가</div><div class="num g">+499<span class="u">원</span></div><div class="cap">11,084 → 11,583원</div></div>
+<div class="ct2" style="margin:20px 0 10px"><h3 style="font-size:13px;color:var(--ink-2)">주문당 할인 원가 — 회사가 실제로 쓴 돈</h3></div>
+<div class="cmp">
+  <div class="cr"><div class="cl">8kg 초과 · 500원</div><div class="ct"><div class="cf k" style="width:90.3%">약 149원</div></div><div class="cd k">기준</div></div>
+  <div class="cr"><div class="cl">12kg 초과 · 1,000원<small>할인 단가는 2배</small></div><div class="ct"><div class="cf a" style="width:100%">약 165원</div></div><div class="cd k">+16원<small>사실상 동결</small></div></div>
 </div>
-
-<div class="insight" style="margin-top:14px">
-  <div class="ic">💡</div>
-  <div class="tx"><b>할인 단가를 2배로 올렸는데 주문당 할인 원가는 16원만 늘었습니다.</b> 대상을 절반으로 줄이면서 단가를 키웠기 때문입니다. 재원을 거의 그대로 유지한 채 객단가만 499원 올렸고, '허들이 높아지면 참여가 줄어 객단가가 떨어진다'는 우려는 반증됐습니다.</div>
+<div class="ct2" style="margin:20px 0 10px"><h3 style="font-size:13px;color:var(--ink-2)">그 결과 객단가</h3></div>
+<div class="cmp">
+  <div class="cr"><div class="cl">프로모션 전</div><div class="ct"><div class="cf k" style="width:95.7%">11,084원</div></div><div class="cd k">기준</div></div>
+  <div class="cr"><div class="cl">프로모션 중</div><div class="ct"><div class="cf g" style="width:100%">11,583원</div></div><div class="cd g">+499원<small>+4.50%</small></div></div>
 </div>
+<p class="note">혜택 대상 주문 비중도 29.89% → 16.54%로 줄었습니다.</p>
+</div>
+<div class="insight" style="margin-top:14px"><div class="ic">💡</div><div class="tx"><b>할인 단가를 2배로 올렸는데 주문당 할인 원가는 16원만 늘었습니다.</b> 대상을 절반으로 줄이면서 단가를 키웠기 때문입니다. 재원을 거의 그대로 유지한 채 객단가만 499원 올렸습니다.</div></div>
 </div></body></html>
