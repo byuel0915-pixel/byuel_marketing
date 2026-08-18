@@ -1,29 +1,31 @@
 <!doctype html><html lang="ko"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>4월 컨셉 A/B — 세그먼트별 전환율 | 박성진</title>
-<meta name="description" content="지구의날과 봄맞이 컨셉의 세그먼트별 첫 이용 전환율">
+<meta name="description" content="지구의날과 봄맞이 컨셉의 세그먼트별 첫 이용 전환율, 팀 시트와 BigQuery 재현 비교">
 <link rel="stylesheet" href="../assets/style.css">
 <link rel="stylesheet" href="../assets/chart.css">
 <style>.wrap{padding:14px 16px}</style>
 </head><body><div class="wrap">
 <div class="card pad">
-<div class="ct2"><h3>성공 기준을 넘긴 건 신규 세그먼트 하나뿐</h3><span class="dir">쿠폰 발급 → 첫 이용 전환율 · 높을수록 좋음</span></div>
-<div class="ct2" style="margin:4px 0 10px"><h3 style="font-size:13px;color:var(--ink-2)">신규 유저 — 광고로 처음 들어온 사람</h3></div>
+<div class="ct2"><h3>방향은 두 기준에서 같고, 성공 기준 통과 여부는 갈린다</h3><span class="dir">첫 이용 전환율 · 높을수록 좋음</span></div>
+<div class="ct2" style="margin:4px 0 10px"><h3 style="font-size:13px;color:var(--ink-2)">신규 유저 — 팀 시트 기준</h3></div>
 <div class="cmp">
-  <div class="cr"><div class="cl">지구의날(196)<small>발급 24명 → 전환 17명</small></div><div class="ct"><div class="cf g" style="width:100%">70.83%</div></div><div class="cd g">+13.14%p<small>성공 기준 +10%p 통과</small></div></div>
+  <div class="cr"><div class="cl">지구의날(196)<small>발급 24명 → 전환 17명</small></div><div class="ct"><div class="cf g" style="width:100%">70.83%</div></div><div class="cd g">+13.14%p<small>성공 기준 통과</small></div></div>
   <div class="cr"><div class="cl">봄맞이(197)<small>발급 52명 → 전환 30명</small></div><div class="ct"><div class="cf k" style="width:81.4%">57.69%</div></div><div class="cd k">대조군</div></div>
 </div>
-<div class="ct2" style="margin:20px 0 10px"><h3 style="font-size:13px;color:var(--ink-2)">기존 유저 — 가입만 하고 안 쓴 사람 (발급 수 동일)</h3></div>
+<div class="ct2" style="margin:20px 0 10px"><h3 style="font-size:13px;color:var(--ink-2)">신규 유저 — BigQuery 재현</h3></div>
 <div class="cmp">
-  <div class="cr"><div class="cl">봄맞이(199)<small>발급 102명 → 전환 39명</small></div><div class="ct"><div class="cf b" style="width:100%">38.24%</div></div><div class="cd b">+5.89%p<small>대조군 승</small></div></div>
-  <div class="cr"><div class="cl">지구의날(198)<small>발급 102명 → 전환 33명</small></div><div class="ct"><div class="cf r" style="width:84.6%">32.35%</div></div><div class="cd r"></div></div>
+  <div class="cr"><div class="cl">지구의날(196)<small>발급 42명 → 전환 26명</small></div><div class="ct"><div class="cf a" style="width:100%">61.90%</div></div><div class="cd a">+5.80%p<small>기준 미달</small></div></div>
+  <div class="cr"><div class="cl">봄맞이(197)<small>발급 82명 → 전환 46명</small></div><div class="ct"><div class="cf k" style="width:90.6%">56.10%</div></div><div class="cd k">대조군</div></div>
 </div>
-<div class="ct2" style="margin:20px 0 10px"><h3 style="font-size:13px;color:var(--ink-2)">종합</h3></div>
+<div class="ct2" style="margin:20px 0 10px"><h3 style="font-size:13px;color:var(--ink-2)">기존 유저 — 두 기준 모두 봄맞이 승</h3></div>
 <div class="cmp">
-  <div class="cr"><div class="cl">봄맞이 합산<small>발급 154명 → 전환 69명</small></div><div class="ct"><div class="cf b" style="width:100%">44.8%</div></div><div class="cd b">+5.1%p<small>대조군 승</small></div></div>
-  <div class="cr"><div class="cl">지구의날 합산<small>발급 126명 → 전환 50명</small></div><div class="ct"><div class="cf r" style="width:88.6%">39.7%</div></div><div class="cd r"></div></div>
+  <div class="cr"><div class="cl">봄맞이(199) 시트<small>발급 102명 → 전환 39명</small></div><div class="ct"><div class="cf b" style="width:64.5%">38.24%</div></div><div class="cd b">+5.89%p<small>대조군 승</small></div></div>
+  <div class="cr"><div class="cl">지구의날(198) 시트<small>발급 102명 → 전환 33명</small></div><div class="ct"><div class="cf r" style="width:54.6%">32.35%</div></div><div class="cd r"></div></div>
+  <div class="cr"><div class="cl">봄맞이(199) BQ<small>발급 140명 → 전환 83명</small></div><div class="ct"><div class="cf b" style="width:100%">59.29%</div></div><div class="cd b">+3.41%p<small>대조군 승</small></div></div>
+  <div class="cr"><div class="cl">지구의날(198) BQ<small>발급 136명 → 전환 76명</small></div><div class="ct"><div class="cf r" style="width:94.2%">55.88%</div></div><div class="cd r"></div></div>
 </div>
-<p class="note">성공 기준은 사전에 <b>'대조군 대비 첫 이용 전환율 +10%p 이상'</b>으로 못박아 뒀습니다. 신규 세그먼트만 이를 통과했고, 기존 유저와 종합은 대조군이 이겼습니다.</p>
+<p class="note">성공 기준은 사전에 <b>'대조군 대비 첫 이용 전환율 +10%p 이상'</b>으로 못박아 뒀습니다. 팀 시트 기준으로는 신규 셀이 이를 통과하지만, BigQuery로 다시 세면 +5.80%p로 미달입니다. <b>기존 유저 셀은 두 기준 모두 봄맞이가 이깁니다.</b></p>
 </div>
-<div class="insight" style="margin-top:14px"><div class="ic">⚠️</div><div class="tx"><b>합산 전환율의 봄맞이 우위는 발급 모수 차이(154명 vs 126명)에 일부 기인합니다.</b> 발급 수가 동일한 기존 유저 셀(각 102명)에서는 봄맞이가 5.89%p 앞섰습니다.</div></div>
+<div class="insight" style="margin-top:14px"><div class="ic">⚠️</div><div class="tx"><b>두 기준이 일치하지 않습니다.</b> 팀 시트의 발급 수(24·52·102·102)는 BigQuery의 어떤 필터로도 재현되지 않습니다(전체 42·82·136·140 / 삭제 제외 22·49·93·99). 방향은 두 세그먼트 모두 같지만, <b>성공 기준 통과 여부는 정의에 따라 뒤집힙니다.</b></div></div>
 </div></body></html>
