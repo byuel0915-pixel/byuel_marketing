@@ -33,21 +33,13 @@
   <p class="note">'가입 후 미결제 유저에게 일괄 발급'이라는 한 줄이 <b>1,708명의 복귀</b>로 돌아왔습니다. 이미 획득 비용을 치렀지만 한 번도 쓰지 않고 잠들어 있던 유저들입니다. 신규 획득 프로모션이 동시에 <b>휴면 회수 캠페인</b>으로도 작동했습니다.</p>
 </div>
 
-<div class="sect"><h2>쿠폰이 붙을 수 있는 주문은 절반뿐이었다</h2><span class="tag">프로모션 코호트의 프로모션 기간 내 주문</span></div>
-<div class="card pad chart">
-  <div class="bar-row"><div class="name">전체 유효주문</div><div class="bar-track"><div class="bar-fill bf-gray" style="width:100%">13,015건</div></div></div>
-  <div class="bar-row"><div class="name">└ 결제 발생 주문</div><div class="bar-track"><div class="bar-fill bf-blue" style="width:51.8%">6,740건 · 51.8%</div></div></div>
-  <div class="bar-row"><div class="name">└ 반값 쿠폰 적용</div><div class="bar-track"><div class="bar-fill bf-green" style="width:32.7%">4,255건 · 32.7%</div></div></div>
-  <p class="note">전체 주문의 절반가량은 <b>0원 주문(봉투 신청 등)</b>이라 애초에 쿠폰이 붙을 수 없습니다. 결제가 발생한 주문 6,740건만 보면 <b>62.3%에 반값 쿠폰이, 88.3%에 어떤 쿠폰이든 적용</b>됐습니다.</p>
-</div>
-
 <div class="insight" style="margin-top:18px">
   <div class="ic">💡</div>
-  <div class="tx">쿠폰 프로모션의 성과를 볼 때 <b>분모를 무엇으로 잡는지가 결론을 바꿉니다.</b> 0원 주문이 절반인 서비스에서 '전체 주문 중 쿠폰 사용률'은 구조적으로 낮게 나옵니다. 그래서 이 프로젝트는 사용률이 아니라 <b>실사용자 수와 그 구성</b>으로 판단했습니다.</div>
+  <div class="tx">같은 반값 할인이라도 <b>누구에게 어떻게 닿게 하느냐</b>가 결과를 갈랐습니다. 대상별로 쿠폰을 쪼개고 발급을 자동화한 덕에, 신규 획득 캠페인 하나가 <b>휴면 회수까지 겸하는 구조</b>가 됐습니다.</div>
 </div>
 
 <div class="foot">
-  <span class="nb">⚠️ 공개용 자료 — `secure_dataset.coupon_policy` / `user_coupon` / `order_v2.user_coupon_id` 실측. 반값 쿠폰 = policy 145 `[이벤트] 첫 이용 반값 할인` 50%·최대 15,000원(25.12.11 생성, 12.31 만료). 사용 = 해당 쿠폰이 적용된 유효주문 1건 이상(취소·삭제 제외). 결제 = `order_invoice`→`receipt`(PAID, 금액>0) · BigQuery 2026.08 기준</span>
+  <span class="nb">⚠️ 공개용 자료 — `secure_dataset.coupon_policy` / `user_coupon` / `order_v2.user_coupon_id` 실측. 반값 쿠폰 = policy 145 `[이벤트] 첫 이용 반값 할인` 50%·최대 15,000원(25.12.11 생성, 12.31 만료). 사용 = 해당 쿠폰이 적용된 유효주문 1건 이상(취소·삭제 제외). · BigQuery 2026.08 기준</span>
   <a class="home" href="../data-room.html">← 박성진 데이터룸</a>
 </div>
 
