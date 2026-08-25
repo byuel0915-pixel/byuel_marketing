@@ -1,34 +1,65 @@
 <!doctype html><html lang="ko"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>무게 허들 상향 — 11월 재검증과 ROI | 박성진</title>
-<meta name="description" content="계절이 다른 두 시점에서 같은 방향이 재현된 결과">
+<meta name="description" content="계절이 다른 두 시점에서 같은 방향이 재현된 결과 비교표">
 <link rel="stylesheet" href="../assets/style.css">
 <link rel="stylesheet" href="../assets/chart.css">
-<style>.wrap{padding:14px 16px}</style>
+<style>
+.wrap{padding:14px 16px}
+.mtx td.num{font-feature-settings:'tnum';font-weight:700;font-size:14.5px}
+.mtx td.delta{font-weight:800;font-size:14.5px}
+.up{color:var(--green)} .flat{color:var(--ink-3)}
+.mtx tr.hi td{background:#F0FDF4}
+.cond{font-size:11.5px;color:var(--ink-3);font-weight:600;display:block;margin-top:2px}
+</style>
 </head><body><div class="wrap">
 <div class="card pad">
-<div class="ct2"><h3>성수기와 비수기, 두 번 모두 같은 방향</h3><span class="dir">7월 성수기 vs 11월 비수기</span></div>
-<div class="ct2" style="margin:4px 0 10px"><h3 style="font-size:13px;color:var(--ink-2)">객단가(AOV) 상승폭</h3></div>
-<div class="cmp">
-  <div class="cr"><div class="cl">7월 (성수기)<small>11,084 → 11,583원</small></div><div class="ct"><div class="cf g" style="width:100%">+4.50%</div></div><div class="cd g">재현</div></div>
-  <div class="cr"><div class="cl">11월 (비수기)<small>11,313 → 11,635원</small></div><div class="ct"><div class="cf g" style="width:63.3%">+2.85%</div></div><div class="cd g">재현<small>방향 동일</small></div></div>
-</div>
-<div class="ct2" style="margin:20px 0 10px"><h3 style="font-size:13px;color:var(--ink-2)">ARPU 상승폭</h3></div>
-<div class="cmp">
-  <div class="cr"><div class="cl">7월 (성수기)<small>12,663 → 13,297원</small></div><div class="ct"><div class="cf g" style="width:100%">+5.01%</div></div><div class="cd g"></div></div>
-  <div class="cr"><div class="cl">11월 (비수기)<small>13,789 → 14,124원</small></div><div class="ct"><div class="cf g" style="width:48.5%">+2.43%</div></div><div class="cd g"><small>방향 동일</small></div></div>
-</div>
-<div class="ct2" style="margin:20px 0 10px"><h3 style="font-size:13px;color:var(--ink-2)">12kg 초과 주문 비중 상승폭</h3></div>
-<div class="cmp">
-  <div class="cr"><div class="cl">7월 (성수기)<small>14.49 → 16.54%</small></div><div class="ct"><div class="cf b" style="width:100%">+2.05%p</div></div><div class="cd g"></div></div>
-  <div class="cr"><div class="cl">11월 (비수기)<small>14.51 → 15.71%</small></div><div class="ct"><div class="cf b" style="width:58.5%">+1.20%p</div></div><div class="cd g"><small>방향 동일</small></div></div>
-</div>
-<div class="ct2" style="margin:20px 0 10px"><h3 style="font-size:13px;color:var(--ink-2)">순증분 매출 — 증분 비용은 발송비뿐</h3></div>
-<div class="cmp">
-  <div class="cr"><div class="cl">7월<small>증분 548.7만 − 발송비 37.4만(64,530건)</small></div><div class="ct"><div class="cf g" style="width:98.4%">511.3만원</div></div><div class="cd g">ROI 14.7배<small>BEP 건당 85원</small></div></div>
-  <div class="cr"><div class="cl">11월<small>증분 588.4만 − 발송비 68.6만(118,354건)</small></div><div class="ct"><div class="cf g" style="width:100%">519.7만원</div></div><div class="cd g">ROI 8.6배<small>BEP 건당 50원</small></div></div>
-</div>
-<p class="note">7월 단독으로는 '여름 대청소 수요' 반론을 막을 수 없었습니다. 수요가 평탄한 11월에 같은 설계를 반복해 같은 방향이 재현된 뒤에야 조직이 결과를 신뢰했습니다. 11월은 발송 규모를 1.83배로 키운 정식 CRM 사이클로 확장했습니다.</p>
+<div class="ct2"><h3>성수기와 비수기, 두 번 모두 같은 방향</h3><span class="dir">7월 07.17~21 vs 07.24~28 · 11월 11.06~12 vs 11.13~19</span></div>
+<table class="mtx" style="margin-top:10px">
+<tr>
+  <th>지표</th>
+  <th>7월 (성수기)<span class="cond">전 → 후</span></th>
+  <th>11월 (비수기)<span class="cond">전 → 후</span></th>
+  <th>방향</th>
+</tr>
+<tr class="hi">
+  <td>객단가 (AOV)</td>
+  <td class="num">11,084 → 11,583원<span class="cond up">+4.50%</span></td>
+  <td class="num">11,313 → 11,635원<span class="cond up">+2.85%</span></td>
+  <td class="delta up">동일</td>
+</tr>
+<tr class="hi">
+  <td>ARPU</td>
+  <td class="num">12,663 → 13,297원<span class="cond up">+5.01%</span></td>
+  <td class="num">13,789 → 14,124원<span class="cond up">+2.43%</span></td>
+  <td class="delta up">동일</td>
+</tr>
+<tr>
+  <td>12kg 초과 주문 비중</td>
+  <td class="num">14.49 → 16.54%<span class="cond up">+2.05%p</span></td>
+  <td class="num">14.51 → 15.71%<span class="cond up">+1.20%p</span></td>
+  <td class="delta up">동일</td>
+</tr>
+<tr>
+  <td>증분 매출</td>
+  <td class="num">548.7만원</td>
+  <td class="num">588.4만원</td>
+  <td class="delta flat">합산 1,137만원</td>
+</tr>
+<tr>
+  <td>증분 비용 (발송비만)</td>
+  <td class="num">37.4만원<span class="cond">64,530건</span></td>
+  <td class="num">68.6만원<span class="cond">118,354건</span></td>
+  <td class="delta flat">합산 106만원</td>
+</tr>
+<tr class="hi">
+  <td>순증분 / ROI</td>
+  <td class="num">511.3만원<span class="cond up">ROI 14.7배 · BEP 건당 85원</span></td>
+  <td class="num">519.7만원<span class="cond up">ROI 8.6배 · BEP 건당 50원</span></td>
+  <td class="delta up">합산 1,031만원</td>
+</tr>
+</table>
+<p class="note">7월 단독으로는 '여름 대청소 수요' 반론을 막을 수 없었습니다. 수요가 평탄한 11월에 같은 설계를 반복해 세 지표가 모두 같은 방향으로 재현된 뒤에야 조직이 결과를 신뢰했습니다. 11월은 발송 규모를 1.83배로 키운 정식 CRM 사이클로 확장했습니다.</p>
 </div>
 <div class="insight green" style="margin-top:14px"><div class="ic">✅</div><div class="tx"><b>새 예산 0원으로 두 차례 합산 약 1,031만원의 증분 매출을 만들었습니다.</b> 할인 재원은 기존 8kg 예산을 옮겨 쓴 것이라 순증 비용은 발송비 106만원이 전부입니다.</div></div>
 </div></body></html>

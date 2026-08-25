@@ -1,29 +1,49 @@
 <!doctype html><html lang="ko"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>무게 허들 상향 — 재원 구조 | 박성진</title>
-<meta name="description" content="혜택 대상을 줄이고 단가를 키운 재원 재배치 구조">
+<meta name="description" content="혜택 대상을 줄이고 단가를 키운 재원 재배치 구조 비교표">
 <link rel="stylesheet" href="../assets/style.css">
 <link rel="stylesheet" href="../assets/chart.css">
-<style>.wrap{padding:14px 16px}</style>
+<style>
+.wrap{padding:14px 16px}
+.mtx td.num{font-feature-settings:'tnum';font-weight:700;font-size:14.5px}
+.mtx td.delta{font-weight:800;font-size:14.5px}
+.up{color:var(--green)} .dn{color:var(--red)} .flat{color:var(--ink-3)}
+.mtx tr.hi td{background:#F0FDF4}
+.cond{font-size:11.5px;color:var(--ink-3);font-weight:600;display:block;margin-top:2px}
+</style>
 </head><body><div class="wrap">
 <div class="card pad">
 <div class="ct2"><h3>혜택 대상은 절반, 원가는 16원만 늘었다</h3><span class="dir">같은 재원으로 더 강한 앵커</span></div>
-<div class="ct2" style="margin:4px 0 10px"><h3 style="font-size:13px;color:var(--ink-2)">혜택 대상 유저 비중</h3></div>
-<div class="cmp">
-  <div class="cr"><div class="cl">8kg 초과 · 500원<small>프로모션 전 07.17~21</small></div><div class="ct"><div class="cf a" style="width:100%">31.72%</div></div><div class="cd k">기준</div></div>
-  <div class="cr"><div class="cl">12kg 초과 · 1,000원<small>프로모션 중 07.24~28</small></div><div class="ct"><div class="cf b" style="width:55.4%">17.56%</div></div><div class="cd b">−14.16%p<small>절반으로 축소</small></div></div>
+<table class="mtx" style="margin-top:10px">
+<tr>
+  <th>지표</th>
+  <th>8kg 초과 · 500원<span class="cond">프로모션 전 07.17~21</span></th>
+  <th>12kg 초과 · 1,000원<span class="cond">프로모션 중 07.24~28</span></th>
+  <th>차이</th>
+</tr>
+<tr>
+  <td>1인당 할인 단가</td><td class="num">500원</td><td class="num">1,000원</td>
+  <td class="delta flat">2배</td>
+</tr>
+<tr>
+  <td>혜택 대상 유저 비중</td><td class="num">31.72%</td><td class="num">17.56%</td>
+  <td class="delta dn">−14.16%p<span class="cond">절반으로 축소</span></td>
+</tr>
+<tr>
+  <td>혜택 대상 주문 비중</td><td class="num">29.89%</td><td class="num">16.54%</td>
+  <td class="delta dn">−13.35%p</td>
+</tr>
+<tr class="hi">
+  <td>주문당 할인 원가<span class="cond">회사가 실제로 쓴 돈</span></td><td class="num">약 149원</td><td class="num">약 165원</td>
+  <td class="delta flat">+16원<span class="cond">사실상 동결</span></td>
+</tr>
+<tr class="hi">
+  <td>객단가 (AOV)</td><td class="num">11,084원</td><td class="num">11,583원</td>
+  <td class="delta up">+499원<span class="cond">+4.50%</span></td>
+</tr>
+</table>
+<p class="note">할인 단가를 2배로 올렸는데 주문당 원가가 16원만 늘어난 이유는 <b>대상을 절반으로 줄였기 때문</b>입니다. 회사가 쓴 돈은 그대로인데 받는 사람에게는 혜택이 두 배로 보이는 구조입니다.</p>
 </div>
-<div class="ct2" style="margin:20px 0 10px"><h3 style="font-size:13px;color:var(--ink-2)">주문당 할인 원가 — 회사가 실제로 쓴 돈</h3></div>
-<div class="cmp">
-  <div class="cr"><div class="cl">8kg 초과 · 500원</div><div class="ct"><div class="cf k" style="width:90.3%">약 149원</div></div><div class="cd k">기준</div></div>
-  <div class="cr"><div class="cl">12kg 초과 · 1,000원<small>할인 단가는 2배</small></div><div class="ct"><div class="cf a" style="width:100%">약 165원</div></div><div class="cd k">+16원<small>사실상 동결</small></div></div>
-</div>
-<div class="ct2" style="margin:20px 0 10px"><h3 style="font-size:13px;color:var(--ink-2)">그 결과 객단가</h3></div>
-<div class="cmp">
-  <div class="cr"><div class="cl">프로모션 전</div><div class="ct"><div class="cf k" style="width:95.7%">11,084원</div></div><div class="cd k">기준</div></div>
-  <div class="cr"><div class="cl">프로모션 중</div><div class="ct"><div class="cf g" style="width:100%">11,583원</div></div><div class="cd g">+499원<small>+4.50%</small></div></div>
-</div>
-<p class="note">혜택 대상 주문 비중도 29.89% → 16.54%로 줄었습니다.</p>
-</div>
-<div class="insight" style="margin-top:14px"><div class="ic">💡</div><div class="tx"><b>할인 단가를 2배로 올렸는데 주문당 할인 원가는 16원만 늘었습니다.</b> 대상을 절반으로 줄이면서 단가를 키웠기 때문입니다. 재원을 거의 그대로 유지한 채 객단가만 499원 올렸습니다.</div></div>
+<div class="insight" style="margin-top:14px"><div class="ic">💡</div><div class="tx"><b>재원을 늘린 게 아니라 재배치한 것입니다.</b> 주문당 16원(원가 +10.7%)을 더 쓰고 객단가를 499원(+4.50%) 올렸으니, 쓴 돈 대비 31배가 돌아왔습니다.</div></div>
 </div></body></html>
