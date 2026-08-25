@@ -1,0 +1,76 @@
+<!doctype html><html lang="ko"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>프로덕트 CRM — 시나리오 설계도 | 박성진</title>
+<meta name="description" content="두 퍼널의 이탈 지점과 신설한 CRM 시나리오 발송 타이밍">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="../assets/chart.css">
+<style>
+.wrap{padding:14px 16px}
+.tl{position:relative;margin:14px 0 4px;padding:0 2px}
+.tlbar{position:relative;height:12px;border-radius:999px;background:#EEF1F6;overflow:hidden}
+.tlgap{position:absolute;top:0;height:100%;background:repeating-linear-gradient(45deg,#FCA5A5,#FCA5A5 5px,#FECACA 5px,#FECACA 10px)}
+.tlpts{position:relative;height:78px;margin-top:6px}
+.tlp{position:absolute;top:0;transform:translateX(-50%);text-align:center;width:96px}
+.tlp .dotm{width:11px;height:11px;border-radius:50%;margin:0 auto 5px;border:2.5px solid #fff;box-shadow:0 0 0 1.5px var(--line)}
+.tlp.old .dotm{background:#9AA4B2}
+.tlp.new .dotm{background:#10B981;box-shadow:0 0 0 1.5px #10B981}
+.tlp .d{font-size:12px;font-weight:800;color:var(--ink-1)}
+.tlp .t{font-size:10.5px;font-weight:600;color:var(--ink-3);line-height:1.3;margin-top:2px}
+.tlp.new .d{color:var(--green)}
+.gaplab{font-size:11.5px;font-weight:800;color:var(--red);text-align:center;margin-top:2px}
+.leg{display:flex;gap:14px;justify-content:flex-end;font-size:11px;font-weight:700;color:var(--ink-3);margin-bottom:2px}
+.leg i{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:4px;vertical-align:-1px}
+.msg{border:1.5px solid var(--line);border-radius:12px;padding:11px 13px;font-size:12.5px;line-height:1.55}
+.msg b{display:block;font-size:11.5px;color:var(--green);margin-bottom:3px}
+.msgs{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px;margin-top:12px}
+</style>
+</head><body><div class="wrap">
+
+<div class="card pad">
+<div class="ct2"><h3>퍼널 A — 봉투 신청 → 첫 결제</h3><span class="dir">D14 전환율 56.4% · 미전환 월 6,600명</span></div>
+<div class="leg"><span><i style="background:#9AA4B2"></i>기존 발송</span><span><i style="background:#10B981"></i>신설 시나리오</span></div>
+<div class="tl">
+  <div class="tlbar"><div class="tlgap" style="left:28.6%;width:57.1%"></div></div>
+  <div class="tlpts">
+    <div class="tlp old" style="left:0%"><div class="dotm"></div><div class="d">D0</div><div class="t">봉투 신청</div></div>
+    <div class="tlp old" style="left:21.4%"><div class="dotm"></div><div class="d">D3</div><div class="t">배송 알림</div></div>
+    <div class="tlp old" style="left:28.6%"><div class="dotm"></div><div class="d">D4</div><div class="t">웰컴쿠폰 만료</div></div>
+    <div class="tlp new" style="left:57.1%"><div class="dotm"></div><div class="d">D8</div><div class="t">가치제안<br>리마인드</div></div>
+    <div class="tlp new" style="left:85.7%"><div class="dotm"></div><div class="d">D12</div><div class="t">최후통첩</div></div>
+    <div class="tlp old" style="left:100%"><div class="dotm"></div><div class="d">D14</div><div class="t">전환 관측</div></div>
+  </div>
+  <div class="gaplab">기존 공백 구간 D4~D12 — 이탈이 고착되는 8일</div>
+</div>
+<p class="note">기존 CRM은 <b>가입일</b>과 <b>마지막 주문일</b> 두 기준으로만 돌아, 봉투가 집에 도착한 뒤부터 이탈이 고착되기까지의 8일이 통째로 비어 있었습니다. 이탈 지점에 보내면 이미 늦기 때문에 <b>이탈 −2일</b>에 개입하도록 D8을 잡았습니다.</p>
+<div class="msgs">
+  <div class="msg"><b>D8 · 가치제안</b>받아두신 봉투, 아직 안 쓰셨네요. 분리수거 없이 그대로 담아서 문 앞에 두시면 끝입니다.</div>
+  <div class="msg"><b>D12 · 최후통첩</b>이번 주 안에 쓰지 않으면 혜택이 사라집니다. (쿠폰 만료일을 이탈 지점에 맞춰 배치)</div>
+</div>
+</div>
+
+<div class="card pad" style="margin-top:14px">
+<div class="ct2"><h3>퍼널 B — 첫 결제 → 2회차</h3><span class="dir">1→2회 전환율 76.5% · 시나리오 부재 구간</span></div>
+<div class="leg"><span><i style="background:#9AA4B2"></i>기존 발송</span><span><i style="background:#10B981"></i>신설 시나리오</span></div>
+<div class="tl">
+  <div class="tlbar"><div class="tlgap" style="left:0%;width:100%"></div></div>
+  <div class="tlpts">
+    <div class="tlp old" style="left:0%"><div class="dotm"></div><div class="d">D0</div><div class="t">첫 결제</div></div>
+    <div class="tlp new" style="left:37.5%"><div class="dotm"></div><div class="d">D6</div><div class="t">8kg 이상<br>세그먼트</div></div>
+    <div class="tlp new" style="left:50%"><div class="dotm"></div><div class="d">D8</div><div class="t">실험 발송<br>(3셀)</div></div>
+    <div class="tlp new" style="left:68.8%"><div class="dotm"></div><div class="d">D11</div><div class="t">8kg 미만<br>세그먼트</div></div>
+    <div class="tlp old" style="left:100%"><div class="dotm"></div><div class="d">D16</div><div class="t">전환 관측</div></div>
+  </div>
+  <div class="gaplab">기존 시나리오 0건 — 첫 결제일 기준 트리거 자체가 없던 구간</div>
+</div>
+<p class="note">세그먼트를 반복 빈도가 아니라 <b>첫 배출 무게</b>로 나눴습니다. 8kg 이상은 바로 재구매하고 바로 이탈하고, 8kg 미만은 느리게 시작해도 지속합니다. 발송 자동화 요건이 확보되지 않아 무게 세그먼트는 실제 실험에는 태우지 못했고, <b>D8 단일 발송 3셀</b>로 집행했습니다.</p>
+<table class="mtx" style="margin-top:12px">
+<tr><th>D8 발송 3셀</th><th>메시지</th><th>2차 신청률</th><th>재주문율</th></tr>
+<tr><td>대조군</td><td>발송 없음</td><td>32.3%</td><td>24.8%</td></tr>
+<tr><td>리마인드만</td><td>타이밍 리마인드</td><td class="win">35.3%</td><td class="win">30.3%</td></tr>
+<tr><td>리마인드+쿠폰</td><td>리마인드 + 1만원 정액</td><td>30.1%</td><td>24.1%</td></tr>
+</table>
+</div>
+
+<div class="insight green" style="margin-top:14px"><div class="ic">🕒</div><div class="tx"><b>두 퍼널 모두 바꾼 변수는 '보내는 날' 하나입니다.</b> 할인율도, 문구의 세기도, 채널도 아니었습니다. 퍼널 A는 D+3(봉투 도착 전) 발송이 증분 0이었고 D+8이 +2.1%p를 냈습니다. 퍼널 B는 쿠폰을 얹은 셀이 대조군보다도 낮았습니다.</div></div>
+
+</div></body></html>
