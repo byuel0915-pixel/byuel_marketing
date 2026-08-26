@@ -1,0 +1,79 @@
+<!doctype html><html lang="ko"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>이거알아 — 평균 재생 시간·CTR·CPC | 박성진</title>
+<meta name="description" content="자막 반복형 리타겟 소재의 평균 재생 시간·CTR·CPC를 기존 세트와 전후 비교">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="../assets/chart.css">
+<style>
+.wrap{padding:14px 16px}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:12px 0 18px}
+.kpi{border-radius:11px;padding:13px 10px;text-align:center;border:1px solid}
+.kpi.win{background:#F0FDF4;border-color:#BBF7D0}
+.kpi.bad{background:#FFF5F5;border-color:#FBD5D5}
+.kpi b{display:block;font-size:21px;font-weight:800;letter-spacing:-.02em;font-feature-settings:'tnum'}
+.kpi.win b{color:var(--green)} .kpi.bad b{color:var(--red)}
+.kpi span{display:block;font-size:11.5px;font-weight:700;color:var(--ink-2);margin-top:3px}
+.kpi em{display:block;font-size:10.5px;font-weight:600;color:var(--ink-3);font-style:normal;margin-top:2px;font-feature-settings:'tnum'}
+.grp{margin:0 0 17px}
+.grp .cmp{margin-top:8px}
+.osl{font-size:11px;font-weight:800;color:var(--ink-3);letter-spacing:.02em;margin:2px 0 4px}
+.cl small{white-space:nowrap}
+@media(max-width:520px){.kpis{grid-template-columns:1fr;gap:7px}.cr{grid-template-columns:96px 1fr 80px;gap:8px}.cl{font-size:11px}.cd{font-size:14px}}
+</style>
+</head><body><div class="wrap">
+<div class="card pad chart">
+
+  <div class="ct2"><h3>재생 시간과 CTR은 올랐고, CPC는 iOS에서 깨졌다</h3><span class="dir">같은 캠페인 기존 세트 대비 · 매체 리포트</span></div>
+
+  <div class="kpis">
+    <div class="kpi win"><b>1.77배</b><span>평균 재생 시간 (iOS)</span><em>2.7 → 4.7초</em></div>
+    <div class="kpi win"><b>1.17배</b><span>CTR (iOS)</span><em>1.39% → 1.63%</em></div>
+    <div class="kpi bad"><b>+21.3%</b><span>CPC (iOS) — 나빠짐</span><em>761 → 923원</em></div>
+  </div>
+
+  <div class="grp">
+    <div class="ct2"><h3>① 평균 재생 시간</h3><span class="dir">길수록 좋음 · 1차 판정 지표</span></div>
+    <p class="osl">iOS · 기존 포맷 8종 대비</p>
+    <div class="cmp">
+      <div class="cr"><div class="cl">기존 세트</div><div class="ct"><div class="cf k" style="width:57.4%">2.7초</div></div><div class="cd k">기준</div></div>
+      <div class="cr"><div class="cl">이거알아 3종</div><div class="ct"><div class="cf g" style="width:100%">4.7초</div></div><div class="cd g">1.77배<small>+2.0초</small></div></div>
+    </div>
+    <p class="osl" style="margin-top:11px">AOS · 리타겟콘텐츠 5종 대비</p>
+    <div class="cmp">
+      <div class="cr"><div class="cl">기존 세트</div><div class="ct"><div class="cf k" style="width:87.1%">5.4초</div></div><div class="cd k">기준</div></div>
+      <div class="cr"><div class="cl">이거알아 3종</div><div class="ct"><div class="cf g" style="width:100%">6.2초</div></div><div class="cd g">1.15배<small>+0.8초</small></div></div>
+    </div>
+  </div>
+
+  <div class="grp">
+    <div class="ct2"><h3>② CTR</h3><span class="dir">높을수록 좋음 · 2차 지표</span></div>
+    <p class="osl">iOS</p>
+    <div class="cmp">
+      <div class="cr"><div class="cl">기존 세트</div><div class="ct"><div class="cf k" style="width:85.3%">1.39%</div></div><div class="cd k">기준</div></div>
+      <div class="cr"><div class="cl">이거알아 3종</div><div class="ct"><div class="cf g" style="width:100%">1.63%</div></div><div class="cd g">1.17배<small>+0.24%p</small></div></div>
+    </div>
+    <p class="osl" style="margin-top:11px">AOS</p>
+    <div class="cmp">
+      <div class="cr"><div class="cl">기존 세트</div><div class="ct"><div class="cf k" style="width:80.4%">1.60%</div></div><div class="cd k">기준</div></div>
+      <div class="cr"><div class="cl">이거알아 3종</div><div class="ct"><div class="cf g" style="width:100%">1.99%</div></div><div class="cd g">1.25배<small>+0.39%p</small></div></div>
+    </div>
+  </div>
+
+  <div class="grp" style="margin-bottom:6px">
+    <div class="ct2"><h3>③ CPC — 여기서 갈렸다</h3><span class="dir">낮을수록 좋음</span></div>
+    <p class="osl">iOS · 오히려 나빠짐</p>
+    <div class="cmp">
+      <div class="cr"><div class="cl">기존 세트</div><div class="ct"><div class="cf k" style="width:82.4%">761원</div></div><div class="cd k">기준</div></div>
+      <div class="cr"><div class="cl">이거알아 3종</div><div class="ct"><div class="cf r" style="width:100%">923원</div></div><div class="cd r">+21.3%<small>+162원</small></div></div>
+    </div>
+    <p class="osl" style="margin-top:11px">AOS · 개선</p>
+    <div class="cmp">
+      <div class="cr"><div class="cl">기존 세트</div><div class="ct"><div class="cf k" style="width:100%">1,380원</div></div><div class="cd k">기준</div></div>
+      <div class="cr"><div class="cl">이거알아 3종</div><div class="ct"><div class="cf g" style="width:92.4%">1,275원</div></div><div class="cd g">−7.6%<small>−105원</small></div></div>
+    </div>
+  </div>
+
+  <p class="note"><b>원가설의 앞부분은 참, 뒷부분은 절반만 참입니다.</b> 재생 시간과 CTR은 iOS·AOS 양쪽 다 올랐지만 CPC는 iOS에서 오히려 21% 나빠졌습니다. 훅률은 iOS 양쪽 82.5%로 같았으니 <b>출발선은 같고 재생된 뒤에 갈렸습니다</b> — 이 포맷은 후킹이 아니라 붙잡는 포맷입니다.</p>
+  <p class="note" style="font-size:11.5px">※ 평균 재생 시간은 매체 리포트의 '동영상 평균 재생 시간'을 재생 수로 가중평균한 값입니다. 절대 초 단위라 영상 길이가 달라도 보정 없이 비교됩니다. 막대 길이는 0부터가 아니라 큰 값을 100%로 둔 상대 비교입니다.</p>
+</div>
+</div></body></html>
