@@ -1,27 +1,73 @@
 <!doctype html><html lang="ko"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>블로그 랜딩 — 대조군 비교 | 박성진</title>
-<meta name="description" content="동일 타겟 앱홍보 캠페인과의 월별 구매 CPA·전환율 비교">
+<title>블로그 랜딩 vs 앱홍보 대조군 | 박성진</title>
+<meta name="description" content="뷰스루를 뺀 엄격한 귀속 기준으로 본 블로그 랜딩과 앱홍보 캠페인의 구매 CPA·설치→구매 전환율">
 <link rel="stylesheet" href="../assets/style.css">
 <link rel="stylesheet" href="../assets/chart.css">
-<style>.wrap{padding:14px 16px}</style>
+<style>
+.wrap{padding:14px 16px}
+.kpis{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:12px 0 18px}
+.kpi{border-radius:11px;padding:13px 10px;text-align:center;border:1px solid}
+.kpi.flat{background:#F4F6F9;border-color:#DDE3EC}
+.kpi.win{background:#F0FDF4;border-color:#BBF7D0}
+.kpi b{display:block;font-size:22px;font-weight:800;letter-spacing:-.02em;font-feature-settings:'tnum'}
+.kpi.flat b{color:var(--ink-2)} .kpi.win b{color:var(--green)}
+.kpi span{display:block;font-size:11.5px;font-weight:700;color:var(--ink-2);margin-top:3px}
+.kpi em{display:block;font-size:10.5px;font-weight:600;color:var(--ink-3);font-style:normal;margin-top:2px;font-feature-settings:'tnum'}
+.grp{margin:0 0 17px}
+.grp .cmp{margin-top:8px}
+.mon{font-size:11px;font-weight:800;color:var(--ink-3);letter-spacing:.02em;margin:2px 0 4px}
+@media(max-width:520px){.kpis{grid-template-columns:1fr;gap:7px}.cr{grid-template-columns:74px 1fr 76px;gap:8px}.cl{font-size:11px}.cd{font-size:14px}}
+</style>
 </head><body><div class="wrap">
-<div class="card pad">
-<div class="ct2"><h3>7월에 대조군을 역전하고, 8월에 격차를 벌렸다</h3><span class="dir">대조군 AOS_논타겟_앱홍보(구매)_26.01.28 · 동일 타겟</span></div>
-<div class="ct2" style="margin:4px 0 10px"><h3 style="font-size:13px;color:var(--ink-2)">구매 CPA — 낮을수록 좋음</h3></div>
-<div class="cmp">
-  <div class="cr"><div class="cl">6월 · 블로그<small>구매 27건</small></div><div class="ct"><div class="cf r" style="width:100%">94,918원</div></div><div class="cd r">3.7배 열위</div></div>
-  <div class="cr"><div class="cl">6월 · 대조군<small>구매 1,241건</small></div><div class="ct"><div class="cf k" style="width:27.2%">25,795원</div></div><div class="cd k">기준</div></div>
-  <div class="cr"><div class="cl">7월 · 블로그<small>구매 75건</small></div><div class="ct"><div class="cf g" style="width:25.7%">24,356원</div></div><div class="cd g">−10.9%</div></div>
-  <div class="cr"><div class="cl">7월 · 대조군<small>구매 1,393건</small></div><div class="ct"><div class="cf k" style="width:28.8%">27,333원</div></div><div class="cd k">기준</div></div>
-  <div class="cr"><div class="cl">8월 · 블로그<small>구매 44건</small></div><div class="ct"><div class="cf g" style="width:17.2%">16,312원</div></div><div class="cd g">−13.3%</div></div>
-  <div class="cr"><div class="cl">8월 · 대조군<small>구매 534건</small></div><div class="ct"><div class="cf k" style="width:19.8%">18,806원</div></div><div class="cd k">기준</div></div>
-</div>
-<div class="ct2" style="margin:20px 0 10px"><h3 style="font-size:13px;color:var(--ink-2)">설치 → 구매 전환율 (8월)</h3></div>
-<div class="cmp">
-  <div class="cr"><div class="cl">블로그 랜딩</div><div class="ct"><div class="cf g" style="width:100%">68.8%</div></div><div class="cd g">1.7배</div></div>
-  <div class="cr"><div class="cl">앱홍보 대조군</div><div class="ct"><div class="cf k" style="width:59.2%">40.7%</div></div><div class="cd k">기준</div></div>
-</div>
-<p class="note">대조군은 6월 25,795원 → 7월 27,333원으로 <b>오히려 나빠지던 구간</b>입니다. 시장 전체가 좋아져서 생긴 개선이 아니라는 뜻입니다. 캠페인 규모가 달라(대조군 월 1,000만~3,800만원) 절대 볼륨이 아니라 CPA·전환율로만 비교했습니다.</p>
+<div class="card pad chart">
+
+  <div class="ct2"><h3>CPA는 동률, 전환율은 2.2배</h3><span class="dir">뷰스루 제외 · 고유 유저 기준 · 26년 8월</span></div>
+
+  <div class="kpis">
+    <div class="kpi flat"><b>31,321 vs 30,328원</b><span>구매 CPA — 사실상 동률</span><em>블로그 / 앱홍보 대조군</em></div>
+    <div class="kpi win"><b>61.5% vs 28.2%</b><span>설치 → 구매 전환율 — 2.2배</span><em>블로그 / 앱홍보 대조군</em></div>
+  </div>
+
+  <div class="grp">
+    <div class="ct2"><h3>구매 CPA</h3><span class="dir">낮을수록 좋음 · 6월 4배 열위 → 7월 동률</span></div>
+    <p class="mon">26년 6월</p>
+    <div class="cmp">
+      <div class="cr"><div class="cl">블로그 랜딩</div><div class="ct"><div class="cf r" style="width:100%">183,057원</div></div><div class="cd r">4.0배 열위</div></div>
+      <div class="cr"><div class="cl">앱홍보 대조군</div><div class="ct"><div class="cf k" style="width:25.3%">46,260원</div></div><div class="cd k">기준</div></div>
+    </div>
+    <p class="mon" style="margin-top:11px">26년 7월</p>
+    <div class="cmp">
+      <div class="cr"><div class="cl">블로그 랜딩</div><div class="ct"><div class="cf b" style="width:99.8%">52,191원</div></div><div class="cd k">동률</div></div>
+      <div class="cr"><div class="cl">앱홍보 대조군</div><div class="ct"><div class="cf k" style="width:100%">52,301원</div></div><div class="cd k">기준</div></div>
+    </div>
+    <p class="mon" style="margin-top:11px">26년 8월</p>
+    <div class="cmp">
+      <div class="cr"><div class="cl">블로그 랜딩</div><div class="ct"><div class="cf b" style="width:100%">31,321원</div></div><div class="cd k">동률</div></div>
+      <div class="cr"><div class="cl">앱홍보 대조군</div><div class="ct"><div class="cf k" style="width:96.8%">30,328원</div></div><div class="cd k">기준</div></div>
+    </div>
+  </div>
+
+  <div class="grp">
+    <div class="ct2"><h3>설치 → 구매 전환율</h3><span class="dir">높을수록 좋음 · 이 실험이 이긴 지표</span></div>
+    <p class="mon">26년 6월</p>
+    <div class="cmp">
+      <div class="cr"><div class="cl">블로그 랜딩</div><div class="ct"><div class="cf k" style="width:78.1%">18.2%</div></div><div class="cd r">−5.1%p</div></div>
+      <div class="cr"><div class="cl">앱홍보 대조군</div><div class="ct"><div class="cf k" style="width:100%">23.3%</div></div><div class="cd k">기준</div></div>
+    </div>
+    <p class="mon" style="margin-top:11px">26년 7월</p>
+    <div class="cmp">
+      <div class="cr"><div class="cl">블로그 랜딩</div><div class="ct"><div class="cf g" style="width:100%">24.6%</div></div><div class="cd g">+4.5%p</div></div>
+      <div class="cr"><div class="cl">앱홍보 대조군</div><div class="ct"><div class="cf k" style="width:81.7%">20.1%</div></div><div class="cd k">기준</div></div>
+    </div>
+    <p class="mon" style="margin-top:11px">26년 8월</p>
+    <div class="cmp">
+      <div class="cr"><div class="cl">블로그 랜딩</div><div class="ct"><div class="cf g" style="width:100%">61.5%</div></div><div class="cd g">2.2배<small>+33.3%p</small></div></div>
+      <div class="cr"><div class="cl">앱홍보 대조군</div><div class="ct"><div class="cf k" style="width:45.9%">28.2%</div></div><div class="cd k">기준</div></div>
+    </div>
+  </div>
+
+  <p class="note"><b>싸게 데려오는 채널이 아니라, 데려온 사람이 잘 사는 채널이었습니다.</b> 같은 설치 100건에서 블로그는 62건을 사고 대조군은 28건을 삽니다. CPA로만 보면 두 채널은 같아 보이지만, 후기를 읽고 넘어온 유저의 구매 의향이 확연히 높습니다.</p>
+  <p class="note" style="font-size:11.5px">※ 두 채널 모두 <code>Is_View_through = false</code> 조건을 걸고 <code>User_ID</code> 기준 고유 유저로 재집계했습니다. MMP 기본 리포트(전환 이벤트 전수·뷰스루 포함)를 그대로 쓰면 양쪽 다 더 낮게 나오지만, 뷰스루 비중이 달라 공정한 비교가 되지 않습니다. 블로그 8월 표본은 설치 39·구매 24로 작아 방향 신호로 읽습니다.</p>
 </div>
 </div></body></html>
