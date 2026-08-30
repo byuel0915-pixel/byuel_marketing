@@ -1,0 +1,137 @@
+<!doctype html><html lang="ko"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>틱톡 캠페인 구조 변화 As-Is / To-Be | 박성진</title>
+<meta name="description" content="목적이 뒤섞인 채 병렬로 돌던 틱톡 캠페인 5개를 끄는 순서를 정해 정리하고, 구매 목적 캠페인 3개·광고그룹 17개로 재편한 기록">
+<style>
+:root{--bg:#0B0B10;--panel:#14141C;--panel2:#141422;--line:#262633;--ink:#E8E8F0;--ink2:#A8A8BC;--ink3:#6E6E85;
+ --ios:#2DD4BF;--aos:#4ADE80;--re:#FBBF24;--vio:#8B5CF6;--vio2:#C4B5FD;--pink:#F472B6;--red:#F87171}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+ font-family:-apple-system,BlinkMacSystemFont,"Pretendard","Apple SD Gothic Neo","Segoe UI",Roboto,sans-serif;
+ -webkit-font-smoothing:antialiased}
+.wrap{padding:18px}
+.gx{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start}
+.pn{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:20px 18px 22px}
+.pn.to{background:var(--panel2);border-color:#4C3FA8;box-shadow:0 0 0 1px rgba(139,92,246,.16)}
+.ph{font-size:14px;font-weight:800;letter-spacing:-.01em;margin:0 0 14px;color:var(--ink)}
+.ph em{font-style:normal;color:var(--vio2);font-weight:800}
+.pills{display:flex;gap:9px;margin-bottom:18px;flex-wrap:wrap}
+.pill{border:1px solid var(--line);border-radius:9px;padding:7px 13px;font-size:12.5px;font-weight:700;color:var(--ink2);background:rgba(255,255,255,.02)}
+.pill b{font-size:14px;font-weight:800;margin-right:3px}
+.pill.c b{color:var(--vio2)} .pill.s b{color:var(--pink)}
+.camp{display:inline-flex;align-items:center;gap:8px;border-radius:8px;padding:7px 12px;margin:0 0 9px;
+ font-size:13px;font-weight:800;letter-spacing:-.01em;border-left:3px solid}
+.camp.ios{background:rgba(45,212,191,.09);color:#7EEAD9;border-left-color:var(--ios)}
+.camp.aos{background:rgba(74,222,128,.09);color:#96EFB0;border-left-color:var(--aos)}
+.camp.re{background:rgba(251,191,36,.09);color:#F4CE72;border-left-color:var(--re)}
+.camp.off{background:rgba(255,255,255,.03);color:#6E6E85;border-left-color:#3A3A48;text-decoration:line-through}
+.tg{font-size:10px;font-weight:800;padding:2px 7px;border-radius:5px;letter-spacing:.01em;text-decoration:none;display:inline-block}
+.tg.p{background:rgba(139,92,246,.20);color:var(--vio2)}
+.tg.g{background:rgba(74,222,128,.16);color:#8BE7A6}
+.tg.r{background:rgba(248,113,113,.16);color:#F9A0A0}
+.tg.n{background:rgba(255,255,255,.06);color:var(--ink2)}
+ul.sets{list-style:none;margin:0 0 20px;padding:0 0 0 10px;border-left:1px solid #2C2C3A}
+ul.sets li{font-size:12.5px;font-weight:600;color:var(--ink2);padding:4px 0 4px 12px;position:relative;line-height:1.5}
+ul.sets li::before{content:"└";position:absolute;left:-1px;top:3px;color:#3C3C4C;font-size:11px}
+ul.sets li b{color:var(--ink);font-weight:700}
+ul.sets li span.d{color:var(--ink3);font-weight:600}
+.seq{margin-top:16px;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:16px 18px}
+.seq h4{margin:0 0 12px;font-size:13px;font-weight:800;color:var(--ink)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.st{background:rgba(255,255,255,.025);border:1px solid var(--line);border-radius:11px;padding:11px 12px}
+.st .no{font-size:10.5px;font-weight:800;color:var(--vio2);margin-bottom:4px}
+.st .tt{font-size:12.5px;font-weight:800;color:var(--ink);margin-bottom:3px;line-height:1.4}
+.st .ds{font-size:11px;font-weight:600;color:var(--ink3);line-height:1.55}
+.ft{margin-top:14px;font-size:11px;font-weight:600;color:var(--ink3);line-height:1.65}
+@media(max-width:820px){.gx{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.steps{grid-template-columns:1fr}}
+</style>
+</head><body><div class="wrap">
+
+<div class="gx">
+
+  <!-- As-Is -->
+  <div class="pn">
+    <p class="ph">1 ~ 3월 · As-Is</p>
+    <div class="pills"><span class="pill c"><b>5</b>캠페인</span><span class="pill s"><b>7</b>세트</span><span class="pill"><b>3</b>가지 목적이 병렬</span></div>
+
+    <div class="camp ios">iOS_논타겟_앱설치 <span class="tg n">설치</span></div>
+    <ul class="sets">
+      <li><b>인플루언서PA(2)</b> <span class="d">— 12월 신설, 3월까지 지속</span></li>
+      <li><b>기본</b> <span class="d">— 1월 6일 소진 종료</span></li>
+      <li><b>대형커버링봉투</b> <span class="d">— 3월 신소재 투입</span></li>
+    </ul>
+
+    <div class="camp aos">AOS_SPC_구매_인플루언서PA(1) <span class="tg n">구매</span></div>
+    <ul class="sets"><li><b>aos_purcahse_all_vd</b> <span class="d">— 소구점 구분 없는 단일 세트</span></li></ul>
+
+    <div class="camp aos">AOS_SPC_구매_대형커버링봉투 <span class="tg n">구매 · 3월 신설</span></div>
+    <ul class="sets"><li><b>aos_purcahse_all_vd</b> <span class="d">— 소재 하나 때문에 캠페인을 또 팜</span></li></ul>
+
+    <div class="camp re">iOS_리타겟_구매 <span class="tg r">2월 3일 OFF</span></div>
+    <ul class="sets"><li><b>ios_purchase_re_vd</b> <span class="d">— 귀속 구매 0건</span></li></ul>
+
+    <div class="camp re">AOS_리타겟_구매 <span class="tg r">2월 3일 OFF</span></div>
+    <ul class="sets"><li><b>aos_purchase_re_vd</b> <span class="d">— 1월 신설, 20일 만에 종료</span></li></ul>
+
+    <div class="camp off">프로모션 전용 캠페인 2개</div>
+    <ul class="sets"><li><span class="d">12월에 신설했다 12월 말 폐기 (22일 · 5일)</span></li></ul>
+  </div>
+
+  <!-- To-Be -->
+  <div class="pn to">
+    <p class="ph">4 ~ 7월 · To-Be <em>▲ 구매 목적으로 통일</em></p>
+    <div class="pills"><span class="pill c"><b>3</b>캠페인</span><span class="pill s"><b>17</b>세트</span><span class="pill"><b>1</b>가지 목적</span></div>
+
+    <div class="camp aos">AOS_SPC_구매_26.04.29 <span class="tg p">신설 · 세트 8</span></div>
+    <ul class="sets">
+      <li><b>복합소구</b> <span class="tg n">4월</span></li>
+      <li><b>엄마소구</b> <span class="tg n">4월</span></li>
+      <li><b>음식물소구</b> <span class="tg n">4월</span></li>
+      <li><b>인플루언서PA</b> <span class="tg n">5월</span></li>
+      <li><b>인플루언서PA(자취/살림)</b> <span class="tg n">6월</span></li>
+      <li><b>음식물모음2</b> <span class="tg n">6월</span></li>
+      <li><b>폐기물소구</b> <span class="tg n">6월</span></li>
+      <li><b>인플루언서PA(대형폐기물)</b> <span class="tg n">7월</span></li>
+    </ul>
+
+    <div class="camp ios">iOS_논타겟_구매_26.04.02 <span class="tg p">신설 · 세트 5 (상한)</span></div>
+    <ul class="sets">
+      <li><b>복합소구</b> <span class="tg n">4월</span></li>
+      <li><b>인플루언서PA</b> <span class="tg n">4월</span></li>
+      <li><b>음식물소구</b> <span class="tg n">4월</span></li>
+      <li><b>엄마소구</b> <span class="tg n">4월</span></li>
+      <li><b>대형커버링봉투</b> <span class="tg n">5월</span></li>
+    </ul>
+
+    <div class="camp ios">iOS_논타겟_구매_26.05.15 <span class="tg p">상한 초과분 · 세트 4</span></div>
+    <ul class="sets">
+      <li><b>인플루언서PA</b> <span class="tg n">5월</span></li>
+      <li><b>인플루언서PA(자취/살림)</b> <span class="tg n">6월</span></li>
+      <li><b>폐기물소구</b> <span class="tg n">6월</span></li>
+      <li><b>음식물소구</b> <span class="tg n">6월</span></li>
+    </ul>
+
+    <div class="camp off">앱설치 · 구소재 · 리타겟 캠페인 5개</div>
+    <ul class="sets">
+      <li><span class="d">iOS_논타겟_앱설치 — 5월 29일 OFF</span></li>
+      <li><span class="d">AOS_SPC_구매_인플루언서PA(1) — 5월 29일 OFF</span></li>
+      <li><span class="d">AOS_SPC_구매_대형커버링봉투 — 6월 17일 OFF</span></li>
+      <li><span class="d">AOS·iOS_리타겟_구매(4월 재개) — 5월 21일 · 6월 12일 OFF</span></li>
+    </ul>
+  </div>
+
+</div>
+
+<div class="seq">
+  <h4>끄는 순서 — 대체재를 먼저 만들고, 스펜딩이 붙은 뒤에 껐습니다</h4>
+  <div class="steps">
+    <div class="st"><div class="no">STEP 1 · 4월 초</div><div class="tt">대체 캠페인부터 신설</div><div class="ds">iOS_논타겟_구매(4/2), AOS_SPC_구매(4/29)를 먼저 열어 구매 목적 축을 만듦</div></div>
+    <div class="st"><div class="no">STEP 2 · 4월 말</div><div class="tt">리타겟은 다시 확인</div><div class="ds">AOS·iOS 리타겟을 4/29에 재개해 성과를 다시 보고, 안 나오는 걸 확인한 뒤 종료</div></div>
+    <div class="st"><div class="no">STEP 3 · 5월 29일</div><div class="tt">앱설치·구소재 동시 OFF</div><div class="ds">신규 캠페인이 스펜딩을 받기 시작한 날 앱설치 캠페인과 구소재 AOS 캠페인을 같은 날 종료</div></div>
+    <div class="st"><div class="no">STEP 4 · 6월 17일</div><div class="tt">잔여 캠페인 정리</div><div class="ds">대형커버링봉투 캠페인까지 닫고 구매 캠페인 3개 체제로 수렴</div></div>
+  </div>
+  <p class="ft">※ BigQuery <code>ads_data.daily_cost_creative</code>(channel = tiktok) 실측. 광고그룹 단위 적재는 2025-12-24부터라 그 이전 구간은 캠페인 단위로만 확인됩니다. 세트 수는 집행비가 발생한 광고그룹만 셌습니다.</p>
+</div>
+
+</div></body></html>
