@@ -1,99 +1,50 @@
 <!doctype html><html lang="ko"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>무게 허들 상향 — 11월 재검증과 ROI | 박성진</title>
-<meta name="description" content="성수기 7월과 비수기 11월, 두 번 모두 같은 방향으로 재현된 객단가·배출 비중과 순증분 ROI">
+<title>무게 허들 상향 — 7월·11월 재현 | 박성진</title>
+<meta name="description" content="성수기(7월)와 비수기(11월) 두 시점에서 같은 설계를 반복한 결과 비교표">
 <link rel="stylesheet" href="../assets/style.css">
 <link rel="stylesheet" href="../assets/chart.css">
 <style>
 .wrap{padding:14px 16px}
-.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:12px 0 18px}
-.kpi{background:#F0FDF4;border:1px solid #BBF7D0;border-radius:11px;padding:13px 10px;text-align:center}
-.kpi b{display:block;font-size:22px;font-weight:800;color:var(--green);letter-spacing:-.02em;font-feature-settings:'tnum'}
-.kpi span{display:block;font-size:11.5px;font-weight:700;color:var(--ink-2);margin-top:3px}
-.kpi em{display:block;font-size:10.5px;font-weight:600;color:var(--ink-3);font-style:normal;margin-top:2px;font-feature-settings:'tnum'}
-.grp{margin:0 0 17px}
-.grp .cmp{margin-top:8px}
-.cl small{white-space:nowrap}
-.seas{font-size:11px;font-weight:800;color:var(--ink-3);letter-spacing:.02em;margin:2px 0 4px}
-@media(max-width:520px){
-  .kpis{grid-template-columns:1fr;gap:7px}
-  .kpi b{font-size:20px}
-  .cr{grid-template-columns:92px 1fr 78px;gap:8px}
-  .cl{font-size:11px}.cd{font-size:14px}
-}
+.mtx td.num{font-feature-settings:'tnum';font-weight:700;font-size:14.5px}
+.mtx td.delta{font-weight:800;font-size:14.5px;font-feature-settings:'tnum'}
+.up{color:var(--green)} .dn{color:var(--red)} .flat{color:var(--ink-3)}
+.mtx tr.hi td{background:#F0FDF4}
+.cond{font-size:11.5px;color:var(--ink-3);font-weight:600;display:block;margin-top:2px}
 </style>
 </head><body><div class="wrap">
-<div class="card pad chart">
-
-  <div class="ct2"><h3>성수기와 비수기, 두 번 모두 같은 방향</h3><span class="dir">7월 07.17~21 vs 07.24~28 · 11월 11.06~12 vs 11.13~19</span></div>
-
-  <div class="kpis">
-    <div class="kpi"><b>10.7배</b><span>증분 매출 ÷ 증분 비용</span><em>7월·11월 합산</em></div>
-    <div class="kpi"><b>발송비만</b><span>증분 비용</span><em>할인 재원은 기존 예산 이전</em></div>
-    <div class="kpi"><b>순증 흑자</b><span>두 시점 모두</span><em>7월 ROI 14.7배 · 11월 8.6배</em></div>
-  </div>
-
-  <div class="grp">
-    <div class="ct2"><h3>객단가 (AOV)</h3><span class="dir">계절이 반대인 두 시점에서 같은 방향</span></div>
-    <p class="seas">7월 · 성수기</p>
-    <div class="cmp">
-      <div class="cr">
-        <div class="cl">프로모션 전<small>8kg 초과</small></div>
-        <div class="ct"><div class="cf k" style="width:95.3%">기준</div></div>
-        <div class="cd k">기준</div>
-      </div>
-      <div class="cr">
-        <div class="cl">프로모션 중<small>12kg 초과</small></div>
-        <div class="ct"><div class="cf g" style="width:99.6%">+4.50%</div></div>
-        <div class="cd g">개선<small>성수기</small></div>
-      </div>
-    </div>
-    <p class="seas" style="margin-top:11px">11월 · 비수기</p>
-    <div class="cmp">
-      <div class="cr">
-        <div class="cl">프로모션 전<small>8kg 초과</small></div>
-        <div class="ct"><div class="cf k" style="width:97.2%">기준</div></div>
-        <div class="cd k">기준</div>
-      </div>
-      <div class="cr">
-        <div class="cl">프로모션 중<small>12kg 초과</small></div>
-        <div class="ct"><div class="cf g" style="width:100%">+2.85%</div></div>
-        <div class="cd g">개선<small>비수기 재현</small></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="grp">
-    <div class="ct2"><h3>12kg 초과 주문 비중</h3><span class="dir">배출 행동이 두 번 다 움직였는가</span></div>
-    <p class="seas">7월 · 성수기</p>
-    <div class="cmp">
-      <div class="cr">
-        <div class="cl">프로모션 전</div>
-        <div class="ct"><div class="cf k" style="width:87.6%">14.49%</div></div>
-        <div class="cd k">기준</div>
-      </div>
-      <div class="cr">
-        <div class="cl">프로모션 중</div>
-        <div class="ct"><div class="cf g" style="width:100%">16.54%</div></div>
-        <div class="cd g">+2.05%p</div>
-      </div>
-    </div>
-    <p class="seas" style="margin-top:11px">11월 · 비수기</p>
-    <div class="cmp">
-      <div class="cr">
-        <div class="cl">프로모션 전</div>
-        <div class="ct"><div class="cf k" style="width:87.7%">14.51%</div></div>
-        <div class="cd k">기준</div>
-      </div>
-      <div class="cr">
-        <div class="cl">프로모션 중</div>
-        <div class="ct"><div class="cf g" style="width:95.0%">15.71%</div></div>
-        <div class="cd g">+1.20%p</div>
-      </div>
-    </div>
-  </div>
-
-  <p class="note">7월 단독으로는 <b>'여름 대청소 수요 아니냐'</b>는 반론을 막을 수 없었습니다. 수요가 평탄한 11월에 같은 설계를 반복해 <b>객단가와 12kg 초과 비중이 모두 같은 방향으로 재현</b>된 뒤에야 조직이 결과를 신뢰했습니다.</p>
-  <p class="note" style="font-size:11.5px">※ 증분 매출 = (프로모션 중 객단가 − 전 객단가) × 프로모션 중 주문 수. 증분 비용은 알림톡 발송비만(건당 5.8원)이며 할인 재원은 기존 8kg 예산을 옮긴 것이라 산입하지 않았습니다. 막대 길이는 상대 비교입니다.</p>
+<div class="card pad">
+<div class="ct2"><h3>성수기와 비수기, 두 번 모두 같은 방향</h3><span class="dir">7월 07.17~21 vs 07.24~28 · 11월 11.06~12 vs 11.13~19</span></div>
+<table class="mtx" style="margin-top:10px">
+<tr>
+  <th>지표</th>
+  <th>7월 (성수기)<span class="cond">프로모션 전 → 중</span></th>
+  <th>11월 (비수기)<span class="cond">프로모션 전 → 중</span></th>
+  <th>재현 여부</th>
+</tr>
+<tr class="hi">
+  <td>객단가<span class="cond">주문 1건당 실제 결제 금액</span></td>
+  <td class="num up">+4.50%</td><td class="num up">+2.85%</td>
+  <td class="delta up">두 번 다 상승</td>
+</tr>
+<tr class="hi">
+  <td>12kg 초과 주문 비중</td>
+  <td class="num up">14.49% → 16.54%<span class="cond">+2.05%p</span></td>
+  <td class="num up">14.51% → 15.71%<span class="cond">+1.20%p</span></td>
+  <td class="delta up">두 번 다 상승</td>
+</tr>
+<tr>
+  <td>증분 매출 ÷ 증분 비용<span class="cond">쓴 돈 대비 돌아온 돈</span></td>
+  <td class="num">14.7배</td><td class="num">8.6배</td>
+  <td class="delta up">합산 10.7배</td>
+</tr>
+<tr>
+  <td>증분 비용의 정체</td>
+  <td class="num">알림톡 발송비만</td><td class="num">알림톡 발송비만</td>
+  <td class="delta flat">할인 재원은 기존 예산 이전</td>
+</tr>
+</table>
+<p class="note">7월 단독으로는 <b>'여름 대청소 수요 아니냐'</b>는 반론을 막을 수 없었습니다. 수요가 평탄한 11월에 같은 설계를 반복해 <b>객단가와 12kg 초과 비중이 모두 같은 방향으로 재현</b>된 뒤에야 조직이 결과를 신뢰했습니다.</p>
+<p class="note" style="font-size:11.5px">※ 증분 매출 = (프로모션 중 객단가 − 프로모션 전 객단가) × 프로모션 중 주문 수. 증분 비용은 알림톡 발송비만 잡았고(건당 5.8원), 할인 재원은 기존 8kg 예산을 옮긴 것이라 산입하지 않았습니다.</p>
 </div>
 </div></body></html>

@@ -1,158 +1,58 @@
 <!doctype html><html lang="ko"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>990원 vs 클린스마스 — 같은 카드, 다른 결과 | 박성진</title>
-<meta name="description" content="1년 간격으로 두 번 쓴 '첫 이용 문턱 낮추기' 카드. 유입 증가율·CAC 변화·프로모션 코호트 이용 전환율 3개 지표로 비교했습니다">
+<title>990원 vs 클린스마스 — 유입·CAC·전환율 | 박성진</title>
+<meta name="description" content="2024.12 990원 진입 이벤트와 2025.12 클린스마스 50% 반값 프로모션을 유입·CAC·전환율 세 지표로 비교">
 <link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="../assets/chart.css">
 <style>
-:root{--s990:#2563EB;--sxmas:#10B981}
-.lgd{display:flex;gap:20px;flex-wrap:wrap;margin:0 0 4px;font-size:12.5px;font-weight:700;color:var(--ink-2)}
-.lgd span{display:inline-flex;align-items:center;gap:7px}
-.lgd i{width:12px;height:12px;border-radius:4px;display:inline-block}
-.panel{margin-top:14px}
-.panel h3{margin:0 0 2px;font-size:14.5px;font-weight:800;color:var(--ink)}
-.panel .pm{margin:0 0 6px;font-size:11.5px;font-weight:600;color:var(--ink-3)}
-.cbox{width:100%;overflow:visible;display:block}
-.g-line{stroke:#E6E9EF;stroke-width:1}
-.g-zero{stroke:#C7CCD6;stroke-width:1.5}
-.ax{font-size:10.5px;fill:var(--ink-3);font-weight:600}
-.nm{font-size:12.5px;fill:var(--ink-2);font-weight:700}
-.vl{font-size:13px;font-weight:800}
-.sub{font-size:10.5px;fill:var(--ink-3);font-weight:600}
-.bar{cursor:default}
-.bar:hover{opacity:.82}
-#tt{position:fixed;pointer-events:none;opacity:0;transition:opacity .12s;background:var(--ink);color:#fff;
-  font-size:12px;font-weight:600;line-height:1.5;padding:7px 10px;border-radius:8px;white-space:pre;z-index:50;
-  box-shadow:0 6px 20px rgba(11,14,20,.18)}
-table.tv{width:100%;border-collapse:collapse;font-size:12.5px;margin-top:6px}
-table.tv th,table.tv td{border-bottom:1px solid var(--line);padding:7px 8px;text-align:right}
-table.tv th:first-child,table.tv td:first-child{text-align:left}
-table.tv th{color:var(--ink-3);font-weight:700;font-size:11.5px}
+.wrap{padding:12px 14px}
+.hd h3{margin:0;font-size:15px;font-weight:800;letter-spacing:-.02em}
+.hd .dir{display:block;font-size:11px;font-weight:600;color:var(--ink-3);margin-top:2px}
+.lgd{display:flex;gap:14px;margin:10px 0 2px;font-size:11px;font-weight:700;color:var(--ink-2)}
+.lgd i{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:5px;vertical-align:-1px}
+.gx{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:12px 0 4px}
+.mp{border:1px solid var(--line,#E8E8E6);border-radius:11px;padding:10px 11px 12px}
+.mt{font-size:12px;font-weight:800;letter-spacing:-.01em;margin:0 0 2px}
+.ms{font-size:10.5px;font-weight:600;color:var(--ink-3);margin:0 0 10px}
+.rw{margin-bottom:9px}
+.lb{font-size:10.5px;font-weight:700;color:var(--ink-2);display:block;margin-bottom:3px}
+.tr{position:relative;height:19px;background:#F4F4F2;border-radius:4px;overflow:hidden}
+.bar{position:absolute;left:0;top:0;height:100%;border-radius:4px}
+.b990{background:#C9CCD3}.bxm{background:#16A34A}.bbad{background:#DC2626}
+.vl{position:absolute;right:6px;top:0;line-height:19px;font-size:11px;font-weight:800;color:#1A1A18;font-feature-settings:'tnum'}
+.vl.on{color:#fff}
+@media(max-width:640px){.gx{grid-template-columns:1fr;gap:9px}}
 </style>
 </head><body><div class="wrap">
-
-<div class="head">
-  <div class="head-meta"><span class="kicker">프로모션 비교</span><span class="date-meta">2024.12 vs 2025.12</span></div>
-  <h1>같은 카드를 두 번 썼고, <span class="hl">결과는 달랐습니다</span></h1>
-  <p class="sub">둘 다 '첫 이용 문턱을 낮춰 신규를 모은다'는 전략이었습니다. 1년 간격으로 집행한 두 프로모션을 <b>유입 증가율 · CAC 변화 · 코호트 이용 전환율</b> 세 지표로 나란히 놓았습니다. 규모가 다른 해이므로 절대값이 아니라 <b>직전월(11월) 대비 변화</b>로 비교합니다.</p>
-</div>
-
 <div class="card pad chart">
+
+  <div class="hd"><h3>같은 카드를 두 번 썼고, 결과는 달랐다</h3><span class="dir">직전월(11월) 대비 변화 · 2024.12 990원 진입 이벤트 vs 2025.12 클린스마스 50% 반값</span></div>
+
   <div class="lgd">
-    <span><i style="background:var(--s990)"></i>2024.12 · 990원 진입 이벤트</span>
-    <span><i style="background:var(--sxmas)"></i>2025.12 · 클린스마스 50% 반값</span>
+    <span><i class="b990"></i>990원 (24.12)</span>
+    <span><i class="bxm"></i>클린스마스 (25.12)</span>
   </div>
 
-  <div class="panel">
-    <h3>① 유입 — 신규 유저(D30) 증가율</h3>
-    <p class="pm">11월 → 12월 · 높을수록 좋음</p>
-    <svg class="cbox" viewBox="0 0 640 132" role="img" aria-label="신규 유저 D30 증가율: 990원 +34.0%, 클린스마스 +61.3%">
-      <g class="g-line"><line x1="120" y1="18" x2="120" y2="112"/><line x1="257" y1="18" x2="257" y2="112"/><line x1="394" y1="18" x2="394" y2="112"/><line x1="531" y1="18" x2="531" y2="112"/></g>
-      <g class="ax" text-anchor="middle"><text x="120" y="126">0%</text><text x="257" y="126">+20%</text><text x="394" y="126">+40%</text><text x="531" y="126">+60%</text></g>
-      <text class="nm" x="112" y="38" text-anchor="end">990원</text>
-      <text class="sub" x="112" y="52" text-anchor="end">1,602 → 2,146명</text>
-      <rect class="bar" x="120" y="26" width="233" height="28" rx="4" fill="var(--s990)" data-t="990원 진입 이벤트&#10;신규 유저(D30) 1,602 → 2,146명&#10;증가율 +34.0%"/>
-      <text class="vl" x="365" y="45" fill="var(--s990)">+34.0%</text>
-      <text class="nm" x="112" y="90" text-anchor="end">클린스마스</text>
-      <text class="sub" x="112" y="104" text-anchor="end">6,633 → 10,696명</text>
-      <rect class="bar" x="120" y="78" width="420" height="28" rx="4" fill="var(--sxmas)" data-t="클린스마스 50% 반값&#10;신규 유저(D30) 6,633 → 10,696명&#10;증가율 +61.3%"/>
-      <text class="vl" x="552" y="97" fill="var(--sxmas)">+61.3%</text>
-    </svg>
-    <p class="note" style="margin-top:2px">같은 '첫 이용 할인' 카드로 <b>유입 리프트를 27.3%p 더 크게</b> 만들었습니다.</p>
+  <div class="gx">
+
+    <div class="mp">
+      <p class="mt">① 유입</p><p class="ms">신규 유저(D30) 증가율 · 높을수록 좋음</p>
+      <div class="rw"><span class="lb">990원</span><div class="tr"><i class="bar b990" style="width:55.5%"></i><span class="vl">+34.0%</span></div></div>
+      <div class="rw"><span class="lb">클린스마스</span><div class="tr"><i class="bar bxm" style="width:100%"></i><span class="vl on">+61.3%</span></div></div>
+    </div>
+
+    <div class="mp">
+      <p class="mt">② CAC</p><p class="ms">신규 1명당 획득비 변화 · 낮을수록 좋음</p>
+      <div class="rw"><span class="lb">990원</span><div class="tr"><i class="bar bbad" style="width:100%"></i><span class="vl on">+9.6%</span></div></div>
+      <div class="rw"><span class="lb">클린스마스</span><div class="tr"><i class="bar bxm" style="width:17%"></i><span class="vl">−1.6%</span></div></div>
+    </div>
+
+    <div class="mp">
+      <p class="mt">③ 전환율</p><p class="ms">가입 후 30일 내 첫 이용 · 높을수록 좋음</p>
+      <div class="rw"><span class="lb">990원</span><div class="tr"><i class="bar b990" style="width:45.6%"></i><span class="vl">17.6%</span></div></div>
+      <div class="rw"><span class="lb">클린스마스</span><div class="tr"><i class="bar bxm" style="width:100%"></i><span class="vl on">38.6%</span></div></div>
+    </div>
+
   </div>
-
-  <div class="panel">
-    <h3>② CAC(D30) — 신규 1명당 획득비 변화율</h3>
-    <p class="pm">11월 → 12월 · 왼쪽(마이너스)이 좋음</p>
-    <svg class="cbox" viewBox="0 0 640 132" role="img" aria-label="CAC D30 변화율: 990원 +9.6% 악화, 클린스마스 -1.6% 개선">
-      <g class="g-line"><line x1="120" y1="18" x2="120" y2="112"/><line x1="240" y1="18" x2="240" y2="112"/><line x1="480" y1="18" x2="480" y2="112"/><line x1="600" y1="18" x2="600" y2="112"/></g>
-      <line class="g-zero" x1="360" y1="14" x2="360" y2="116"/>
-      <g class="ax" text-anchor="middle"><text x="120" y="126">−12%</text><text x="240" y="126">−6%</text><text x="360" y="126">0%</text><text x="480" y="126">+6%</text><text x="600" y="126">+12%</text></g>
-      <text class="ax" x="360" y="10" text-anchor="middle">← 개선 &#160;|&#160; 악화 →</text>
-      <text class="nm" x="112" y="38" text-anchor="end">990원</text>
-      <text class="sub" x="112" y="52" text-anchor="end">CAC +9.6%</text>
-      <rect class="bar" x="360" y="26" width="192" height="28" rx="4" fill="var(--s990)" data-t="990원 진입 이벤트&#10;CAC(D30) +9.6%&#10;+9.6% (악화)"/>
-      <text class="vl" x="562" y="45" fill="var(--s990)">+9.6% 악화</text>
-      <text class="nm" x="112" y="90" text-anchor="end">클린스마스</text>
-      <text class="sub" x="112" y="104" text-anchor="end">CAC −1.6%</text>
-      <rect class="bar" x="328" y="78" width="32" height="28" rx="4" fill="var(--sxmas)" data-t="클린스마스 50% 반값&#10;CAC(D30) −1.6%&#10;−1.6% (개선)"/>
-      <text class="vl" x="318" y="97" fill="var(--sxmas)" text-anchor="end">−1.6% 개선</text>
-    </svg>
-    <p class="note" style="margin-top:2px">990원은 <b>예산을 태울수록 단가가 올랐고</b>, 클린스마스는 광고비를 58.6% 늘리면서도 단가를 내렸습니다.</p>
-  </div>
-
-  <div class="panel">
-    <h3>③ 이용 전환율 — 프로모션 기간 가입 코호트</h3>
-    <p class="pm">가입 후 30일 내 첫 결제 이용 비율 · 회색 선은 직전월(11월) 수준</p>
-    <svg class="cbox" viewBox="0 0 640 132" role="img" aria-label="프로모션 코호트 이용 전환율: 990원 17.6%, 클린스마스 38.6%">
-      <g class="g-line"><line x1="120" y1="18" x2="120" y2="112"/><line x1="280" y1="18" x2="280" y2="112"/><line x1="440" y1="18" x2="440" y2="112"/><line x1="600" y1="18" x2="600" y2="112"/></g>
-      <g class="ax" text-anchor="middle"><text x="120" y="126">0%</text><text x="280" y="126">15%</text><text x="440" y="126">30%</text><text x="600" y="126">45%</text></g>
-      <text class="nm" x="112" y="38" text-anchor="end">990원</text>
-      <text class="sub" x="112" y="52" text-anchor="end">11월 17.4%</text>
-      <rect class="bar" x="120" y="26" width="188" height="28" rx="4" fill="var(--s990)" data-t="990원 진입 이벤트&#10;11월 17.4% → 12월 17.6%&#10;개선폭 +0.2%p"/>
-      <line x1="306" y1="22" x2="306" y2="58" stroke="#7A8294" stroke-width="2"/>
-      <text class="vl" x="320" y="45" fill="var(--s990)">17.6%</text>
-      <text class="sub" x="378" y="45">+0.2%p</text>
-      <text class="nm" x="112" y="90" text-anchor="end">클린스마스</text>
-      <text class="sub" x="112" y="104" text-anchor="end">11월 30.8%</text>
-      <rect class="bar" x="120" y="78" width="412" height="28" rx="4" fill="var(--sxmas)" data-t="클린스마스 50% 반값&#10;11월 30.8% → 12월 38.6%&#10;개선폭 +7.8%p"/>
-      <line x1="329" y1="74" x2="329" y2="110" stroke="#fff" stroke-width="2"/>
-      <text class="vl" x="544" y="97" fill="var(--sxmas)">38.6%</text>
-      <text class="sub" x="602" y="97" text-anchor="end">+7.8%p</text>
-    </svg>
-    <p class="note" style="margin-top:2px">990원은 유입을 늘렸어도 <b>전환율을 거의 못 움직였습니다(+0.2%p)</b>. 990원 회고의 결론도 '사용 방법을 제대로 인지하지 못해 CAC를 개선하지 못했다'였습니다. 클린스마스는 <b>+7.8%p</b> 올렸습니다.</p>
-  </div>
-
-  <details style="margin-top:16px">
-    <summary style="font-size:12.5px;font-weight:700;color:var(--ink-2);cursor:pointer">표로 보기</summary>
-    <table class="tv">
-      <thead><tr><th>지표</th><th>990원 (24.12)</th><th>클린스마스 (25.12)</th><th>차이</th></tr></thead>
-      <tbody>
-        <tr><td>신규 유저(D30) 11월</td><td>1,602명</td><td>6,633명</td><td>—</td></tr>
-        <tr><td>신규 유저(D30) 12월</td><td>2,146명</td><td>10,696명</td><td>—</td></tr>
-        <tr><td><b>유입 증가율</b></td><td>+34.0%</td><td><b>+61.3%</b></td><td>+27.3%p</td></tr>
-        <tr><td>CAC(D30) 11월</td><td>기준</td><td>+43.8%</td><td>—</td></tr>
-        <tr><td>CAC(D30) 12월</td><td>+9.6%</td><td>+41.4%</td><td>—</td></tr>
-        <tr><td><b>CAC 변화율</b></td><td>+9.6%</td><td><b>−1.6%</b></td><td>−11.2%p</td></tr>
-        <tr><td>이용 전환율 11월</td><td>17.4%</td><td>30.8%</td><td>—</td></tr>
-        <tr><td>이용 전환율 12월</td><td>17.6%</td><td>38.6%</td><td>+21.0%p</td></tr>
-        <tr><td><b>전환율 개선폭</b></td><td>+0.2%p</td><td><b>+7.8%p</b></td><td>+7.6%p</td></tr>
-      </tbody>
-    </table>
-  </details>
 </div>
-
-<div class="sect"><h2>신규 획득 캠페인이 휴면 회수까지 겸했다</h2><span class="tag">반값 쿠폰 실사용자 7,351명의 구성</span></div>
-<div class="card pad chart">
-  <div class="bar-row"><div class="name">프로모션 신규 (12.16~31)</div><div class="bar-track"><div class="bar-fill bf-green" style="width:100%">4,257명 · 57.9%</div></div></div>
-  <div class="bar-row"><div class="name">기존 미이용자 회수</div><div class="bar-track"><div class="bar-fill bf-amber" style="width:40.1%">1,708명 · 23.2%</div></div></div>
-  <div class="bar-row"><div class="name">12월 전반 가입</div><div class="bar-track"><div class="bar-fill bf-blue" style="width:32.6%">1,386명 · 18.9%</div></div></div>
-  <p class="note">'가입 후 미결제 유저에게 일괄 발급'이라는 한 줄이 <b>1,708명의 복귀</b>로 돌아왔습니다. 이미 획득 비용을 치렀지만 한 번도 쓰지 않고 잠들어 있던 유저입니다.</p>
-</div>
-
-<div class="insight" style="margin-top:18px">
-  <div class="ic">💡</div>
-  <div class="tx">할인율은 두 번 다 비슷했습니다. 달라진 건 <b>쿠폰이 유저에게 닿는 경로를 자동화하고, 990원 때 없던 인플루언서 바이럴을 새 트랙으로 얹은 것</b>입니다. 그 차이가 전환율 +7.6%p, 유입 리프트 +27.3%p로 나타났습니다.</div>
-</div>
-
-<div class="foot">
-  <span class="nb">⚠️ 공개용 자료 — 신규 유저(D30) = 해당 월 가입자 중 30일 내 첫 결제 이용, <b>24년·25년에 동일 쿼리 적용</b>(`secure_dataset.user` + `order_v2` + `order_invoice`→`receipt` PAID). 이용 전환율 = 신규 유저(D30) ÷ 해당 월 가입자. 24.12 CAC(D30)는 사내 990원 회고 문서 인용값 — 광고비 테이블(`ads_data.daily_cost`)이 25.10부터 적재되어 자체 산출 불가. 반값 쿠폰 = `coupon_policy` 145 · BigQuery 2026.08 기준</span>
-  <a class="home" href="../data-room.html">← 박성진 데이터룸</a>
-</div>
-
-<div id="tt"></div>
-<script>
-(function(){
-  var tt=document.getElementById('tt');
-  document.querySelectorAll('.bar[data-t]').forEach(function(b){
-    b.addEventListener('mouseenter',function(e){tt.textContent=b.getAttribute('data-t');tt.style.opacity=1;});
-    b.addEventListener('mousemove',function(e){
-      var w=tt.offsetWidth,h=tt.offsetHeight;
-      var x=Math.min(e.clientX+14, window.innerWidth-w-8);
-      var y=Math.max(e.clientY-h-10, 8);
-      tt.style.left=x+'px';tt.style.top=y+'px';
-    });
-    b.addEventListener('mouseleave',function(){tt.style.opacity=0;});
-  });
-})();
-</script>
 </div></body></html>

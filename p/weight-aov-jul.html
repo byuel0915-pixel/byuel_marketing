@@ -1,102 +1,54 @@
 <!doctype html><html lang="ko"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>무게 허들 상향 — 7월 객단가·배출량·매출 | 박성진</title>
-<meta name="description" content="12kg 허들 상향 프로모션 전후 객단가·주문당 배출량·기간 매출 비교">
+<meta name="description" content="12kg 허들 상향 프로모션 전후 객단가·주문당 배출량·기간 매출 비교표">
 <link rel="stylesheet" href="../assets/style.css">
 <link rel="stylesheet" href="../assets/chart.css">
 <style>
 .wrap{padding:14px 16px}
-.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:0 0 18px}
-.kpi{background:#F0FDF4;border:1px solid #BBF7D0;border-radius:11px;padding:13px 10px;text-align:center}
-.kpi b{display:block;font-size:23px;font-weight:800;color:var(--green);letter-spacing:-.02em;font-feature-settings:'tnum'}
-.kpi span{display:block;font-size:11.5px;font-weight:700;color:var(--ink-2);margin-top:3px}
-.kpi em{display:block;font-size:10.5px;font-weight:600;color:var(--ink-3);font-style:normal;margin-top:2px;font-feature-settings:'tnum'}
-.grp{margin:0 0 17px}
-.grp .cmp{margin-top:8px}
-.cl small{white-space:nowrap}
-@media(max-width:520px){
-  .kpis{grid-template-columns:1fr;gap:7px}
-  .kpi b{font-size:20px}
-  .cr{grid-template-columns:96px 1fr 78px;gap:8px}
-  .cl{font-size:11px}.cd{font-size:14px}
-}
+.mtx td.num{font-feature-settings:'tnum';font-weight:700;font-size:14.5px}
+.mtx td.delta{font-weight:800;font-size:14.5px;font-feature-settings:'tnum'}
+.up{color:var(--green)} .dn{color:var(--red)} .flat{color:var(--ink-3)}
+.mtx tr.hi td{background:#F0FDF4}
+.cond{font-size:11.5px;color:var(--ink-3);font-weight:600;display:block;margin-top:2px}
 </style>
 </head><body><div class="wrap">
-<div class="card pad chart">
-
-  <div class="ct2"><h3>허들을 올렸는데 객단가·배출량·매출이 같이 올랐다</h3><span class="dir">07.17~21 vs 07.24~28 · 같은 요일 5일</span></div>
-
-  <div class="kpis" style="margin-top:12px">
-    <div class="kpi"><b>+4.50%</b><span>객단가</span><em>+4.50%</em></div>
-    <div class="kpi"><b>+5.36%</b><span>주문당 배출량</span><em>7.286 → 7.677kg</em></div>
-    <div class="kpi"><b>+11.9%</b><span>기간 매출</span><em>+11.9%</em></div>
-  </div>
-
-  <div class="grp">
-    <div class="ct2"><h3>객단가 (AOV)</h3><span class="dir">할인 차감 후 실결제액</span></div>
-    <div class="cmp">
-      <div class="cr">
-        <div class="cl">프로모션 전<small>8kg 초과 · 500원</small></div>
-        <div class="ct"><div class="cf k" style="width:95.7%">기준</div></div>
-        <div class="cd k">기준</div>
-      </div>
-      <div class="cr">
-        <div class="cl">프로모션 중<small>12kg 초과 · 1,000원</small></div>
-        <div class="ct"><div class="cf g" style="width:100%">+4.50%</div></div>
-        <div class="cd g">개선<small>객단가 상승</small></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="grp">
-    <div class="ct2"><h3>주문당 배출량</h3><span class="dir">배출 행동이 실제로 움직였는가</span></div>
-    <div class="cmp">
-      <div class="cr">
-        <div class="cl">프로모션 전<small>8kg 초과 · 500원</small></div>
-        <div class="ct"><div class="cf k" style="width:94.9%">7.286kg</div></div>
-        <div class="cd k">기준</div>
-      </div>
-      <div class="cr">
-        <div class="cl">프로모션 중<small>12kg 초과 · 1,000원</small></div>
-        <div class="ct"><div class="cf g" style="width:100%">7.677kg</div></div>
-        <div class="cd g">+5.36%<small>+0.391kg</small></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="grp">
-    <div class="ct2"><h3>기간 매출</h3><span class="dir">5일 합산 실결제액</span></div>
-    <div class="cmp">
-      <div class="cr">
-        <div class="cl">프로모션 전<small>주문량 기준</small></div>
-        <div class="ct"><div class="cf k" style="width:89.4%">기준</div></div>
-        <div class="cd k">기준</div>
-      </div>
-      <div class="cr">
-        <div class="cl">프로모션 중<small>주문량 +7.0%</small></div>
-        <div class="ct"><div class="cf g" style="width:100%">+11.9%</div></div>
-        <div class="cd g">개선<small>기간 매출 상승</small></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="grp" style="margin-bottom:6px">
-    <div class="ct2"><h3>12kg 초과 주문 비중</h3><span class="dir">허들을 넘긴 주문의 비율</span></div>
-    <div class="cmp">
-      <div class="cr">
-        <div class="cl">프로모션 전</div>
-        <div class="ct"><div class="cf k" style="width:87.6%">14.49%</div></div>
-        <div class="cd k">기준</div>
-      </div>
-      <div class="cr">
-        <div class="cl">프로모션 중</div>
-        <div class="ct"><div class="cf g" style="width:100%">16.54%</div></div>
-        <div class="cd g">+2.05%p</div>
-      </div>
-    </div>
-  </div>
-
-  <p class="note">우려는 <b>'허들이 올라가면 할인을 포기하고 적게 버려서 객단가가 떨어진다'</b>였습니다. 실제로는 12kg 초과 주문 비중과 주문당 배출량이 함께 올라 배출 행동 자체가 움직였고, 객단가와 매출이 따라 올랐습니다.</p>
-  <p class="note" style="font-size:11.5px">※ 할인 재원은 기존 8kg 예산을 그대로 옮긴 것이라 <b>순증 비용은 0원</b>입니다. 막대 길이는 두 값의 비율이며, 축은 0부터가 아니라 큰 값을 100%로 둔 상대 비교입니다.</p>
+<div class="card pad">
+<div class="ct2"><h3>허들을 올렸는데 객단가·배출량·매출이 같이 올랐다</h3><span class="dir">07.17~21 vs 07.24~28 · 같은 요일 5일 · 추가 예산 0원</span></div>
+<table class="mtx" style="margin-top:10px">
+<tr>
+  <th>지표</th>
+  <th>프로모션 전<span class="cond">8kg 초과 · 500원 할인</span></th>
+  <th>프로모션 중<span class="cond">12kg 초과 · 1,000원 할인</span></th>
+  <th>차이</th>
+</tr>
+<tr class="hi">
+  <td>객단가<span class="cond">주문 1건당 실제 결제 금액</span></td>
+  <td class="num">100</td><td class="num">104.5</td>
+  <td class="delta up">+4.50%</td>
+</tr>
+<tr class="hi">
+  <td>주문당 배출량<span class="cond">한 번에 얼마나 버렸나</span></td>
+  <td class="num">7.286kg</td><td class="num">7.677kg</td>
+  <td class="delta up">+5.36%<span class="cond">+0.391kg</span></td>
+</tr>
+<tr>
+  <td>12kg 초과 주문 비중<span class="cond">허들을 넘긴 주문의 비율</span></td>
+  <td class="num">14.49%</td><td class="num">16.54%</td>
+  <td class="delta up">+2.05%p</td>
+</tr>
+<tr>
+  <td>주문 수</td>
+  <td class="num">100</td><td class="num">107.0</td>
+  <td class="delta up">+7.0%</td>
+</tr>
+<tr class="hi">
+  <td>기간 매출<span class="cond">5일 합산 실결제액</span></td>
+  <td class="num">100</td><td class="num">111.9</td>
+  <td class="delta up">+11.9%</td>
+</tr>
+</table>
+<p class="note">우려는 <b>'허들이 올라가면 할인을 포기하고 적게 버려서 객단가가 떨어진다'</b>였습니다. 실제로는 12kg을 넘긴 주문 비중과 주문당 배출량이 함께 올라 <b>버리는 행동 자체가 움직였고</b>, 객단가와 매출이 따라 올랐습니다.</p>
+<p class="note" style="font-size:11.5px">※ 할인 재원은 기존 8kg 예산을 그대로 옮긴 것이라 <b>순증 비용은 0원</b>입니다. 객단가·주문 수·기간 매출은 프로모션 전을 100으로 둔 지수입니다.</p>
 </div>
 </div></body></html>

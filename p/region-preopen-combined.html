@@ -1,0 +1,62 @@
+<!doctype html><html lang="ko"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>사전 모객 — 오픈 당일 DAU·BEP·전환율 | 박성진</title>
+<meta name="description" content="사전 모객을 한 지역과 하지 않은 지역의 오픈 당일 DAU, BEP 도달 일수, 쿠폰 전환율 비교">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="../assets/chart.css">
+<style>
+.wrap{padding:12px 14px}
+.hd h3{margin:0;font-size:15px;font-weight:800;letter-spacing:-.02em}
+.hd .dir{display:block;font-size:11px;font-weight:600;color:var(--ink-3);margin-top:2px}
+.gx{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:13px 0 4px}
+.mp{border:1px solid var(--line,#E8E8E6);border-radius:11px;padding:10px 11px 12px}
+.mt{font-size:12px;font-weight:800;letter-spacing:-.01em;margin:0 0 2px}
+.ms{font-size:10.5px;font-weight:600;color:var(--ink-3);margin:0 0 10px}
+.rw{margin-bottom:8px}
+.lb{font-size:10.5px;font-weight:700;color:var(--ink-2);display:block;margin-bottom:3px}
+.tr{position:relative;height:19px;background:#F4F4F2;border-radius:4px;overflow:hidden}
+.bar{position:absolute;left:0;top:0;height:100%;border-radius:4px}
+.bk{background:#C9CCD3}.bg{background:#16A34A}.br{background:#DC2626}
+.vl{position:absolute;right:6px;top:0;line-height:19px;font-size:11px;font-weight:800;color:#1A1A18;font-feature-settings:'tnum'}
+.vl.on{color:#fff}
+.dl{font-size:11px;font-weight:800;margin-top:6px;font-feature-settings:'tnum';color:#16A34A}
+.ft{margin-top:12px;background:#F0FDF4;border:1px solid #BBF7D0;border-radius:10px;padding:10px 12px;font-size:12px;font-weight:700;color:#15803D}
+@media(max-width:640px){.gx{grid-template-columns:1fr;gap:9px}}
+</style>
+</head><body><div class="wrap">
+<div class="card pad chart">
+
+  <div class="hd"><h3>사전 모객을 한 지역과 하지 않은 지역</h3><span class="dir">회색 = 사전 모객 없이 연 20개 지역의 중앙값 · 초록 = 사전 모객을 한 지역</span></div>
+
+  <div class="gx">
+
+    <div class="mp">
+      <p class="mt">① 오픈 당일 이용자 수</p><p class="ms">문을 연 첫날 실제로 주문한 사람 · 많을수록 좋음</p>
+      <div class="rw"><span class="lb">사전 모객 없음 (중앙값)</span><div class="tr"><i class="bar bk" style="width:14%"></i><span class="vl">13명</span></div></div>
+      <div class="rw"><span class="lb">오픈 '후'에 쿠폰 (천안·아산)</span><div class="tr"><i class="bar br" style="width:9%"></i><span class="vl">8명</span></div></div>
+      <div class="rw"><span class="lb">사전 모객 (청주)</span><div class="tr"><i class="bar bg" style="width:56%"></i><span class="vl on">52명</span></div></div>
+      <div class="rw"><span class="lb">사전 모객 (대전)</span><div class="tr"><i class="bar bg" style="width:100%"></i><span class="vl on">93명</span></div></div>
+      <p class="dl">대전 7.2배 · 청주 4.0배</p>
+    </div>
+
+    <div class="mp">
+      <p class="mt">② 손익분기점까지 걸린 날</p><p class="ms">하루 35건을 넘기까지 · 짧을수록 좋음</p>
+      <div class="rw"><span class="lb">사전 모객 없음 (중앙값)</span><div class="tr"><i class="bar bk" style="width:100%"></i><span class="vl on">114일</span></div></div>
+      <div class="rw"><span class="lb">사전 모객 (대전·청주)</span><div class="tr"><i class="bar bg" style="width:5.3%"></i><span class="vl">6일</span></div></div>
+      <div class="rw"><span class="lb">사전 모객 (세종)</span><div class="tr"><i class="bar br" style="width:100%"></i><span class="vl on">143일</span></div></div>
+      <p class="dl">대전·청주 −108일 / 세종은 오히려 +29일</p>
+    </div>
+
+    <div class="mp">
+      <p class="mt">③ 같은 쿠폰, 다른 사람</p><p class="ms">2만원 쿠폰을 받고 실제로 주문한 비율</p>
+      <div class="rw"><span class="lb">사전 모객 유저</span><div class="tr"><i class="bar bg" style="width:100%"></i><span class="vl on">6.90%</span></div></div>
+      <div class="rw"><span class="lb">기존 가입자 (쿠폰 없음)</span><div class="tr"><i class="bar bk" style="width:84.5%"></i><span class="vl">5.83%</span></div></div>
+      <div class="rw"><span class="lb">기존 가입자 (쿠폰 받음)</span><div class="tr"><i class="bar br" style="width:13%"></i><span class="vl">0.90%</span></div></div>
+      <p class="dl">쿠폰이 아니라 사람이 갈랐다 (7.7배)</p>
+    </div>
+
+  </div>
+
+  <div class="ft">아껴진 고정비는 이 캠페인에 들어간 비용의 <b>2.8배</b>입니다. 실패한 세종의 손실을 전액 빼고 계산한 값입니다.</div>
+</div>
+</div></body></html>
