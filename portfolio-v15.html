@@ -1,0 +1,1099 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>박성진 — 그로스·퍼포먼스 마케터 포트폴리오 2026</title>
+<meta name="description" content="예산을 늘리기 전에 전환율을 먼저 올립니다. 10개 프로젝트로 정리한 그로스·퍼포먼스 마케팅 포트폴리오." />
+<style>
+:root{
+  --navy:#0B2545;
+  --navy-2:#13315C;
+  --blue:#2563EB;
+  --blue-dk:#1D4ED8;
+  --blue-soft:#E9EFFD;
+  --blue-line:#C9D8FA;
+  --cream:#FAF7F0;
+  --mustard:#C98A1E;
+  --mustard-soft:#FBF1DC;
+  --ink:#101828;
+  --body:#3B4557;
+  --muted:#6B7688;
+  --line:#E3E7EF;
+  --bg:#FFFFFF;
+  --surface:#F6F8FC;
+  --good:#15803D;
+  --good-soft:#E7F5EC;
+  --bad:#B42318;
+  --bad-soft:#FBEBE9;
+  --radius:14px;
+}
+*{box-sizing:border-box;}
+html{
+  scroll-behavior:smooth;
+  scroll-snap-type:y proximity;
+  -webkit-text-size-adjust:100%;
+}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Segoe UI","Malgun Gothic",system-ui,sans-serif;
+  font-variant-numeric:tabular-nums;
+  font-size:17px;
+  line-height:1.6;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,h4,p,ul,ol,figure{margin:0;padding:0;}
+ul{list-style:none;}
+a{color:inherit;}
+
+/* ---------- progress + nav ---------- */
+#bar{
+  position:fixed;top:0;left:0;height:3px;width:0%;
+  background:linear-gradient(90deg,var(--blue),var(--mustard));
+  z-index:60;transition:width .12s linear;
+}
+#jump{
+  position:fixed;right:18px;top:50%;transform:translateY(-50%);
+  display:flex;flex-direction:column;gap:9px;z-index:55;
+}
+#jump button{
+  width:9px;height:9px;padding:0;border:0;border-radius:50%;
+  background:#CFD6E4;cursor:pointer;transition:.18s;
+}
+#jump button:hover{background:var(--blue);transform:scale(1.35);}
+#jump button[aria-current="true"]{background:var(--navy);transform:scale(1.45);}
+@media (max-width:1180px){#jump{display:none;}}
+
+/* ---------- slide shell ---------- */
+.deck{max-width:1680px;margin:0 auto;}
+.slide{
+  position:relative;
+  min-height:100svh;
+  padding:clamp(72px,8vh,96px) clamp(24px,5vw,72px) clamp(56px,7vh,76px);
+  display:flex;flex-direction:column;justify-content:center;
+  border-bottom:1px solid var(--line);
+  scroll-snap-align:start;
+}
+.slide:last-child{border-bottom:0;}
+.eyebrow{
+  position:absolute;top:clamp(26px,3.4vh,38px);
+  left:clamp(24px,5vw,72px);right:clamp(24px,5vw,72px);
+  display:flex;justify-content:space-between;align-items:center;gap:16px;
+  font-size:12.5px;font-weight:800;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--blue-dk);
+}
+.eyebrow .rt{color:var(--muted);font-weight:700;letter-spacing:.08em;}
+.pnum{
+  position:absolute;bottom:clamp(20px,3vh,30px);right:clamp(24px,5vw,72px);
+  font-size:13px;font-weight:700;letter-spacing:.08em;color:var(--muted);
+}
+
+/* ---------- cover ---------- */
+.cover{
+  background:
+    radial-gradient(120% 90% at 88% 8%, rgba(37,99,235,.20), transparent 58%),
+    radial-gradient(90% 70% at 4% 96%, rgba(201,138,30,.14), transparent 60%),
+    linear-gradient(160deg,#0B2545 0%,#13315C 55%,#1B3E72 100%);
+  color:#fff;justify-content:center;
+}
+.cover .eyebrow{color:#9DBBF7;}
+.cover .eyebrow .rt{color:rgba(255,255,255,.6);}
+.cover .pnum{color:rgba(255,255,255,.55);}
+.cv-kicker{
+  display:inline-block;align-self:flex-start;
+  font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;
+  color:#0B2545;background:#F3C969;border-radius:999px;padding:7px 16px;margin-bottom:26px;
+}
+.cv-name{font-size:clamp(38px,5.2vw,74px);font-weight:900;letter-spacing:-.03em;line-height:1.02;}
+.cv-name em{font-style:normal;color:#F3C969;}
+.cv-role{
+  margin-top:16px;font-size:clamp(17px,1.7vw,24px);font-weight:600;
+  color:#C9DAFB;letter-spacing:-.01em;
+}
+.cv-line{
+  margin-top:34px;max-width:22ch;
+  font-size:clamp(24px,3vw,42px);font-weight:800;line-height:1.32;letter-spacing:-.025em;
+}
+.cv-line u{text-decoration:none;background:linear-gradient(transparent 58%, rgba(243,201,105,.42) 58%);}
+.cv-stats{
+  margin-top:clamp(34px,5vh,58px);
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(14px,1.6vw,26px);
+  max-width:1080px;
+}
+.cv-stat{
+  background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);
+  border-radius:var(--radius);padding:clamp(16px,1.7vw,24px);
+}
+.cv-stat b{display:block;font-size:clamp(24px,2.6vw,38px);font-weight:900;letter-spacing:-.03em;color:#F3C969;line-height:1.1;}
+.cv-stat span{display:block;margin-top:8px;font-size:clamp(13.5px,1.05vw,15.5px);color:#C9DAFB;line-height:1.5;font-weight:600;}
+.cv-foot{
+  margin-top:clamp(28px,4vh,46px);display:flex;flex-wrap:wrap;gap:10px 26px;
+  font-size:15px;color:#A9C2F0;font-weight:600;
+}
+@media (max-width:820px){.cv-stats{grid-template-columns:1fr;} .cv-line{max-width:none;}}
+
+/* ---------- generic headings ---------- */
+.s-head{max-width:1100px;}
+.s-eye{
+  font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--blue-dk);margin-bottom:14px;
+}
+.s-title{font-size:clamp(28px,3.3vw,48px);font-weight:900;letter-spacing:-.03em;line-height:1.2;}
+.s-title u{text-decoration:none;background:linear-gradient(transparent 60%, rgba(37,99,235,.20) 60%);}
+.s-sub{margin-top:18px;font-size:clamp(16px,1.35vw,20px);color:var(--body);max-width:74ch;line-height:1.66;}
+
+/* ---------- approach (slide 2) ---------- */
+.cards3{
+  margin-top:clamp(30px,4.4vh,52px);
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,1.7vw,26px);
+}
+.card{
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+  padding:clamp(20px,2vw,30px);display:flex;flex-direction:column;
+}
+.card .num{
+  width:34px;height:34px;border-radius:9px;background:var(--navy);color:#fff;
+  display:flex;align-items:center;justify-content:center;font-weight:800;font-size:15px;margin-bottom:16px;
+}
+.card h3{font-size:clamp(18px,1.5vw,22px);font-weight:800;letter-spacing:-.02em;line-height:1.35;}
+.card p{margin-top:12px;font-size:clamp(14.5px,1.05vw,16.5px);color:var(--body);line-height:1.66;}
+.card .ex{
+  margin-top:auto;padding-top:16px;font-size:14px;font-weight:700;color:var(--blue-dk);
+}
+.strip{
+  margin-top:clamp(22px,3vh,34px);
+  display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;
+}
+.strip div{
+  background:var(--blue-soft);border:1px solid var(--blue-line);border-radius:12px;
+  padding:16px 18px;
+}
+.strip b{display:block;font-size:clamp(19px,1.8vw,26px);font-weight:900;color:var(--navy);letter-spacing:-.02em;}
+.strip span{display:block;margin-top:6px;font-size:13.5px;color:var(--body);font-weight:600;line-height:1.45;}
+@media (max-width:1000px){.cards3{grid-template-columns:1fr;} .strip{grid-template-columns:repeat(2,minmax(0,1fr));}}
+
+/* ---------- contents (slide 3) ---------- */
+.toc{margin-top:clamp(28px,4vh,48px);display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,1.8vw,28px);}
+.toc-col{border-top:4px solid var(--navy);padding-top:20px;}
+.toc-col:nth-child(2){border-top-color:var(--blue);}
+.toc-col:nth-child(3){border-top-color:var(--mustard);}
+.toc-col h3{font-size:clamp(18px,1.5vw,22px);font-weight:900;letter-spacing:-.02em;}
+.toc-col .cnt{font-size:13px;font-weight:800;color:var(--muted);letter-spacing:.1em;margin-top:6px;}
+.toc-col ol{margin-top:16px;list-style:none;display:flex;flex-direction:column;gap:12px;}
+.toc-col li{
+  display:flex;gap:12px;align-items:baseline;
+  font-size:clamp(14.5px,1.08vw,17px);color:var(--body);line-height:1.5;
+}
+.toc-col li i{
+  font-style:normal;font-weight:800;color:var(--blue-dk);min-width:24px;font-size:14px;
+}
+.toc-col li b{color:var(--ink);font-weight:700;}
+.toc-note{
+  margin-top:clamp(22px,3vh,34px);padding:16px 20px;background:var(--surface);
+  border-left:4px solid var(--mustard);border-radius:0 10px 10px 0;
+  font-size:15px;color:var(--body);
+}
+@media (max-width:1000px){.toc{grid-template-columns:1fr;}}
+
+/* ---------- project slide ---------- */
+.proj-grid{
+  display:grid;grid-template-columns:minmax(0,.98fr) minmax(0,1.02fr);
+  gap:clamp(26px,3vw,56px);align-items:start;
+}
+.tagrow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:16px;}
+.pill{
+  font-size:12.5px;font-weight:800;letter-spacing:.04em;border-radius:999px;padding:6px 13px;
+  background:var(--navy);color:#fff;
+}
+.pill.alt{background:var(--blue-soft);color:var(--blue-dk);border:1px solid var(--blue-line);}
+.pill.own{background:var(--mustard-soft);color:var(--mustard);border:1px solid #EBD9B4;}
+.ptitle{
+  font-size:clamp(25px,2.45vw,40px);font-weight:900;letter-spacing:-.032em;line-height:1.22;
+}
+.ptitle u{text-decoration:none;background:linear-gradient(transparent 58%, rgba(37,99,235,.20) 58%);}
+.plede{
+  margin-top:16px;font-size:clamp(16px,1.22vw,19px);color:var(--body);line-height:1.66;max-width:60ch;
+}
+.blocks{margin-top:clamp(22px,2.6vh,32px);display:flex;flex-direction:column;gap:clamp(16px,2vh,24px);}
+.blk{display:grid;grid-template-columns:64px minmax(0,1fr);gap:16px;align-items:start;}
+.lbl{
+  font-size:12.5px;font-weight:800;letter-spacing:.06em;color:#fff;background:var(--blue);
+  border-radius:7px;padding:5px 0;text-align:center;margin-top:3px;
+}
+.blk.b1 .lbl{background:var(--navy-2);}
+.blk.b3 .lbl{background:var(--good);}
+.blk p,.blk li{font-size:clamp(15px,1.07vw,17.5px);color:var(--body);line-height:1.62;}
+.blk ul{display:flex;flex-direction:column;gap:9px;}
+.blk li{position:relative;padding-left:15px;}
+.blk li::before{
+  content:"";position:absolute;left:0;top:.62em;width:6px;height:6px;border-radius:50%;
+  background:var(--blue-line);
+}
+.blk b{color:var(--ink);font-weight:800;}
+.lesson{
+  margin-top:clamp(20px,2.6vh,30px);padding:16px 20px;
+  background:var(--cream);border-left:4px solid var(--mustard);border-radius:0 10px 10px 0;
+  font-size:clamp(15px,1.08vw,17.5px);color:var(--ink);line-height:1.6;
+}
+.lesson span{display:block;font-size:12.5px;font-weight:800;letter-spacing:.1em;color:var(--mustard);margin-bottom:7px;}
+
+/* right column */
+.kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;}
+.kpi{
+  background:var(--navy);color:#fff;border-radius:12px;padding:clamp(14px,1.4vw,20px);
+  display:flex;flex-direction:column;justify-content:center;min-height:96px;
+}
+.kpi.k2{background:var(--blue-dk);}
+.kpi.k3{background:#1F4C86;}
+.kpi b{font-size:clamp(19px,1.75vw,27px);font-weight:900;letter-spacing:-.03em;line-height:1.12;}
+.kpi span{margin-top:8px;font-size:13px;color:#C9DAFB;font-weight:600;line-height:1.4;}
+.chartbox{
+  margin-top:14px;border:1px solid var(--line);border-radius:var(--radius);
+  background:#F6F7F9;overflow:hidden;
+  height:clamp(300px, calc(100svh - 348px), 560px);
+}
+.chartbox iframe{width:100%;height:100%;border:0;display:block;}
+.chart-cap{
+  margin-top:11px;font-size:13.5px;color:var(--muted);line-height:1.55;
+}
+.dashlink{
+  display:inline-flex;align-items:center;gap:7px;margin-top:12px;
+  font-size:14.5px;font-weight:800;color:var(--blue-dk);text-decoration:none;
+  border-bottom:2px solid var(--blue-line);padding-bottom:2px;
+}
+.dashlink:hover{border-bottom-color:var(--blue-dk);}
+.printnote{display:none;}
+@media (max-width:1080px){
+  .proj-grid{grid-template-columns:1fr;}
+  .slide{justify-content:flex-start;}
+  .kpis{grid-template-columns:repeat(3,minmax(0,1fr));}
+}
+@media (max-width:620px){
+  .kpis{grid-template-columns:1fr;}
+  .kpi{min-height:0;}
+  .blk{grid-template-columns:1fr;gap:8px;}
+  .lbl{justify-self:start;padding:5px 14px;}
+}
+
+/* ---------- appendix ---------- */
+.apx{margin-top:clamp(26px,3.6vh,44px);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(16px,1.8vw,26px);}
+.apx-card{
+  border:1px solid var(--line);border-radius:var(--radius);padding:clamp(20px,2vw,28px);
+  background:var(--bg);display:flex;flex-direction:column;
+}
+.apx-card .top{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;}
+.apx-card h3{font-size:clamp(17.5px,1.4vw,21px);font-weight:900;letter-spacing:-.025em;line-height:1.35;}
+.apx-card .tag{font-size:12px;font-weight:800;color:var(--blue-dk);background:var(--blue-soft);border-radius:999px;padding:5px 11px;white-space:nowrap;}
+.apx-card p{margin-top:12px;font-size:clamp(14.5px,1.03vw,16.5px);color:var(--body);line-height:1.62;}
+.apx-card .figs{margin-top:auto;padding-top:16px;display:flex;flex-wrap:wrap;gap:8px;}
+.apx-card .figs span{
+  font-size:13.5px;font-weight:800;color:var(--navy);background:var(--surface);
+  border:1px solid var(--line);border-radius:8px;padding:6px 11px;
+}
+@media (max-width:900px){.apx{grid-template-columns:1fr;}}
+
+/* ---------- outro ---------- */
+.outro{
+  background:linear-gradient(160deg,#0B2545 0%,#13315C 60%,#1B3E72 100%);color:#fff;
+}
+.outro .eyebrow{color:#9DBBF7;}
+.outro .eyebrow .rt{color:rgba(255,255,255,.6);}
+.outro .pnum{color:rgba(255,255,255,.55);}
+.outro .s-title{color:#fff;}
+.outro .s-title u{background:linear-gradient(transparent 58%, rgba(243,201,105,.42) 58%);}
+.o-list{margin-top:clamp(28px,4vh,46px);display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,1.8vw,28px);}
+.o-item{border-top:3px solid rgba(243,201,105,.75);padding-top:18px;}
+.o-item b{display:block;font-size:clamp(17px,1.4vw,21px);font-weight:800;letter-spacing:-.02em;color:#F3C969;}
+.o-item p{margin-top:10px;font-size:clamp(14.5px,1.05vw,16.5px);color:#C9DAFB;line-height:1.62;}
+.o-contact{
+  margin-top:clamp(32px,4.6vh,56px);display:flex;flex-wrap:wrap;gap:14px 32px;align-items:center;
+  font-size:clamp(15px,1.15vw,17.5px);font-weight:600;color:#C9DAFB;
+}
+.o-contact a{color:#fff;text-decoration:none;border-bottom:2px solid rgba(243,201,105,.7);padding-bottom:2px;}
+@media (max-width:900px){.o-list{grid-template-columns:1fr;}}
+
+/* ---------- print ---------- */
+@media print{
+  @page{size:A4 landscape;margin:10mm;}
+  html{scroll-snap-type:none;}
+  #bar,#jump{display:none !important;}
+  .slide{min-height:0;height:auto;page-break-after:always;break-after:page;border:0;padding:14mm 10mm;}
+  .chartbox{display:none;}
+  .printnote{display:block;font-size:12px;color:#555;margin-top:10px;}
+  .cover,.outro{background:#0B2545 !important;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+<nav id="jump" aria-label="슬라이드 이동"></nav>
+
+<main class="deck">
+
+<!-- ============ 01 COVER ============ -->
+<section class="slide cover" data-nav="표지">
+  <div class="eyebrow"><span>Portfolio 2026</span><span class="rt">Growth · Performance Marketing</span></div>
+  <span class="cv-kicker">Growth · Performance</span>
+  <h1 class="cv-name">박성진<em>.</em></h1>
+  <p class="cv-role">폐기물 수거 서비스 커버링 — 그로스 · 퍼포먼스 마케터</p>
+  <p class="cv-line"><u>예산을 늘리기 전에</u><br>전환율을 먼저 올립니다.</p>
+  <div class="cv-stats">
+    <div class="cv-stat"><b>CAC &minus;1.6%</b><span>광고비를 58.6% 더 쓰는 동안 신규 획득 단가는 내려갔습니다</span></div>
+    <div class="cv-stat"><b>구매 CPA &minus;50%</b><span>껐던 틱톡을 되살려 광고비 6.3배 구간까지 끌어올렸습니다</span></div>
+    <div class="cv-stat"><b>객단가 +4.5%</b><span>추가 예산 0원 &mdash; 할인 기준선만 바꿔 만든 결과입니다</span></div>
+  </div>
+  <div class="cv-foot"><span>10개 대표 프로젝트 · 부록 4</span><span>가설 → 실험 → 판정 → 자산화</span></div>
+  <div class="pnum">01 / 15</div>
+</section>
+
+<!-- ============ 02 일하는 방식 ============ -->
+<section class="slide" data-nav="일하는 방식">
+  <div class="eyebrow"><span>How I Work</span><span class="rt">박성진 — Portfolio 2026</span></div>
+  <div class="s-head">
+    <div class="s-eye">일하는 방식</div>
+    <h2 class="s-title">숫자로 <u>가설을 세우고</u>, 구조를 바꿔서 답을 냅니다</h2>
+    <p class="s-sub">돈을 더 쓰는 건 마지막 카드입니다. 아래 세 가지가 지난 성과를 만든 순서이고, 이 포트폴리오의 프로젝트는 전부 그 순서대로 쓰여 있습니다.</p>
+  </div>
+  <div class="cards3">
+    <div class="card">
+      <div class="num">1</div>
+      <h3>검증 가능한 문장으로 가설을 씁니다</h3>
+      <p>"해보자"가 아니라 "무엇이 얼마나 오를 것이다"로 적습니다. 판정 지표와 기각 조건을 집행 전에 정해두기 때문에, 결과가 나쁠 때도 원인을 특정할 수 있습니다.</p>
+      <div class="ex">→ 손실회피 카피 A/B · 워딩 실험 2건 기각</div>
+    </div>
+    <div class="card">
+      <div class="num">2</div>
+      <h3>예산보다 구조를 먼저 건드립니다</h3>
+      <p>같은 재원, 같은 소재로도 기준선·발송 시점·캠페인 구조만 바꿔서 지표를 움직일 수 있는지 먼저 봅니다. 그게 안 될 때 증액합니다.</p>
+      <div class="ex">→ 추가 예산 0원 · 추가 할인 0원 사례 2건</div>
+    </div>
+    <div class="card">
+      <div class="num">3</div>
+      <h3>실패한 실험도 그대로 남깁니다</h3>
+      <p>기각된 가설에서 나온 게 더 컸던 적이 많습니다. 매체 도입 실패에서 오귀속을 잡아냈고, 진 실험에서 리타겟 대장 소재가 나왔습니다.</p>
+      <div class="ex">→ 앱피어 오귀속 발견 · 귀속 설정 개선</div>
+    </div>
+  </div>
+  <div class="strip">
+    <div><b>6.3배</b><span>틱톡 광고비를 늘리는 동안 CPA는 목표선 아래</span></div>
+    <div><b>+5.5%p</b><span>할인 0원으로 만든 재주문율 개선</span></div>
+    <div><b>1.74배</b><span>카피 한 줄로 갈린 구독 전환율</span></div>
+    <div><b>163일 → 6일</b><span>신규 지역 손익분기점 도달 기간</span></div>
+  </div>
+  <div class="pnum">02 / 15</div>
+</section>
+
+<!-- ============ 03 목차 ============ -->
+<section class="slide" data-nav="목차">
+  <div class="eyebrow"><span>Contents</span><span class="rt">박성진 — Portfolio 2026</span></div>
+  <div class="s-head">
+    <div class="s-eye">목차</div>
+    <h2 class="s-title">세 개의 축으로 <u>10개 프로젝트</u>를 담았습니다</h2>
+    <p class="s-sub">축 1은 구조를 바꿔 만든 성과, 축 2는 매체 운영과 측정, 축 3은 콘텐츠와 온드 채널입니다. 각 장은 병목 → 실행 → 결과 → 레슨런 순서로 읽힙니다.</p>
+  </div>
+  <div class="toc">
+    <div class="toc-col">
+      <h3>구조를 바꿔 만든 성과</h3>
+      <div class="cnt">축 1 · 4개 · 04–07</div>
+      <ol>
+        <li><i>01</i><span><b>반값 쿠폰</b> — 광고비 +58.6%에 CAC &minus;1.6%</span></li>
+        <li><i>02</i><span><b>무게 허들</b> — 추가 예산 0원, 객단가 +4.5%</span></li>
+        <li><i>03</i><span><b>CRM 타이밍</b> — 할인 0원, 재주문율 +5.5%p</span></li>
+        <li><i>04</i><span><b>손실회피 카피</b> — 구독 전환율 1.74배</span></li>
+      </ol>
+    </div>
+    <div class="toc-col">
+      <h3>퍼포먼스 운영 · 측정</h3>
+      <div class="cnt">축 2 · 3개 · 08–10</div>
+      <ol>
+        <li><i>05</i><span><b>틱톡 재가동</b> — 구매 CPA &minus;50%</span></li>
+        <li><i>06</i><span><b>앱피어 도입</b> — 기각, 그리고 오귀속 발견</span></li>
+        <li><i>07</i><span><b>지역 사전 모객</b> — BEP 163일 → 6일</span></li>
+      </ol>
+    </div>
+    <div class="toc-col">
+      <h3>콘텐츠 · 온드</h3>
+      <div class="cnt">축 3 · 3개 · 11–13</div>
+      <ol>
+        <li><i>08</i><span><b>품목 단위 소구</b> — 구매 CPA &minus;70%</span></li>
+        <li><i>09</i><span><b>온드미디어</b> — 광고비 0원, 설치→구매 44.8%</span></li>
+        <li><i>10</i><span><b>댓글→DM</b> — 가입 CPA &minus;52%, 그리고 퍼널 누수</span></li>
+      </ol>
+    </div>
+  </div>
+  <div class="toc-note"><b>부록(14p)</b> — 휴면 알림톡 · 블로그 후기 랜딩 · 색인 재구성 · 워딩 실험 4건을 한 장으로 압축했습니다. 전체 19개 프로젝트의 원본 분석은 데이터룸에 있습니다.</div>
+  <div class="pnum">03 / 15</div>
+</section>
+
+<!-- ============ 04 반값 쿠폰 ============ -->
+<section class="slide" data-nav="반값 쿠폰">
+  <div class="eyebrow"><span>축 1 · Project 01 / 10</span><span class="rt">박성진 — Portfolio 2026</span></div>
+  <div class="proj-grid">
+    <div>
+      <div class="tagrow">
+        <span class="pill">프로모션 · 그로스</span>
+        <span class="pill alt">CAC</span>
+        <span class="pill alt">리텐션</span>
+        <span class="pill own">기여도 70%</span>
+      </div>
+      <h2 class="ptitle">광고비를 59% 더 썼는데 <u>획득 단가는 내려갔다</u></h2>
+      <p class="plede">100% 무료 쿠폰이 실패했던 조직에서 "절반은 유저가 내게 하자"를 설득했습니다. 볼륨과 품질을 동시에 지켰습니다.</p>
+      <div class="blocks">
+        <div class="blk b1">
+          <span class="lbl">병목</span>
+          <p>신규 획득 효율이 두 달째 꺾이고 있었습니다. 광고비를 <b>3.3% 덜 썼는데 신규 유저는 15.1% 줄어</b>, 1명당 획득비가 13.9% 비싸졌습니다. 예산이 아니라 획득 효율 자체의 문제였습니다.</p>
+        </div>
+        <div class="blk b2">
+          <span class="lbl">실행</span>
+          <ul>
+            <li><b>100%가 아니라 50%</b> — 절반을 직접 결제하게 만들어, 할인율 자체를 체리피커 필터로 설계했습니다</li>
+            <li><b>마찰 제거</b> — 사전 광고로 기대감을 쌓고 쿠폰은 가입 즉시 자동 발급해 '받으러 가는' 단계를 없앴습니다</li>
+            <li><b>유입 경로 신설</b> — 인플루언서 숏폼 트랙을 처음 만들었고, 이후 <b>9개월 상시 채널</b>로 정착했습니다</li>
+          </ul>
+        </div>
+        <div class="blk b3">
+          <span class="lbl">결과</span>
+          <ul>
+            <li>가입 → 30일 내 이용 <b>30.8% → 38.6%(+7.8%p)</b>. 광고비 +58.6%인데 CAC는 &minus;1.6%</li>
+            <li>가장 우려됐던 리텐션이 <b>M0~M6 전 구간 우위</b>(최소 +1.0%p, 최대 +4.5%p)</li>
+            <li>누적 ARPU는 M0에 30.4% 뒤진 채 시작해 <b>M4에 역전</b>, M6 지수 101.5 vs 100</li>
+          </ul>
+        </div>
+      </div>
+      <div class="lesson"><span>레슨런</span>할인율은 버리는 돈이 아니라 <b>유입 품질을 조절하는 다이얼</b>입니다. 100% 무료가 실패한 건 할인이 커서가 아니라 유저가 아무것도 걸지 않았기 때문입니다.</div>
+    </div>
+    <div>
+      <div class="kpis">
+        <div class="kpi"><b>&minus;1.6%</b><span>신규 획득 단가(CAC)</span></div>
+        <div class="kpi k2"><b>+61.3%</b><span>신규 유저(D30)</span></div>
+        <div class="kpi k3"><b>101.5</b><span>M6 누적 ARPU 지수<br>(11월 코호트=100)</span></div>
+      </div>
+      <div class="chartbox">
+        <iframe src="https://byuel0915-pixel.github.io/byuel_marketing/p/xmas-arpu-cohort.html" title="코호트별 M0~M6 누적 ARPU" loading="eager"></iframe>
+      </div>
+      <p class="chart-cap">코호트별 M0~M6 누적 ARPU — 반값 쿠폰 코호트가 M4에 역전해 M6에 앞섭니다.</p>
+      <p class="printnote">차트: /p/xmas-arpu-cohort.html</p>
+      <a class="dashlink" href="https://byuel0915-pixel.github.io/byuel_marketing/p/xmas-arpu-cohort.html" target="_blank" rel="noopener">대시보드 전체 보기 ↗</a>
+    </div>
+  </div>
+  <div class="pnum">04 / 15</div>
+</section>
+
+<!-- ============ 05 무게 허들 ============ -->
+<section class="slide" data-nav="무게 허들">
+  <div class="eyebrow"><span>축 1 · Project 02 / 10</span><span class="rt">박성진 — Portfolio 2026</span></div>
+  <div class="proj-grid">
+    <div>
+      <div class="tagrow">
+        <span class="pill">가격 정책 · 그로스</span>
+        <span class="pill alt">객단가</span>
+        <span class="pill alt">A/B 대체 검증</span>
+        <span class="pill own">기여도 90%</span>
+      </div>
+      <h2 class="ptitle">허들을 올렸는데 객단가가 올랐다 — <u>추가 예산 0원</u></h2>
+      <p class="plede">"기준을 올리면 이용률이 떨어진다"는 반론으로 결정이 멈춰 있었습니다. 말로 안 나던 답을 5일짜리 프로모션으로 냈습니다.</p>
+      <div class="blocks">
+        <div class="blk b1">
+          <span class="lbl">병목</span>
+          <p>4kg 미만 주문이 절반인데 <b>물류비는 5kg 초과에서야 회수</b>되는 구조였습니다. 기존 '8kg 초과 할인'을 한 단계 더 올릴 수 있는지가 다음 질문이었지만, 반론이 갈려 결정이 서지 않았습니다.</p>
+        </div>
+        <div class="blk b2">
+          <span class="lbl">실행</span>
+          <ul>
+            <li><b>기준선 상향</b> — 8kg 초과 시 기본요금 20% 할인 → <b>12kg 초과 시 40% 할인</b></li>
+            <li><b>추가 예산 0원</b> — 기존 할인 재원을 그대로 옮겨 썼습니다. 적은 수에게 더 큰 혜택을 주는 구조로 바꾼 것뿐입니다</li>
+            <li><b>5일 한시 검증</b> — 상시 정책을 바꾸기 전에 저비용 프로모션으로 반응부터 봤습니다</li>
+          </ul>
+        </div>
+        <div class="blk b3">
+          <span class="lbl">결과</span>
+          <ul>
+            <li>객단가 <b>+4.50%</b> · 주문당 배출량 <b>+5.36%</b> · 기간 매출 <b>+11.9%</b></li>
+            <li>배출 행동 자체가 움직였습니다 — 12kg 초과 주문 비중 <b>14.49% → 16.54%</b></li>
+            <li>'여름 대청소 수요' 반론을 막기 위해 <b>비수기 11월에 재현</b> — 객단가 +2.85%로 같은 방향</li>
+          </ul>
+        </div>
+      </div>
+      <div class="lesson"><span>레슨런</span>반론이 갈리는 정책은 <b>단발 프로모션으로 먼저 실험</b>합니다. 그리고 한 번의 결과는 계절일 수 있으니, 반대 계절 재현을 기획 단계에 넣습니다.</div>
+    </div>
+    <div>
+      <div class="kpis">
+        <div class="kpi"><b>+4.50%</b><span>객단가</span></div>
+        <div class="kpi k2"><b>+5.36%</b><span>주문당 배출량</span></div>
+        <div class="kpi k3"><b>0원</b><span>추가 투입 예산</span></div>
+      </div>
+      <div class="chartbox">
+        <iframe src="https://byuel0915-pixel.github.io/byuel_marketing/p/weight-aov-daily.html" title="일별 객단가 추이" loading="lazy"></iframe>
+      </div>
+      <p class="chart-cap">07.10~08.03 일별 객단가 추이 — 초록 구간이 프로모션 5일. 끝나자 곧바로 되돌아옵니다.</p>
+      <p class="printnote">차트: /p/weight-aov-daily.html</p>
+      <a class="dashlink" href="https://byuel0915-pixel.github.io/byuel_marketing/p/weight-daily-timeseries.html" target="_blank" rel="noopener">3개 지표 일별 추이 전체 보기 ↗</a>
+    </div>
+  </div>
+  <div class="pnum">05 / 15</div>
+</section>
+
+<!-- ============ 06 CRM 타이밍 ============ -->
+<section class="slide" data-nav="CRM 타이밍">
+  <div class="eyebrow"><span>축 1 · Project 03 / 10</span><span class="rt">박성진 — Portfolio 2026</span></div>
+  <div class="proj-grid">
+    <div>
+      <div class="tagrow">
+        <span class="pill">CRM · 리텐션</span>
+        <span class="pill alt">퍼널 설계</span>
+        <span class="pill alt">발송 인프라</span>
+        <span class="pill own">기여도 90%</span>
+      </div>
+      <h2 class="ptitle">할인 0원으로 재주문율 +5.5%p — <u>바꾼 건 보내는 날뿐</u></h2>
+      <p class="plede">기존 CRM은 가입일과 마지막 주문일 두 기준으로만 돌고 있었습니다. 정작 전환이 갈리는 두 구간엔 터치포인트가 아예 없었습니다.</p>
+      <div class="blocks">
+        <div class="blk b1">
+          <span class="lbl">병목</span>
+          <p>봉투 신청 → 첫 결제 구간의 <b>D4~D12가 공백</b>이었고(미전환 43.6%), 첫 결제 → 2회차는 <b>시나리오 자체가 없었습니다</b>. 1→2회 전환율 76.5% 구간이 방치돼 있었습니다.</p>
+        </div>
+        <div class="blk b2">
+          <span class="lbl">실행</span>
+          <ul>
+            <li><b>이탈 지점을 수치로 정의</b> — 급감을 '전날 대비 &minus;20% 이상 연속 + 회복 없이 고착'으로 정의하고 3개 코호트에 교차 검증했습니다</li>
+            <li><b>세그먼트를 다시</b> — 반복 빈도가 아니라 <b>첫 배출 무게</b>로 나눴습니다</li>
+            <li><b>채널 전환</b> — 알림톡 반려율이 높아 문안 6종을 브랜드 메시지 규격으로 전면 재기획하고, 플레어레인 도입부터 발신번호·수신거부 연동까지 직접 세팅했습니다</li>
+          </ul>
+        </div>
+        <div class="blk b3">
+          <span class="lbl">결과</span>
+          <ul>
+            <li>D+3은 봉투가 도착하기도 전이라 증분 0. <b>D+8이 D14 전환율 +2.1%p</b></li>
+            <li>리마인드만 보낸 셀이 <b>재주문율 +5.5%p · 2차 신청률 +3.0%p</b></li>
+            <li><b>쿠폰을 얹은 셀은 대조군보다도 낮았습니다</b> — 가장 손쉬운 처방을 데이터로 기각했습니다</li>
+          </ul>
+        </div>
+      </div>
+      <div class="lesson"><span>레슨런</span>1차 결론을 <b>5일 뒤 스스로 뒤집었습니다.</b> 눈대중으로 잡은 발송일을 수치 정의로 다시 세우고 3개 코호트로 교차 검증한 뒤 바꿨습니다.</div>
+    </div>
+    <div>
+      <div class="kpis">
+        <div class="kpi"><b>+5.5%p</b><span>재주문율</span></div>
+        <div class="kpi k2"><b>+3.0%p</b><span>2차 수거 신청률</span></div>
+        <div class="kpi k3"><b>0원</b><span>추가 할인 비용</span></div>
+      </div>
+      <div class="chartbox">
+        <iframe src="https://byuel0915-pixel.github.io/byuel_marketing/p/funnel-crm-part-b.html" title="첫 결제 → 2회차 구간 3셀 실험 결과" loading="lazy"></iframe>
+      </div>
+      <p class="chart-cap">첫 결제에서 2회차 구간의 3셀 실험 결과 — 쿠폰군이 대조군보다 낮게 나왔습니다.</p>
+      <p class="printnote">차트: /p/funnel-crm-part-b.html</p>
+      <a class="dashlink" href="https://byuel0915-pixel.github.io/byuel_marketing/p/funnel-crm-part-b.html" target="_blank" rel="noopener">대시보드 전체 보기 ↗</a>
+    </div>
+  </div>
+  <div class="pnum">06 / 15</div>
+</section>
+
+<!-- ============ 07 손실회피 카피 ============ -->
+<section class="slide" data-nav="손실회피 카피">
+  <div class="eyebrow"><span>축 1 · Project 04 / 10</span><span class="rt">박성진 — Portfolio 2026</span></div>
+  <div class="proj-grid">
+    <div>
+      <div class="tagrow">
+        <span class="pill">구독 · A/B 테스트</span>
+        <span class="pill alt">카피</span>
+        <span class="pill alt">타겟 추출</span>
+        <span class="pill own">기여도 100%</span>
+      </div>
+      <h2 class="ptitle">카피 한 줄로 <u>구독 전환율 1.74배</u></h2>
+      <p class="plede">타겟도 혜택도 발송 시각도 같게 두고 프레임만 바꿨습니다. 이득이 아니라 손실로.</p>
+      <div class="blocks">
+        <div class="blk b1">
+          <span class="lbl">병목</span>
+          <p>구독 페이지에 <b>들어온 유저의 34%는 실제로 구독</b>합니다. 문제는 그 페이지에 들어오는 사람 자체가 적다는 것이었습니다. 34%를 올리는 것보다 <b>진입을 만드는 쪽이 훨씬 큰 레버</b>라고 봤습니다.</p>
+        </div>
+        <div class="blk b2">
+          <span class="lbl">실행</span>
+          <ul>
+            <li><b>상품을 다시 봤습니다</b> — 구독료보다 할인액이 커서, 이 상품은 애초에 이득 제안이 아니라 <b>손실 상태</b>였습니다. 카피가 그 사실을 말하지 않고 있었습니다</li>
+            <li><b>카피만 다르게</b> — A "…할인받는 방법이 있어요" vs B "…그냥 이용하면 손해예요". 나머지 변수는 전부 고정했습니다</li>
+            <li><b>타겟 직접 추출</b> — 플레어레인 세그먼트로 조건이 안 잡혀 BigQuery로 대상을 뽑아 벌크 적재하고, 3그룹 간 중복이 0인 것까지 발송 전에 검증했습니다</li>
+          </ul>
+        </div>
+        <div class="blk b3">
+          <span class="lbl">결과</span>
+          <ul>
+            <li>구독 페이지 진입율 <b>1.13% → 1.82%(1.61배)</b></li>
+            <li>구독 전환율 <b>5.93% → 10.32%(1.74배)</b> — 최종 판정 지표</li>
+            <li>클릭을 1.61배 더 받고도 <b>그 클릭의 전환율까지 올랐습니다.</b> 타겟이 같았으니 클릭의 질을 가른 건 카피입니다</li>
+          </ul>
+        </div>
+      </div>
+      <div class="lesson"><span>레슨런</span>같은 혜택도 프레임에 따라 전환율이 1.74배 갈립니다. <b>구독 전환율 격차가 진입율 격차보다 크면</b> 클릭의 질이 좋아졌다는 신호입니다.</div>
+    </div>
+    <div>
+      <div class="kpis">
+        <div class="kpi"><b>1.74배</b><span>구독 전환율(판정 지표)</span></div>
+        <div class="kpi k2"><b>1.61배</b><span>구독 페이지 진입율</span></div>
+        <div class="kpi k3"><b>100%</b><span>기여도 — 설계·카피·발송 단독</span></div>
+      </div>
+      <div class="chartbox">
+        <iframe src="https://byuel0915-pixel.github.io/byuel_marketing/p/mar-sub-loss-ab.html" title="손실회피 카피 A/B 결과" loading="lazy"></iframe>
+      </div>
+      <p class="chart-cap">발송 대상 안에서의 A/B 비교 — 진입율 1.61배, 구독 전환율 1.74배.</p>
+      <p class="printnote">차트: /p/mar-sub-loss-ab.html</p>
+      <a class="dashlink" href="https://byuel0915-pixel.github.io/byuel_marketing/p/mar-sub-loss-ab.html" target="_blank" rel="noopener">대시보드 전체 보기 ↗</a>
+    </div>
+  </div>
+  <div class="pnum">07 / 15</div>
+</section>
+
+<!-- ============ 08 틱톡 ============ -->
+<section class="slide" data-nav="틱톡 재가동">
+  <div class="eyebrow"><span>축 2 · Project 05 / 10</span><span class="rt">박성진 — Portfolio 2026</span></div>
+  <div class="proj-grid">
+    <div>
+      <div class="tagrow">
+        <span class="pill">퍼포먼스 · 매체</span>
+        <span class="pill alt">캠페인 구조</span>
+        <span class="pill alt">소재 기획</span>
+        <span class="pill own">기여도 80%</span>
+      </div>
+      <h2 class="ptitle">껐던 틱톡을 되살렸다 — <u>광고비 6.3배, 구매 CPA &minus;50%</u></h2>
+      <p class="plede">"뭘 해도 CPA가 안 잡힌다"며 껐던 매체입니다. 콘텐츠와 운영 두 축을 동시에 갈아서 되살렸습니다.</p>
+      <div class="blocks">
+        <div class="blk b1">
+          <span class="lbl">병목</span>
+          <p>광고비의 대부분이 한 매체에서만 집행되고 있었고, 그 매체가 흔들리면 대체할 곳이 없었습니다. 틱톡은 <b>iOS 집행액의 87%가 성과가 잘 나지 않던 앱설치 캠페인에 쓰이고</b> 있었습니다.</p>
+        </div>
+        <div class="blk b2">
+          <span class="lbl">실행</span>
+          <ul>
+            <li><b>포맷 교체</b> — 제품 소개형을 버리고 오가닉처럼 소비되는 <b>'썰' 포맷</b>으로 대본·연출을 다시 짰습니다</li>
+            <li><b>구조 집약</b> — 병렬로 흩어진 5개 캠페인을 끄고 <b>구매 캠페인 3개</b>로 모은 뒤, 그 안에서 세트를 17개로 확장했습니다</li>
+            <li><b>증액 순서</b> — CPI를 먼저 낮춰 근거를 만들고, 검증된 세트만 단계적으로 증액했습니다</li>
+          </ul>
+        </div>
+        <div class="blk b3">
+          <span class="lbl">결과</span>
+          <ul>
+            <li>'썰' 포맷 CTR <b>3.48%</b> — 이전 소재 평균 1.18%의 <b>2.9배</b></li>
+            <li>광고비 3.2배 구간에서 <b>구매 6.4배, 구매 CPA &minus;50%</b></li>
+            <li>1월 대비 7월 광고비를 <b>6.3배</b>로 늘리는 동안 구매 CPA는 목표선 아래를 유지했습니다</li>
+          </ul>
+        </div>
+      </div>
+      <div class="lesson"><span>레슨런</span>매체가 안 되는 게 아니라 소재가 안 맞았던 겁니다. 그리고 <b>증액은 금액이 아니라 순서 문제</b>입니다 — 근거를 먼저 만들고 검증된 것만 올립니다.</div>
+    </div>
+    <div>
+      <div class="kpis">
+        <div class="kpi"><b>&minus;50%</b><span>구매 CPA</span></div>
+        <div class="kpi k2"><b>2.9배</b><span>소재 CTR(이전 평균 대비)</span></div>
+        <div class="kpi k3"><b>6.3배</b><span>1월 대비 7월 광고비</span></div>
+      </div>
+      <div class="chartbox">
+        <iframe src="https://byuel0915-pixel.github.io/byuel_marketing/p/tiktok-scale-result.html" title="틱톡 증액 전후 구매 전환수·CPA" loading="lazy"></iframe>
+      </div>
+      <p class="chart-cap">증액 전 Q1과 증액 후 Q2 — 구매 전환수 6.4배, 구매 CPA &minus;50%.</p>
+      <p class="printnote">차트: /p/tiktok-scale-result.html · 구조도: /p/tiktok-campaign-shift.html</p>
+      <a class="dashlink" href="https://byuel0915-pixel.github.io/byuel_marketing/p/tiktok-campaign-shift.html" target="_blank" rel="noopener">캠페인 구조 As-Is / To-Be 보기 ↗</a>
+    </div>
+  </div>
+  <div class="pnum">08 / 15</div>
+</section>
+
+<!-- ============ 09 앱피어 ============ -->
+<section class="slide" data-nav="앱피어 · 오귀속">
+  <div class="eyebrow"><span>축 2 · Project 06 / 10</span><span class="rt">박성진 — Portfolio 2026</span></div>
+  <div class="proj-grid">
+    <div>
+      <div class="tagrow">
+        <span class="pill">매체 도입 · 측정</span>
+        <span class="pill alt">어트리뷰션</span>
+        <span class="pill alt">가설 기각</span>
+        <span class="pill own">기여도 80%</span>
+      </div>
+      <h2 class="ptitle">실패한 매체 도입에서 <u>오귀속을 잡아냈다</u></h2>
+      <p class="plede">결과부터 말하면 실패입니다. 그런데 매체 리포트 CPA는 계정 최저였습니다. 그 모순을 그냥 넘기지 않았습니다.</p>
+      <div class="blocks">
+        <div class="blk b1">
+          <span class="lbl">병목</span>
+          <p>한 번 쓰고 멈춘 고객이 계속 쌓이는데, CRM 밖에서 이들을 다시 활성화할 채널이 없었습니다. AI 리타겟 매체 <b>앱피어(Appier)를 신규 도입</b>해 이 구간을 맡겼습니다.</p>
+        </div>
+        <div class="blk b2">
+          <span class="lbl">실행</span>
+          <ul>
+            <li><b>도입·설계</b> — 매체 계약부터 캠페인 설계, 리타겟 모수 정의까지 주도했습니다</li>
+            <li><b>모순 추적</b> — 재구매율은 안 오르는데 CPA만 좋자, 리포트 전환을 <b>실제 수거 무게 발생 기준으로 재분류</b>했습니다</li>
+            <li><b>설정 교정</b> — 오귀속을 확인하고 <b>에어브릿지 귀속 설정을 변경</b>해 이후 매체 판단의 기준선을 다시 세웠습니다</li>
+          </ul>
+        </div>
+        <div class="blk b3">
+          <span class="lbl">결과</span>
+          <ul>
+            <li>다음 달 재구매율이 도입 전 7개월 평균 <b>38.1% → 34.9%</b>로 오히려 하락 — <b>가설 기각</b></li>
+            <li>낮았던 리포트 CPA는 효율이 아니라 <b>이미 살 사람을 가져다 붙인 결과</b>였습니다</li>
+            <li>AI 리타겟은 '제외'가 아니라 <b>'포함'으로 모수를 짜야 한다</b>는 운영 원칙을 얻었습니다</li>
+          </ul>
+        </div>
+      </div>
+      <div class="lesson"><span>레슨런</span><b>낮은 CPA가 가장 위험한 지표였습니다.</b> 다음 매체 도입부터는 지표 정의·귀속 기준·홀드아웃을 집행 전에 문서로 확정합니다.</div>
+    </div>
+    <div>
+      <div class="kpis">
+        <div class="kpi"><b>38.1% → 34.9%</b><span>다음 달 재구매율 (가설 기각)</span></div>
+        <div class="kpi k2"><b>오귀속</b><span>리포트 CPA의 실제 원인</span></div>
+        <div class="kpi k3"><b>귀속 설정</b><span>MMP 기준 변경으로 자산화</span></div>
+      </div>
+      <div class="chartbox">
+        <iframe src="https://byuel0915-pixel.github.io/byuel_marketing/p/appier-conversion-decomp.html" title="리포트 전환수 재분류" loading="lazy"></iframe>
+      </div>
+      <p class="chart-cap">매체 리포트 전환수를 실제 수거 무게 발생 기준으로 재분류한 구성.</p>
+      <p class="printnote">차트: /p/appier-conversion-decomp.html</p>
+      <a class="dashlink" href="https://byuel0915-pixel.github.io/byuel_marketing/p/appier-conversion-decomp.html" target="_blank" rel="noopener">대시보드 전체 보기 ↗</a>
+    </div>
+  </div>
+  <div class="pnum">09 / 15</div>
+</section>
+
+<!-- ============ 10 지역 사전 모객 ============ -->
+<section class="slide" data-nav="지역 사전 모객">
+  <div class="eyebrow"><span>축 2 · Project 07 / 10</span><span class="rt">박성진 — Portfolio 2026</span></div>
+  <div class="proj-grid">
+    <div>
+      <div class="tagrow">
+        <span class="pill">지역 확장 · CRM</span>
+        <span class="pill alt">사전 모객</span>
+        <span class="pill alt">BEP</span>
+        <span class="pill own">기여도 90%</span>
+      </div>
+      <h2 class="ptitle">오픈 전에 번호를 모았더니 <u>BEP가 163일 → 6일</u></h2>
+      <p class="plede">지역을 열고 나서 광고하는 순서를, 열기 전에 신청받는 순서로 바꿨습니다. 쿠폰은 그대로였습니다.</p>
+      <div class="blocks">
+        <div class="blk b1">
+          <span class="lbl">병목</span>
+          <p>신규 지역은 주문이 붙기까지 <b>고정비만 나갑니다.</b> 사전 모객 없이 연 지역은 손익분기점까지 <b>평균 163일</b>이 걸렸습니다. 오픈 후에 광고를 켜는 순서 자체가 비용이었습니다.</p>
+        </div>
+        <div class="blk b2">
+          <span class="lbl">실행</span>
+          <ul>
+            <li><b>순서 역전</b> — 오픈 전에 광고로 번호를 선접수하고, 오픈 당일 쿠폰 알림톡을 일괄 발송했습니다</li>
+            <li><b>변수 분리 설계</b> — 같은 지역에서 <b>쿠폰 유무</b>만 비교하고, 사전 모객 유저에게 같은 쿠폰을 보내 <b>유저 유형</b>만 비교했습니다</li>
+            <li><b>체리피커 우려 해소</b> — 과거 쿠폰 플레이의 M1 잔류를 근거로 LTV가 고정비 손실보다 크다고 판단하고 집행했습니다</li>
+          </ul>
+        </div>
+        <div class="blk b3">
+          <span class="lbl">결과</span>
+          <ul>
+            <li>오픈 당일 이용자가 평균 대비 <b>3.9배</b>, 손익분기점을 <b>6일 만에</b> 넘겨 <b>157일을 앞당겼습니다</b></li>
+            <li>회피한 고정비가 <b>투입 비용의 2.8배</b></li>
+            <li>다만 같은 처치를 한 세종은 143일 — <b>처치가 아니라 확보 가능한 모수가 갈랐습니다</b></li>
+          </ul>
+        </div>
+      </div>
+      <div class="lesson"><span>레슨런</span>쿠폰보다 순서가 큽니다. <b>다만 사전 모객은 만능이 아닙니다</b> — 모수가 임계치를 넘는 지역에서만 작동하므로, 다음 오픈부터는 모객 목표 미달 시 오픈을 연기합니다.</div>
+    </div>
+    <div>
+      <div class="kpis">
+        <div class="kpi"><b>163일 → 6일</b><span>손익분기점 도달</span></div>
+        <div class="kpi k2"><b>3.9배</b><span>오픈 당일 이용자</span></div>
+        <div class="kpi k3"><b>2.8배</b><span>회피 고정비 / 투입 비용</span></div>
+      </div>
+      <div class="chartbox">
+        <iframe src="https://byuel0915-pixel.github.io/byuel_marketing/p/region-preopen-combined.html" title="지역 사전 모객 결과 비교" loading="lazy"></iframe>
+      </div>
+      <p class="chart-cap">오픈 당일 이용자 수 · 손익분기점 도달 일수 · 쿠폰 전환율 비교.</p>
+      <p class="printnote">차트: /p/region-preopen-combined.html</p>
+      <a class="dashlink" href="https://byuel0915-pixel.github.io/byuel_marketing/p/region-preopen-combined.html" target="_blank" rel="noopener">대시보드 전체 보기 ↗</a>
+    </div>
+  </div>
+  <div class="pnum">10 / 15</div>
+</section>
+
+<!-- ============ 11 품목 단위 소구 ============ -->
+<section class="slide" data-nav="품목 단위 소구">
+  <div class="eyebrow"><span>축 3 · Project 08 / 10</span><span class="rt">박성진 — Portfolio 2026</span></div>
+  <div class="proj-grid">
+    <div>
+      <div class="tagrow">
+        <span class="pill">콘텐츠 · 소재 기획</span>
+        <span class="pill alt">소구점 실험</span>
+        <span class="pill alt">대본·콘티</span>
+        <span class="pill own">기여도 100%</span>
+      </div>
+      <h2 class="ptitle">소구점을 품목 단위로 쪼갰더니 <u>구매 CPA &minus;70%</u></h2>
+      <p class="plede">'폐기물'이라는 카테고리로는 CTR 0.34%에서 더 올라가지 못했습니다. 그래서 6종을 같은 조건으로 동시에 태웠습니다.</p>
+      <div class="blocks">
+        <div class="blk b1">
+          <span class="lbl">병목</span>
+          <p>카테고리 단위 소구로는 반응이 나오지 않았고, <b>어떤 품목이 먹히는지 판단할 근거가 없었습니다.</b> 소재를 새로 찍어도 매번 같은 자리에서 멈췄습니다.</p>
+        </div>
+        <div class="blk b2">
+          <span class="lbl">실행</span>
+          <ul>
+            <li><b>베리에이션 설계</b> — '여름에 꺼냈다가 버리게 되는 물건' 6종으로 소구점을 쪼갰습니다</li>
+            <li><b>동일 조건 동시 집행</b> — 예산·타겟·기간을 같게 두어 소재 간 비교가 성립하게 만들었습니다</li>
+            <li><b>제작까지 직접</b> — 페인포인트를 재정의하고 대본과 편집 콘티를 작성했습니다</li>
+          </ul>
+        </div>
+        <div class="blk b3">
+          <span class="lbl">결과</span>
+          <ul>
+            <li>'이불' 단일 소재가 <b>CTR 3.94배, 구매 CPA 70.0% 절감(3.3배 저렴)</b></li>
+            <li>6종 중 이불 하나가 <b>지출의 66%, 구매의 78.9%</b>를 만들었습니다</li>
+            <li>한 편으로 끝내지 않고 <b>13개월간 광고 세트 16개</b>로 재세팅하며 대장 소재로 운용했습니다</li>
+          </ul>
+        </div>
+      </div>
+      <div class="lesson"><span>레슨런</span>소구점은 카테고리가 아니라 <b>품목 단위로 쪼개야</b> 합니다. 그리고 잘 만든 소재는 끄는 게 아니라 <b>보는 사람을 바꾸는</b> 편이 쌉니다.</div>
+    </div>
+    <div>
+      <div class="kpis">
+        <div class="kpi"><b>&minus;70.0%</b><span>구매 CPA</span></div>
+        <div class="kpi k2"><b>3.94배</b><span>CTR (직전 소재 대비)</span></div>
+        <div class="kpi k3"><b>13개월</b><span>단일 소재 운용 기간</span></div>
+      </div>
+      <div class="chartbox">
+        <iframe src="https://byuel0915-pixel.github.io/byuel_marketing/p/waste-bedding-cpa.html" title="품목 단위 소구 구매 CPA 비교" loading="lazy"></iframe>
+      </div>
+      <p class="chart-cap">'이불' 소재와 직전 폐기물 소재의 구매 CPA 비교 — 매체 기준으로 통일했습니다.</p>
+      <p class="printnote">차트: /p/waste-bedding-cpa.html</p>
+      <a class="dashlink" href="https://byuel0915-pixel.github.io/byuel_marketing/p/waste-bedding-cpa.html" target="_blank" rel="noopener">대시보드 전체 보기 ↗</a>
+    </div>
+  </div>
+  <div class="pnum">11 / 15</div>
+</section>
+
+<!-- ============ 12 온드미디어 ============ -->
+<section class="slide" data-nav="온드미디어">
+  <div class="eyebrow"><span>축 3 · Project 09 / 10</span><span class="rt">박성진 — Portfolio 2026</span></div>
+  <div class="proj-grid">
+    <div>
+      <div class="tagrow">
+        <span class="pill">온드미디어 · 브랜드</span>
+        <span class="pill alt">KPI 재정의</span>
+        <span class="pill alt">트래킹</span>
+        <span class="pill own">기여도 80%</span>
+      </div>
+      <h2 class="ptitle">광고비 0원으로 <u>설치 → 구매 44.8%</u></h2>
+      <p class="plede">"쓰레기 그냥 태우는 거 아니냐"는 불신을, 수거 후 처리 과정을 직접 보여주는 콘텐츠로 풀었습니다.</p>
+      <div class="blocks">
+        <div class="blk b1">
+          <span class="lbl">병목</span>
+          <p>온드 채널 KPI가 <b>팔로워 수</b>로 잡혀 있어, 온드가 사실상 <b>또 하나의 페이드 채널</b>처럼 운영되고 있었습니다. 도달을 사는 데 돈이 나가고 신뢰는 쌓이지 않았습니다.</p>
+        </div>
+        <div class="blk b2">
+          <span class="lbl">실행</span>
+          <ul>
+            <li><b>소재 1순위 교체</b> — CS에 반복되는 오해를 그대로 주제로 올려 처리 과정 콘텐츠를 만들었습니다</li>
+            <li><b>KPI 재정의</b> — 팔로워 수 → <b>도달 수와 오가닉 비율</b>로 바꿔 CPI 0원 축을 지켰습니다</li>
+            <li><b>측정 세팅</b> — 에어브릿지 온드 전용 링크로 설치 → 구매를 상시 측정했습니다</li>
+          </ul>
+        </div>
+        <div class="blk b3">
+          <span class="lbl">결과</span>
+          <ul>
+            <li>오해를 정면으로 다룬 콘텐츠 반응이 <b>평시의 6.3배</b></li>
+            <li>도달의 <b>93%가 팔로워 밖</b> — 유료 광고가 구조적으로 못 닿는 자리에 닿았습니다</li>
+            <li>설치 → 구매 전환율 <b>44.8%</b>로 유료 광고보다 높았습니다</li>
+          </ul>
+        </div>
+      </div>
+      <div class="lesson"><span>레슨런</span>CS에 반복되는 오해가 <b>콘텐츠 소재 1순위</b>입니다. 그리고 온드 KPI를 팔로워로 두면 온드가 또 하나의 페이드가 됩니다.</div>
+    </div>
+    <div>
+      <div class="kpis">
+        <div class="kpi"><b>44.8%</b><span>설치 → 구매 전환율</span></div>
+        <div class="kpi k2"><b>6.3배</b><span>콘텐츠 반응(평시 대비)</span></div>
+        <div class="kpi k3"><b>93%</b><span>팔로워 외 도달 비율</span></div>
+      </div>
+      <div class="chartbox">
+        <iframe src="https://byuel0915-pixel.github.io/byuel_marketing/p/owned-content-reach.html" title="온드 콘텐츠 반응과 팔로워 외 도달" loading="lazy"></iframe>
+      </div>
+      <p class="chart-cap">처리 과정 콘텐츠의 게시물 반응과 팔로워 외 도달 비율.</p>
+      <p class="printnote">차트: /p/owned-content-reach.html</p>
+      <a class="dashlink" href="https://byuel0915-pixel.github.io/byuel_marketing/p/owned-content-reach.html" target="_blank" rel="noopener">대시보드 전체 보기 ↗</a>
+    </div>
+  </div>
+  <div class="pnum">12 / 15</div>
+</section>
+
+<!-- ============ 13 댓글 → DM ============ -->
+<section class="slide" data-nav="댓글 → DM">
+  <div class="eyebrow"><span>축 3 · Project 10 / 10</span><span class="rt">박성진 — Portfolio 2026</span></div>
+  <div class="proj-grid">
+    <div>
+      <div class="tagrow">
+        <span class="pill">인플루언서 · 바이럴</span>
+        <span class="pill alt">자동화</span>
+        <span class="pill alt">퍼널 분석</span>
+        <span class="pill own">기여도 80%</span>
+      </div>
+      <h2 class="ptitle">댓글 한 줄로 앱 설치 2.7배 — <u>그리고 퍼널이 샜다</u></h2>
+      <p class="plede">커머스에서 검증된 자동 DM 로직을 커버링 톤으로 재설계했습니다. 앞단은 이겼고, 뒷단은 졌습니다.</p>
+      <div class="blocks">
+        <div class="blk b1">
+          <span class="lbl">병목</span>
+          <p>유료 광고가 닿지 못하는 유저를 <b>저비용으로 확보할 경로가 없었습니다.</b> 인플루언서 집행은 하고 있었지만, 반응을 우리 앱으로 넘기는 구조가 빠져 있었습니다.</p>
+        </div>
+        <div class="blk b2">
+          <span class="lbl">실행</span>
+          <ul>
+            <li><b>구조 설계</b> — '댓글 달면 DM으로 쿠폰 자동발송' 로직을 커버링 톤으로 재설계하고 인플루언서를 섭외했습니다</li>
+            <li><b>쿠폰 2단 분기</b> — 관여 수준에 따라 혜택이 갈리도록 설계했습니다</li>
+            <li><b>골든타임 PA</b> — 반응이 빠른 콘텐츠는 24~48시간 안에 광고로 증폭했습니다</li>
+          </ul>
+        </div>
+        <div class="blk b3">
+          <span class="lbl">결과</span>
+          <ul>
+            <li>회원가입 CPA가 유료 광고 대비 <b>52% 저렴</b> — 가설 1 참</li>
+            <li>그런데 <b>가입자 중 10.1%만 구매</b> — 가설 2 기각. 앞단에서 아낀 돈이 뒷단에서 사라졌습니다</li>
+            <li>집행한 주에 <b>앱 설치 2.7배</b>, iOS 앱스토어 라이프스타일 <b>6위</b></li>
+          </ul>
+        </div>
+      </div>
+      <div class="lesson"><span>레슨런</span><b>CPI 효율과 유저 품질은 함께 가지 않습니다.</b> 참여 허들을 낮춘 만큼 저관여 유저도 같이 들어옵니다. 다음은 콘텐츠를 본 사람을 리타겟팅하는 것입니다.</div>
+    </div>
+    <div>
+      <div class="kpis">
+        <div class="kpi"><b>&minus;52%</b><span>회원가입 CPA(유료 광고 대비)</span></div>
+        <div class="kpi k2"><b>2.7배</b><span>집행 주 앱 설치</span></div>
+        <div class="kpi k3"><b>10.1%</b><span>가입 → 구매 (가설 2 기각)</span></div>
+      </div>
+      <div class="chartbox">
+        <iframe src="https://byuel0915-pixel.github.io/byuel_marketing/p/dm-funnel-leak.html" title="설치 → 가입 → 구매 퍼널 누수" loading="lazy"></iframe>
+      </div>
+      <p class="chart-cap">설치 → 가입 62.9% → 구매 10.1%의 퍼널 누수.</p>
+      <p class="printnote">차트: /p/dm-funnel-leak.html</p>
+      <a class="dashlink" href="https://byuel0915-pixel.github.io/byuel_marketing/p/dm-funnel-leak.html" target="_blank" rel="noopener">대시보드 전체 보기 ↗</a>
+    </div>
+  </div>
+  <div class="pnum">13 / 15</div>
+</section>
+
+<!-- ============ 14 부록 ============ -->
+<section class="slide" data-nav="부록 4건">
+  <div class="eyebrow"><span>Appendix</span><span class="rt">박성진 — Portfolio 2026</span></div>
+  <div class="s-head">
+    <div class="s-eye">부록 · 그 외 4건</div>
+    <h2 class="s-title">같은 방식으로 굴린 <u>네 개의 프로젝트</u></h2>
+    <p class="s-sub">두 건은 이겼고 한 건은 기각됐습니다. 기각된 실험에서도 남은 자산이 있어 함께 넣었습니다.</p>
+  </div>
+  <div class="apx">
+    <div class="apx-card">
+      <div class="top"><h3>휴면 알림톡 한 통으로 복귀율 18배</h3><span class="tag">CRM</span></div>
+      <p>할인율은 20%로 평범합니다. 바꾼 건 <b>명목</b>과 <b>만료일</b>이었습니다 — '여름이 끝난다'는 이유를 붙이고 쿠폰 만료를 2일로 좁혔습니다. 상충하는 조건을 메시지를 늘려서가 아니라 세팅값 하나로 풀었습니다.</p>
+      <div class="figs"><span>복귀율 3.46%</span><span>일반 알림톡의 18배</span><span>쓴 돈의 3.8배 회수</span></div>
+    </div>
+    <div class="apx-card">
+      <div class="top"><h3>광고를 앱 대신 블로그 후기로 보냈다</h3><span class="tag">퍼포먼스</span></div>
+      <p>랜딩을 앱스토어가 아니라 <b>네이버 실사용 후기</b>로 바꾸고, 소구점별로 흩어진 세트를 검증된 소재 4개의 단일 세트로 집약했습니다. 6월만 보면 대조군보다 비싸서 그때 껐다면 실패로 끝났을 실험입니다.</p>
+      <div class="figs"><span>구매 CPA &minus;82.8%</span><span>설치→구매 2.2배</span><span>49일 무중단 라이브</span></div>
+    </div>
+    <div class="apx-card">
+      <div class="top"><h3>껐던 광고그룹을 캠페인 1위로</h3><span class="tag">퍼포먼스</span></div>
+      <p>소재를 두 번 갈아도 안 살아나 껐던 그룹을, 소재가 아니라 <b>잠재고객 색인</b>을 의심해 되살렸습니다. '머신러닝이 안 붙는다'는 결과이지 원인이 아니라고 봤습니다. 잘 된 색인은 자산으로 저장해 다른 캠페인에 옮겼습니다.</p>
+      <div class="figs"><span>캠페인 CPI &minus;20.8%</span><span>그룹 CPI 1위</span><span>캠페인 구매의 55%</span></div>
+    </div>
+    <div class="apx-card">
+      <div class="top"><h3>가설 두 개를 모두 기각시킨 워딩 실험</h3><span class="tag">기각 · 자산화</span></div>
+      <p>'기본요금 vs 방문요금' — 단기(구매 CPA)도 후행(재구매·리텐션)도 <b>기존 문구가 이겼습니다.</b> 광고로 제품 의사결정을 대신할 수는 없었습니다. 대신 이때 만든 배너 포맷이 리타겟 주력 소재로 남았습니다.</p>
+      <div class="figs"><span>가설 2건 모두 기각</span><span>배너 구매 CPA &minus;36.5%</span><span>리타겟 대장 소재</span></div>
+    </div>
+  </div>
+  <div class="pnum">14 / 15</div>
+</section>
+
+<!-- ============ 15 마무리 ============ -->
+<section class="slide outro" data-nav="마무리">
+  <div class="eyebrow"><span>Closing</span><span class="rt">박성진 — Portfolio 2026</span></div>
+  <div class="s-head">
+    <div class="s-eye" style="color:#9DBBF7">마무리</div>
+    <h2 class="s-title">숫자를 <u>움직인 방식</u>은 매번 같았습니다</h2>
+  </div>
+  <div class="o-list">
+    <div class="o-item">
+      <b>병목부터 특정합니다</b>
+      <p>"전환율을 올리자"가 아니라 "D4~D12가 공백이다"까지 좁힙니다. 좁혀야 손댈 곳이 보입니다.</p>
+    </div>
+    <div class="o-item">
+      <b>가장 싼 카드부터 씁니다</b>
+      <p>발송 시점, 기준선, 캠페인 구조. 추가 예산 0원·추가 할인 0원으로 만든 결과가 두 건입니다.</p>
+    </div>
+    <div class="o-item">
+      <b>진 실험을 그대로 남깁니다</b>
+      <p>앱피어는 기각됐지만 오귀속을 잡았고, 워딩 실험은 졌지만 리타겟 대장 소재를 남겼습니다.</p>
+    </div>
+  </div>
+  <div class="o-contact">
+    <span>박성진 · 그로스 · 퍼포먼스 마케터</span>
+    <span><a href="mailto:jin915@covering.app">jin915@covering.app</a></span>
+    <span><a href="https://byuel0915-pixel.github.io/byuel_marketing/data-room.html" target="_blank" rel="noopener">전체 19개 프로젝트 데이터룸 ↗</a></span>
+  </div>
+  <div class="pnum">15 / 15</div>
+</section>
+
+</main>
+
+<script>
+(function(){
+  var slides = Array.prototype.slice.call(document.querySelectorAll('.slide'));
+  var bar = document.getElementById('bar');
+  var jump = document.getElementById('jump');
+
+  slides.forEach(function(s, i){
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.title = (i+1) + '. ' + (s.dataset.nav || '');
+    b.setAttribute('aria-label', b.title);
+    b.addEventListener('click', function(){
+      s.scrollIntoView({behavior:'smooth', block:'start'});
+    });
+    jump.appendChild(b);
+  });
+  var dots = Array.prototype.slice.call(jump.children);
+
+  function onScroll(){
+    var st = window.scrollY || document.documentElement.scrollTop;
+    var max = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.width = (max > 0 ? (st / max) * 100 : 0) + '%';
+
+    var mid = st + window.innerHeight * 0.4;
+    var cur = 0;
+    for (var i = 0; i < slides.length; i++){
+      if (slides[i].offsetTop <= mid) cur = i;
+    }
+    dots.forEach(function(d, i){
+      d.setAttribute('aria-current', i === cur ? 'true' : 'false');
+    });
+  }
+  var ticking = false;
+  window.addEventListener('scroll', function(){
+    if (!ticking){
+      ticking = true;
+      requestAnimationFrame(function(){ onScroll(); ticking = false; });
+    }
+  }, {passive:true});
+  window.addEventListener('resize', onScroll);
+  onScroll();
+
+  function go(dir){
+    var st = (window.scrollY || document.documentElement.scrollTop) + 8;
+    var idx = 0;
+    for (var i = 0; i < slides.length; i++){
+      if (slides[i].offsetTop <= st) idx = i;
+    }
+    var next = Math.min(slides.length - 1, Math.max(0, idx + dir));
+    slides[next].scrollIntoView({behavior:'smooth', block:'start'});
+  }
+  document.addEventListener('keydown', function(e){
+    if (e.metaKey || e.ctrlKey || e.altKey) return;
+    var t = e.target;
+    if (t && (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA')) return;
+    if (e.key === 'ArrowDown' || e.key === 'PageDown'){ e.preventDefault(); go(1); }
+    else if (e.key === 'ArrowUp' || e.key === 'PageUp'){ e.preventDefault(); go(-1); }
+    else if (e.key === 'Home'){ e.preventDefault(); slides[0].scrollIntoView({behavior:'smooth'}); }
+    else if (e.key === 'End'){ e.preventDefault(); slides[slides.length-1].scrollIntoView({behavior:'smooth'}); }
+  });
+})();
+</script>
+</body>
+</html>
