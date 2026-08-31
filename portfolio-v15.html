@@ -42,6 +42,8 @@ body{
   font-variant-numeric:tabular-nums;
   font-size:17px;
   line-height:1.6;
+  word-break:keep-all;
+  overflow-wrap:break-word;
   overflow-x:hidden;
   -webkit-font-smoothing:antialiased;
 }
@@ -115,7 +117,7 @@ a{color:inherit;}
 }
 .cv-line{
   margin-top:34px;max-width:22ch;
-  font-size:clamp(24px,3vw,42px);font-weight:800;line-height:1.32;letter-spacing:-.025em;
+  font-size:clamp(27px,3.7vw,52px);font-weight:800;line-height:1.26;letter-spacing:-.03em;
 }
 .cv-line u{text-decoration:none;background:linear-gradient(transparent 84%, rgba(243,201,105,.92) 84%);}
 .cv-stats{
@@ -282,13 +284,13 @@ a{color:inherit;}
 
 /* ---------- cover extras ---------- */
 .cv-sub{
-  margin-top:18px;max-width:52ch;
-  font-size:clamp(16px,1.35vw,21px);font-weight:600;color:#C9DAFB;line-height:1.55;
+  margin-top:22px;max-width:64ch;
+  font-size:clamp(17px,1.5vw,24px);font-weight:600;color:#C9DAFB;line-height:1.55;
 }
 .cv-sub b{color:#fff;font-weight:800;}
 .cv-note{
-  margin-top:16px;max-width:62ch;
-  font-size:clamp(14px,1.05vw,16.5px);color:#9DBBF7;line-height:1.65;
+  margin-top:20px;max-width:66ch;
+  font-size:clamp(14.5px,1.15vw,18px);color:#9DBBF7;line-height:1.65;
 }
 .cv-note b{color:#F3C969;font-weight:700;}
 .cv-stat .st{
@@ -394,7 +396,7 @@ a{color:inherit;}
   .card p{font-size:15.5px;margin-top:10px;}
   .apx-card{padding:19px 21px;}
   .apx-card p{font-size:15.4px;}
-  .cv-line{font-size:clamp(24px,2.6vw,34px);margin-top:26px;}
+  .cv-line{font-size:clamp(25px,3vw,40px);margin-top:24px;}
   .cv-stats{margin-top:28px;}
 }
 @media (max-height:830px){
@@ -571,13 +573,8 @@ body.printpreview #jump{ display:none; }
   <h1 class="cv-line">고객을 데려오는 건 시작일 뿐,<br><u>‘활성화’까지 책임집니다.</u></h1>
   <p class="cv-sub">입사 후 <b>월 매출 11.5배 · 누적 가입자 5.8배</b>, 직접 리딩한 프로젝트로 <b>구매 1,157건</b>을 만든 마케터 <b>박성진</b>입니다.</p>
   <p class="cv-note">광고가 막히면 CRM으로, CRM이 닿지 않으면 바이럴로 — 병목이 어디에 있든 직접 찾아 뚫었습니다.<br>가장 뿌듯한 순간은 지표가 오를 때가 아니라 <b>유저가 겪던 불편이 실제로 사라졌을 때</b>입니다.</p>
-  <div class="cv-stats">
-    <div class="cv-stat"><span class="st">획득 Acquisition</span><b>구매 CPA &minus;50%</b><span>껐던 매체를 되살려 광고비 6.3배 구간까지 확장했습니다</span></div>
-    <div class="cv-stat"><span class="st">전환 Activation</span><b>CAC &minus;1.6%</b><span>광고비를 58.6% 더 쓰는 동안 획득 단가는 내려갔습니다</span></div>
-    <div class="cv-stat"><span class="st">재이용 Retention</span><b>재주문율 +5.5%p</b><span>추가 할인 0원 &mdash; 보내는 날만 바꿔 만든 결과입니다</span></div>
-  </div>
   <div class="cv-foot"><span>10개 대표 프로젝트 · 부록 4</span><span>가설 → 실험 → 판정 → 자산화</span></div>
-  <div class="pnum">01 / 16</div>
+  <div class="pnum">01 / 15</div>
 </section>
 
 <!-- ============ 02 PROFILE ============ -->
@@ -585,7 +582,7 @@ body.printpreview #jump{ display:none; }
   <div class="eyebrow"><span>Profile</span><span class="rt">박성진 — Portfolio 2026</span></div>
   <div class="s-head">
     <div class="s-eye">프로필</div>
-    <h2 class="s-title">퍼포먼스 · CRM · 프로모션 · 온드 · 바이럴을 <u>한 사람이 설계합니다</u></h2>
+    <h2 class="s-title">퍼포먼스 · CRM · 바이럴 · 온드미디어로 <u>고객의 삶을 설계하는</u> 마케터입니다</h2>
   </div>
   <div class="pf-grid">
     <div class="pf-photo">
@@ -638,7 +635,7 @@ body.printpreview #jump{ display:none; }
       </div>
     </div>
   </div>
-  <div class="pnum">02 / 16</div>
+  <div class="pnum">02 / 15</div>
 </section>
 
 <!-- ============ 03 성과 개요 ============ -->
@@ -698,49 +695,7 @@ body.printpreview #jump{ display:none; }
     </div>
   </div>
   <div class="ov-bar"><div>매체 <b>5개</b>를 독립 운용하며 만든 <b>누적 가입자 5.8배</b> — 되는 것을 키우는 일과 안 되는 것을 증명하는 일을 같은 무게로 했습니다</div><span>ACQUISITION · ACTIVATION · RETENTION</span></div>
-  <div class="pnum">03 / 16</div>
-</section>
-
-<!-- ============ 03 목차 ============ -->
-<section class="slide" data-nav="목차">
-  <div class="eyebrow"><span>Contents</span><span class="rt">박성진 — Portfolio 2026</span></div>
-  <div class="s-head">
-    <div class="s-eye">목차</div>
-    <h2 class="s-title">세 개의 축으로 <u>10개 프로젝트</u>를 담았습니다</h2>
-    <p class="s-sub">축 1은 구조를 바꿔 만든 성과, 축 2는 매체 운영과 측정, 축 3은 콘텐츠와 온드 채널입니다. 각 장은 병목 → 실행 → 결과 → 레슨런 순서로 읽힙니다.</p>
-  </div>
-  <div class="toc">
-    <div class="toc-col">
-      <h3>구조를 바꿔 만든 성과</h3>
-      <div class="cnt">축 1 · 4개 · 05–08</div>
-      <ol>
-        <li><i>01</i><span><b>반값 쿠폰</b> — 광고비 +58.6%에 CAC &minus;1.6%</span></li>
-        <li><i>02</i><span><b>무게 허들</b> — 추가 예산 0원, 객단가 +4.5%</span></li>
-        <li><i>03</i><span><b>CRM 타이밍</b> — 할인 0원, 재주문율 +5.5%p</span></li>
-        <li><i>04</i><span><b>손실회피 카피</b> — 구독 전환율 1.74배</span></li>
-      </ol>
-    </div>
-    <div class="toc-col">
-      <h3>퍼포먼스 운영 · 측정</h3>
-      <div class="cnt">축 2 · 3개 · 09–11</div>
-      <ol>
-        <li><i>05</i><span><b>틱톡 재가동</b> — 구매 CPA &minus;50%</span></li>
-        <li><i>06</i><span><b>앱피어 도입</b> — 기각, 그리고 오귀속 발견</span></li>
-        <li><i>07</i><span><b>지역 사전 모객</b> — BEP 163일 → 6일</span></li>
-      </ol>
-    </div>
-    <div class="toc-col">
-      <h3>콘텐츠 · 온드</h3>
-      <div class="cnt">축 3 · 3개 · 12–14</div>
-      <ol>
-        <li><i>08</i><span><b>품목 단위 소구</b> — 구매 CPA &minus;70%</span></li>
-        <li><i>09</i><span><b>온드미디어</b> — 광고비 0원, 설치→구매 44.8%</span></li>
-        <li><i>10</i><span><b>댓글→DM</b> — 가입 CPA &minus;52%, 그리고 퍼널 누수</span></li>
-      </ol>
-    </div>
-  </div>
-  <div class="toc-note"><b>부록(15p)</b> — 휴면 알림톡 · 블로그 후기 랜딩 · 색인 재구성 · 워딩 실험 4건을 한 장으로 압축했습니다. 전체 19개 프로젝트의 원본 분석은 데이터룸에 있습니다.</div>
-  <div class="pnum">04 / 16</div>
+  <div class="pnum">03 / 15</div>
 </section>
 
 <!-- ============ 04 반값 쿠폰 ============ -->
@@ -794,7 +749,7 @@ body.printpreview #jump{ display:none; }
       <a class="dashlink" href="https://byuel0915-pixel.github.io/byuel_marketing/p/xmas-arpu-cohort.html" target="_blank" rel="noopener">대시보드 전체 보기 ↗</a>
     </div>
   </div>
-  <div class="pnum">05 / 16</div>
+  <div class="pnum">04 / 15</div>
 </section>
 
 <!-- ============ 05 무게 허들 ============ -->
@@ -848,7 +803,7 @@ body.printpreview #jump{ display:none; }
       <a class="dashlink" href="https://byuel0915-pixel.github.io/byuel_marketing/p/weight-daily-timeseries.html" target="_blank" rel="noopener">3개 지표 일별 추이 전체 보기 ↗</a>
     </div>
   </div>
-  <div class="pnum">06 / 16</div>
+  <div class="pnum">05 / 15</div>
 </section>
 
 <!-- ============ 06 CRM 타이밍 ============ -->
@@ -902,7 +857,7 @@ body.printpreview #jump{ display:none; }
       <a class="dashlink" href="https://byuel0915-pixel.github.io/byuel_marketing/p/funnel-crm-part-b.html" target="_blank" rel="noopener">대시보드 전체 보기 ↗</a>
     </div>
   </div>
-  <div class="pnum">07 / 16</div>
+  <div class="pnum">06 / 15</div>
 </section>
 
 <!-- ============ 07 손실회피 카피 ============ -->
@@ -956,7 +911,7 @@ body.printpreview #jump{ display:none; }
       <a class="dashlink" href="https://byuel0915-pixel.github.io/byuel_marketing/p/mar-sub-loss-ab.html" target="_blank" rel="noopener">대시보드 전체 보기 ↗</a>
     </div>
   </div>
-  <div class="pnum">08 / 16</div>
+  <div class="pnum">07 / 15</div>
 </section>
 
 <!-- ============ 08 틱톡 ============ -->
@@ -1010,7 +965,7 @@ body.printpreview #jump{ display:none; }
       <a class="dashlink" href="https://byuel0915-pixel.github.io/byuel_marketing/p/tiktok-campaign-shift.html" target="_blank" rel="noopener">캠페인 구조 As-Is / To-Be 보기 ↗</a>
     </div>
   </div>
-  <div class="pnum">09 / 16</div>
+  <div class="pnum">08 / 15</div>
 </section>
 
 <!-- ============ 09 앱피어 ============ -->
@@ -1064,7 +1019,7 @@ body.printpreview #jump{ display:none; }
       <a class="dashlink" href="https://byuel0915-pixel.github.io/byuel_marketing/p/appier-conversion-decomp.html" target="_blank" rel="noopener">대시보드 전체 보기 ↗</a>
     </div>
   </div>
-  <div class="pnum">10 / 16</div>
+  <div class="pnum">09 / 15</div>
 </section>
 
 <!-- ============ 10 지역 사전 모객 ============ -->
@@ -1118,7 +1073,7 @@ body.printpreview #jump{ display:none; }
       <a class="dashlink" href="https://byuel0915-pixel.github.io/byuel_marketing/p/region-preopen-combined.html" target="_blank" rel="noopener">대시보드 전체 보기 ↗</a>
     </div>
   </div>
-  <div class="pnum">11 / 16</div>
+  <div class="pnum">10 / 15</div>
 </section>
 
 <!-- ============ 11 품목 단위 소구 ============ -->
@@ -1172,7 +1127,7 @@ body.printpreview #jump{ display:none; }
       <a class="dashlink" href="https://byuel0915-pixel.github.io/byuel_marketing/p/waste-bedding-cpa.html" target="_blank" rel="noopener">대시보드 전체 보기 ↗</a>
     </div>
   </div>
-  <div class="pnum">12 / 16</div>
+  <div class="pnum">11 / 15</div>
 </section>
 
 <!-- ============ 12 온드미디어 ============ -->
@@ -1226,7 +1181,7 @@ body.printpreview #jump{ display:none; }
       <a class="dashlink" href="https://byuel0915-pixel.github.io/byuel_marketing/p/owned-content-reach.html" target="_blank" rel="noopener">대시보드 전체 보기 ↗</a>
     </div>
   </div>
-  <div class="pnum">13 / 16</div>
+  <div class="pnum">12 / 15</div>
 </section>
 
 <!-- ============ 13 댓글 → DM ============ -->
@@ -1280,7 +1235,7 @@ body.printpreview #jump{ display:none; }
       <a class="dashlink" href="https://byuel0915-pixel.github.io/byuel_marketing/p/dm-funnel-leak.html" target="_blank" rel="noopener">대시보드 전체 보기 ↗</a>
     </div>
   </div>
-  <div class="pnum">14 / 16</div>
+  <div class="pnum">13 / 15</div>
 </section>
 
 <!-- ============ 14 부록 ============ -->
@@ -1313,7 +1268,7 @@ body.printpreview #jump{ display:none; }
       <div class="figs"><span>가설 2건 모두 기각</span><span>배너 구매 CPA &minus;36.5%</span><span>리타겟 대장 소재</span></div>
     </div>
   </div>
-  <div class="pnum">15 / 16</div>
+  <div class="pnum">14 / 15</div>
 </section>
 
 <!-- ============ 15 마무리 ============ -->
@@ -1342,7 +1297,7 @@ body.printpreview #jump{ display:none; }
     <span><a href="mailto:jin915@covering.app">jin915@covering.app</a></span>
     <span><a href="https://byuel0915-pixel.github.io/byuel_marketing/data-room.html" target="_blank" rel="noopener">전체 19개 프로젝트 데이터룸 ↗</a></span>
   </div>
-  <div class="pnum">16 / 16</div>
+  <div class="pnum">15 / 15</div>
 </section>
 
 </main>
