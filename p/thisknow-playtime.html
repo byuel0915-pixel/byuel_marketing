@@ -1,39 +1,42 @@
 <!doctype html><html lang="ko"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>이거알아 — 평균 재생 시간 | 박성진</title>
-<meta name="description" content="나레이션 없는 자막 반복형 소재와 기존 리타겟 소재의 평균 재생 시간 비교 (AOS·iOS)">
+<meta name="description" content="자막 반복형 리타겟 소재의 평균 재생 시간을 기존 세트와 비교">
 <link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="../assets/chart.css">
 <style>
-  body{padding:0;background:var(--card)}
-  .wrap{max-width:760px;padding:14px 16px 10px}
-  .ct{text-align:center;font-size:16px;font-weight:800;letter-spacing:-.015em;margin-bottom:2px}
-  .ct .d{color:var(--green)} .ct .d.x{color:var(--red)}
-  .cs{text-align:center;font-size:11.5px;color:var(--ink-3);margin-bottom:6px}
-  .lg{display:flex;justify-content:center;gap:18px;font-size:11.5px;color:var(--ink-2);margin-bottom:2px}
-  .lg i{display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:5px;vertical-align:-1px}
-  svg{width:100%;height:auto;display:block}
-  .nt{font-size:11.5px;color:var(--ink-3);text-align:center;margin-top:4px;line-height:1.55}
-  .nt b{color:var(--ink)}
+.wrap{padding:10px 12px}
+.hd h3{margin:0;font-size:14px;font-weight:800;letter-spacing:-.02em}
+.hd .dir{display:block;font-size:10.5px;font-weight:600;color:var(--ink-3);margin-top:2px}
+.gx{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:11px 0 2px}
+.os{font-size:10.5px;font-weight:800;color:var(--ink-3);margin:0 0 5px}
+.rw{display:grid;grid-template-columns:52px 1fr;align-items:center;gap:7px;margin-bottom:5px}
+.lb{font-size:10.5px;font-weight:700;color:var(--ink-2)}
+.tr{position:relative;height:20px;background:#F4F4F2;border-radius:4px;overflow:hidden}
+.bar{position:absolute;left:0;top:0;height:100%;border-radius:4px}
+.k{background:#D6D6D2}.g{background:var(--green,#16A34A)}.r{background:var(--red,#DC2626)}
+.vl{position:absolute;right:7px;top:0;line-height:20px;font-size:11px;font-weight:800;color:#1A1A18;font-feature-settings:'tnum'}
+.vl.on{color:#fff}
+.dl{font-size:11.5px;font-weight:800;margin-top:5px;font-feature-settings:'tnum'}
+.dl.g{color:var(--green,#16A34A)}.dl.r{color:var(--red,#DC2626)}
+@media(max-width:520px){.gx{grid-template-columns:1fr;gap:10px}}
 </style>
 </head><body><div class="wrap">
-<div class="ct">평균 재생 시간 <span class="d">iOS 1.77배 · AOS 1.15배</span></div>
-<div class="cs">길수록 좋음 · 매체 리포트 가중평균</div>
-<div class="lg">
-  <span><i style="background:#C3C8D2"></i>기존 세트</span>
-  <span><i style="background:#10B981"></i>이거알아 3종</span>
+<div class="card pad chart">
+  <div class="hd"><h3>① 평균 재생 시간 — 길수록 좋음 (1차 판정 지표)</h3><span class="dir">같은 캠페인 기존 세트 대비 · 매체 리포트</span></div>
+  <div class="gx">
+    <div>
+      <p class="os">iOS</p>
+      <div class="rw"><span class="lb">기존</span><div class="tr"><i class="bar k" style="width:57.4%"></i><span class="vl">2.7초</span></div></div>
+      <div class="rw"><span class="lb">이거알아</span><div class="tr"><i class="bar g" style="width:100%"></i><span class="vl on">4.7초</span></div></div>
+      <p class="dl g">1.77배</p>
+    </div>
+    <div>
+      <p class="os">AOS</p>
+      <div class="rw"><span class="lb">기존</span><div class="tr"><i class="bar k" style="width:87.1%"></i><span class="vl">5.4초</span></div></div>
+      <div class="rw"><span class="lb">이거알아</span><div class="tr"><i class="bar g" style="width:100%"></i><span class="vl on">6.2초</span></div></div>
+      <p class="dl g">1.15배</p>
+    </div>
+  </div>
 </div>
-<svg viewBox="0 0 640 330" role="img" aria-label="평균 재생 시간 비교. iOS와 AOS 각각 기존 세트와 이거알아 3종.">
-  <g font-size="11.5" fill="#7A8294" font-family="Pretendard, sans-serif"><text x="60" y="284.0" text-anchor="end">0</text><text x="60" y="249.7" text-anchor="end">1초</text><text x="60" y="215.4" text-anchor="end">2초</text><text x="60" y="181.1" text-anchor="end">3초</text><text x="60" y="146.9" text-anchor="end">4초</text><text x="60" y="112.6" text-anchor="end">5초</text><text x="60" y="78.3" text-anchor="end">6초</text><text x="60" y="44.0" text-anchor="end">7초</text></g>
-  <g stroke="#E6E9EF" stroke-width="1"><line x1="70" y1="280.0" x2="620" y2="280.0"/><line x1="70" y1="245.7" x2="620" y2="245.7"/><line x1="70" y1="211.4" x2="620" y2="211.4"/><line x1="70" y1="177.1" x2="620" y2="177.1"/><line x1="70" y1="142.9" x2="620" y2="142.9"/><line x1="70" y1="108.6" x2="620" y2="108.6"/><line x1="70" y1="74.3" x2="620" y2="74.3"/><line x1="70" y1="40.0" x2="620" y2="40.0"/></g>
-  <rect x="125" y="187.4" width="78" height="92.6" rx="3" fill="#C3C8D2"/><rect x="217" y="118.9" width="78" height="161.1" rx="3" fill="#10B981"/><rect x="385" y="94.9" width="78" height="185.1" rx="3" fill="#C3C8D2"/><rect x="477" y="67.4" width="78" height="212.6" rx="3" fill="#10B981"/>
-  <g font-family="Pretendard, sans-serif" font-weight="800" font-size="16" text-anchor="middle"><text x="164" y="178.4" fill="#5A6272">2.7초</text><text x="256" y="109.9" fill="#10B981">4.7초</text><text x="424" y="85.9" fill="#5A6272">5.4초</text><text x="516" y="58.4" fill="#10B981">6.2초</text></g>
-  <line x1="70" y1="280.0" x2="620" y2="280.0" stroke="#3A4254" stroke-width="1.5"/>
-  <g font-family="Pretendard, sans-serif" text-anchor="middle">
-    <text x="210" y="301" font-size="13.5" font-weight="700" fill="#3A4254">iOS</text>
-    <text x="210" y="319" font-size="11.5" fill="#7A8294">기존 포맷 8종 대비</text>
-    <text x="470" y="301" font-size="13.5" font-weight="700" fill="#3A4254">AOS</text>
-    <text x="470" y="319" font-size="11.5" fill="#7A8294">리타겟콘텐츠 5종 대비</text>
-  </g>
-</svg>
-<p class="nt"><b>양쪽 다 길어졌습니다.</b> 훅률은 iOS 82.5%로 동일 — 출발선은 같고 재생된 뒤에 갈렸습니다.</p>
 </div></body></html>
