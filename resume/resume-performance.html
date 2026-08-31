@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>활성화까지 책임지고 50배 성장을 만드는 마케터 박성진_퍼포먼스 마케터</title>
+<meta name="description" content="활성화까지 책임지고 50배 성장을 만드는 마케터 박성진 — 퍼포먼스 마케터 지원. 누적 가입자 5.8배 성장 구간에서 퍼포먼스·CRM·프로모션·온드·바이럴을 담당했습니다." />
+<style>
+:root{
+  --navy:#0B2545; --navy2:#13315C; --blue:#2563EB; --blue-dk:#1D4ED8;
+  --blue-soft:#E9EFFD; --blue-line:#C9D8FA; --cream:#FAF7F0; --mustard:#C98A1E;
+  --ink:#101828; --body:#3B4557; --muted:#6B7688; --line:#E3E7EF; --surface:#F6F8FC;
+}
+*{box-sizing:border-box;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  margin:0; background:#EEF1F7; color:var(--ink);
+  font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Segoe UI","Malgun Gothic",system-ui,sans-serif;
+  font-variant-numeric:tabular-nums;
+  font-size:15px; line-height:1.6;
+  word-break:keep-all; overflow-wrap:break-word;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,h4,p,ul,ol{margin:0;padding:0;}
+ul{list-style:none;}
+a{color:var(--blue-dk);text-decoration:none;border-bottom:1px solid var(--blue-line);}
+
+.sheet{
+  width:100%; max-width:210mm; margin:0 auto; background:#fff;
+  padding:clamp(20px,5vw,17mm) clamp(18px,5vw,16mm) clamp(22px,5vw,15mm);
+  box-shadow:0 8px 30px rgba(15,37,87,.13);
+}
+@media (min-width:900px){ body{padding:26px 0;} }
+
+/* header */
+.hd{border-bottom:3px solid var(--navy);padding-bottom:16px;}
+.hd .pos{
+  display:inline-block;font-size:11.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;
+  color:#fff;background:var(--blue-dk);border-radius:999px;padding:5px 12px;margin-bottom:12px;
+}
+.hd h1{font-size:clamp(26px,4.6vw,34px);font-weight:900;letter-spacing:-.035em;line-height:1.15;}
+.hd h1 small{display:block;margin-top:8px;font-size:clamp(14.5px,2vw,17px);font-weight:700;color:var(--blue-dk);letter-spacing:-.01em;}
+.hd .lede{margin-top:13px;font-size:clamp(13.6px,1.7vw,15.4px);color:var(--body);line-height:1.68;}
+.hd .lede b{color:var(--ink);font-weight:800;}
+.meta{
+  margin-top:14px;display:flex;flex-wrap:wrap;gap:6px 18px;
+  font-size:13px;color:var(--muted);font-weight:600;
+}
+.meta span b{color:var(--ink);font-weight:700;}
+
+/* sections */
+.sec{margin-top:clamp(18px,3vw,26px);break-inside:avoid;}
+.sec>h2{
+  font-size:12px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:var(--blue-dk);
+  padding-bottom:7px;border-bottom:2px solid var(--blue-soft);margin-bottom:13px;
+}
+
+/* highlights */
+.hl{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;}
+.hl-card{
+  border:1px solid var(--line);border-radius:10px;padding:12px 14px;background:var(--surface);
+  break-inside:avoid;
+}
+.hl-card .n{font-size:clamp(17px,2.4vw,21px);font-weight:900;letter-spacing:-.03em;color:var(--navy);line-height:1.15;}
+.hl-card .t{margin-top:5px;font-size:13.4px;font-weight:800;}
+.hl-card .d{margin-top:5px;font-size:12.8px;color:var(--body);line-height:1.55;}
+@media (max-width:560px){ .hl{grid-template-columns:1fr;} }
+
+/* experience */
+.exp{break-inside:avoid;}
+.exp+.exp{margin-top:16px;padding-top:15px;border-top:1px solid var(--line);}
+.exp-top{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 14px;align-items:baseline;}
+.exp-top .co{font-size:16.5px;font-weight:900;letter-spacing:-.02em;}
+.exp-top .co em{font-style:normal;font-weight:700;color:var(--muted);font-size:14px;}
+.exp-top .when{font-size:13px;font-weight:700;color:var(--muted);white-space:nowrap;}
+.exp .sum{margin-top:6px;font-size:13.4px;color:var(--blue-dk);font-weight:700;}
+.exp ul{margin-top:9px;display:flex;flex-direction:column;gap:7px;}
+.exp li{position:relative;padding-left:14px;font-size:13.6px;color:var(--body);line-height:1.62;break-inside:avoid;}
+.exp li::before{content:"";position:absolute;left:0;top:.62em;width:5px;height:5px;border-radius:50%;background:var(--blue-line);}
+.exp li b{color:var(--ink);font-weight:800;}
+.exp li .tag{
+  display:inline-block;margin-right:6px;font-size:11.5px;font-weight:800;color:var(--blue-dk);
+  background:var(--blue-soft);border-radius:5px;padding:1px 7px;vertical-align:1px;
+}
+
+/* project table */
+.prj{display:flex;flex-direction:column;gap:0;}
+.prj-row{
+  display:grid;grid-template-columns:88px minmax(0,1fr) minmax(0,168px);
+  gap:12px;padding:8px 0;border-bottom:1px solid var(--line);align-items:baseline;
+  break-inside:avoid;
+}
+.prj-row:last-child{border-bottom:0;}
+.prj-row .k{font-size:11.5px;font-weight:800;color:var(--blue-dk);letter-spacing:.02em;}
+.prj-row .n{font-size:13.4px;color:var(--body);line-height:1.5;}
+.prj-row .n b{color:var(--ink);font-weight:800;}
+.prj-row .v{font-size:13px;font-weight:800;color:var(--navy);text-align:right;}
+@media (max-width:620px){
+  .prj-row{grid-template-columns:1fr;gap:3px;}
+  .prj-row .v{text-align:left;}
+}
+
+/* skills */
+.sk{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;}
+.sk div{border:1px solid var(--line);border-radius:9px;padding:10px 12px;break-inside:avoid;}
+.sk b{display:block;font-size:13px;font-weight:800;color:var(--navy);}
+.sk p{margin-top:4px;font-size:12.6px;color:var(--body);line-height:1.5;}
+@media (max-width:560px){ .sk{grid-template-columns:1fr;} }
+
+/* simple rows */
+.rows{display:flex;flex-direction:column;}
+.row2{
+  display:flex;flex-wrap:wrap;justify-content:space-between;gap:3px 14px;align-items:baseline;
+  padding:7px 0;border-bottom:1px solid var(--line);break-inside:avoid;
+}
+.row2:last-child{border-bottom:0;}
+.row2 .l{font-size:13.8px;}
+.row2 .l b{font-weight:800;}
+.row2 .l span{color:var(--body);}
+.row2 .r{font-size:12.8px;font-weight:700;color:var(--muted);white-space:nowrap;}
+
+.mini{margin-top:9px;font-size:12.6px;color:var(--muted);line-height:1.6;}
+
+/* print / PDF — A4 세로, 잘림 없이 자연 분할 */
+@media print{
+  @page{ size:A4 portrait; margin:12mm 11mm; }
+  html,body{ background:#fff !important; }
+  body{ font-size:10.6pt; padding:0; }
+  .sheet{
+    max-width:none; width:auto; margin:0; padding:0;
+    box-shadow:none; border-radius:0;
+  }
+  .sec{ break-inside:auto; page-break-inside:auto; }
+  .sec>h2{ break-after:avoid; page-break-after:avoid; }
+  .exp,.hl-card,.prj-row,.row2,.sk div{ break-inside:avoid; page-break-inside:avoid; }
+  a{ border-bottom:none; color:var(--blue-dk); }
+  .noprint{ display:none !important; }
+  *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+}
+</style>
+</head>
+<body>
+<main class="sheet">
+  <header class="hd">
+    <span class="pos">Performance Marketer · 퍼포먼스 마케터</span>
+    <h1>활성화까지 책임지고 50배 성장을 만드는 마케터 박성진<small>매체 5개를 독립 운용하는 퍼포먼스 마케터</small></h1>
+    <p class="lede"><b>콘텐츠 제작 · 퍼포먼스 · 그로스 · CRM · 바이럴</b> — 수단과 방법을 가리지 않고 결국 고객을 ‘활성화’시킵니다. <b>어떻게 데려와서 → 어떻게 첫 경험을 만들고 → 어떻게 다시 오게 할 것인지</b>를 하나의 흐름으로 설계하기 때문에, 광고비를 6.3배로 늘리면서 구매 CPA를 절반으로 낮췄듯 채널이 무엇이든 유입을 진짜 행동으로 바꾸는 데서 멈추지 않습니다.</p>
+    
+<div class="meta">
+  <span><b>박성진</b> · 2001년생</span>
+  <span>jin915@covering.app</span>
+  <span>byuel0915@gmail.com</span>
+  <span>서울 성북구</span>
+</div>
+<div class="meta" style="margin-top:6px;">
+  <span>포트폴리오 <a href="https://byuel0915-pixel.github.io/byuel_marketing/portfolio-v15.html">장표 보기</a></span>
+  <span>프로젝트 데이터룸 <a href="https://byuel0915-pixel.github.io/byuel_marketing/data-room.html">19건 전체</a></span>
+</div>
+
+  </header>
+
+  <section class="sec">
+    <h2>Key Results</h2>
+    <div class="hl"><div class="hl-card"><div class="n">−50%</div><div class="t">틱톡 구매 CPA (광고비 6.3배 구간)</div><div class="d">‘썰’ 포맷 전환으로 CTR 2.9배 + 캠페인 5개→3개 집약 + 증액 순서 재설계</div></div><div class="hl-card"><div class="n">−20.8%</div><div class="t">캠페인 CPI (색인 재구성)</div><div class="d">껐던 광고그룹을 소재가 아닌 잠재고객 색인으로 되살려 캠페인 CPI 1위</div></div><div class="hl-card"><div class="n">−82.8%</div><div class="t">블로그 후기 랜딩 구매 CPA</div><div class="d">랜딩을 앱스토어→네이버 실사용 후기로 전환, 세트 집약 후 49일 무중단 라이브</div></div><div class="hl-card"><div class="n">오귀속 규명</div><div class="t">리포트 CPA 최저의 실체</div><div class="d">리포트 전환을 실제 수거 발생 기준으로 재분류해 MMP 귀속 설정 변경</div></div></div>
+  </section>
+
+  <section class="sec">
+    <h2>Experience</h2>
+    <div class="exp"><div class="exp-top"><div class="co">커버링 <em>마케팅팀 · 팀원</em></div><div class="when">2025.01 – 재직 중</div></div><div class="sum">Meta·Google·TikTok·Apple Search Ads·Appier 5개 매체 독립 운용 (누적 가입자 5.8배 구간)</div><ul><li><span class="tag">매체 운용</span>5개 매체 계정을 <b>단독으로 기획·집행·최적화</b> — 캠페인 구조, 예산 배분, 증액·감액 규칙을 직접 수립</li><li><span class="tag">구조 최적화</span>병렬로 흩어진 캠페인 5개를 <b>구매 캠페인 3개로 집약</b>하고 세트를 17개로 확장 — 학습이 붙는 구조로 재편해 구매 CPA −50%</li><li><span class="tag">증액 규율</span>금액이 아니라 순서 — <b>CPI를 먼저 낮춰 근거를 만든 뒤 검증된 세트만 증액</b>해 광고비 6.3배 구간에서도 목표 CPA 아래 유지</li><li><span class="tag">타겟팅</span>저효율 그룹을 끄기 전에 <b>잠재고객 색인 구성을 먼저 의심</b> — 재구성으로 캠페인 CPI −20.8%, 검증된 색인은 자산화해 타 캠페인 수평 전개</li><li><span class="tag">랜딩 실험</span>광고 랜딩을 앱스토어에서 <b>네이버 실사용 후기</b>로 전환 — 대조군 대비 설치→구매 2.2배, 구매 CPA −82.8%</li><li><span class="tag">측정 신뢰도</span>매체 리포트를 그대로 믿지 않음 — AI 리타겟 매체의 최저 CPA를 <b>오귀속으로 규명</b>하고 에어브릿지 귀속 설정을 변경해 판단 기준선 재수립</li><li><span class="tag">소재</span>소구점을 카테고리가 아닌 <b>품목 단위로 쪼개</b> 위닝 소재 발굴 — 구매 CPA −70%, 이후 13개월간 광고 세트 16개로 재세팅 운용</li><li><span class="tag">측정</span>에어브릿지·GA4·Mixpanel 이벤트 설계와 BigQuery 직접 쿼리로 <b>매체 리포트와 실제 전환을 상시 대조</b></li><li><span class="tag">자동화</span>Apps Script·Meta Graph API·Claude Code로 <b>대상 추출 → 발송 → 쿠폰 발급 파이프라인 3종</b> 구축·무중단 운영</li><li><span class="tag">콘텐츠</span>광고 소재·상세페이지·온드 콘텐츠를 <b>기획부터 편집까지 직접</b> (Premiere Pro·Figma·Photoshop)</li></ul></div>
+    
+<div class="exp">
+  <div class="exp-top"><div class="co">인하대 산학협력단 디지털혁신전략센터 <em>학생연구원 · 조교</em></div><div class="when">2024.09 – 2024.12</div></div>
+  <div class="sum">‘인천시 에코허브플랫폼 실증 리빙랩’ 학생연구원 리더</div>
+  <ul>
+    <li>4050 세대 사용자 리서치로 <b>Pain Point를 발굴</b>해 단순·가시적 UI/UX 개선안 도출</li>
+    <li>리빙랩 진행 총괄 — 회의록·보고서 작성 및 자료 관리</li>
+  </ul>
+</div>
+<div class="exp">
+  <div class="exp-top"><div class="co">이보영의 토킹클럽 구월아시아드점 <em>전임강사</em></div><div class="when">2024.03 – 2024.08</div></div>
+  <ul><li>초·중등 학생 영어 교육 및 학부모 소통</li></ul>
+</div>
+
+  </section>
+
+  <section class="sec">
+    <h2>Projects · 직접 리딩한 프로젝트</h2>
+    <div class="prj"><div class="prj-row"><div class="k">퍼포먼스</div><div class="n"><b>틱톡 재가동</b> — ‘썰’ 포맷 전환 + 캠페인 5개→3개 집약 + 증액 순서 재설계</div><div class="v">구매 CPA −50% / 광고비 6.3배</div></div><div class="prj-row"><div class="k">퍼포먼스</div><div class="n"><b>잠재고객 색인 재구성</b> — 껐던 광고그룹을 소재가 아닌 색인으로 되살려 자산화</div><div class="v">캠페인 CPI −20.8% / CPI 1위</div></div><div class="prj-row"><div class="k">퍼포먼스</div><div class="n"><b>블로그 후기 랜딩</b> — 랜딩을 앱스토어→네이버 실사용 후기로, 세트 집약</div><div class="v">구매 CPA −82.8% (49일 무중단)</div></div><div class="prj-row"><div class="k">측정</div><div class="n"><b>앱피어 도입·검증</b> — 가설 기각 후 리포트 CPA 최저의 실체를 오귀속으로 규명</div><div class="v">MMP 귀속 설정 개선</div></div><div class="prj-row"><div class="k">콘텐츠</div><div class="n"><b>품목 단위 소구 실험</b> — 6종 동시 집행으로 ‘이불’ 위닝 소재 발굴, 13개월 운용</div><div class="v">구매 CPA −70% / CTR 3.94배</div></div><div class="prj-row"><div class="k">실험</div><div class="n"><b>가격 워딩 A/B</b> — 가설 2건 모두 기각, 배너 포맷은 리타겟 주력 소재로 남김</div><div class="v">배너 구매 CPA −36.5%</div></div><div class="prj-row"><div class="k">바이럴</div><div class="n"><b>댓글→DM 자동발송</b> — 인플루언서 섭외 + 쿠폰 2단 분기 + 골든타임 PA</div><div class="v">가입 CPA −52% / 설치 2.7배</div></div><div class="prj-row"><div class="k">프로모션</div><div class="n"><b>반값 쿠폰 프로모션</b> — 100% 무료가 실패한 조직에 ‘50%’를 설득, 할인율을 품질 필터로 설계</div><div class="v">광고비 +58.6% / CAC −1.6%</div></div><div class="prj-row"><div class="k">CRM</div><div class="n"><b>퍼널 CRM 신설</b> — 이탈 지점을 수치로 정의해 발송일만 교체, 3개 코호트 교차 검증</div><div class="v">재주문율 +5.5%p (할인 0원)</div></div><div class="prj-row"><div class="k">지역 확장</div><div class="n"><b>오픈 전 사전 모객</b> — 광고 선접수 → 오픈 당일 쿠폰 알림톡, 변수 분리 설계</div><div class="v">BEP 163일 → 6일</div></div><div class="prj-row"><div class="k">온드</div><div class="n"><b>온드미디어 재정의</b> — KPI를 팔로워→도달·오가닉으로, 처리 과정 콘텐츠 제작</div><div class="v">설치→구매 44.8% (광고비 0원)</div></div><div class="prj-row"><div class="k">CRM</div><div class="n"><b>손실회피 카피 A/B</b> — 타겟·혜택 고정, 프레임만 이득→손실로 전환</div><div class="v">구독 전환율 1.74배</div></div><div class="prj-row"><div class="k">CRM</div><div class="n"><b>휴면 복귀 알림톡</b> — 할인율이 아니라 명목과 만료일(2일)을 바꿈</div><div class="v">복귀율 18배 / 3.8배 회수</div></div><div class="prj-row"><div class="k">가격 정책</div><div class="n"><b>무게 허들 상향</b> — 8kg→12kg 기준선 상향을 5일 프로모션으로 검증, 비수기 재현까지</div><div class="v">객단가 +4.5% (예산 0원)</div></div><div class="prj-row"><div class="k">프로모션</div><div class="n"><b>환경 소구 프로모션 A/B</b> — 신규는 환경 소구, 기존은 계절 소구로 분리</div><div class="v">신규 전환 품질 +13.1%p</div></div><div class="prj-row"><div class="k">콘텐츠</div><div class="n"><b>인플루언서 2차 활용</b> — 회사 최초로 기존 소재를 네 갈래로 재활용</div><div class="v">Meta 구매 +23.8% / CPA −4.9%</div></div></div>
+    <p class="mini">전체 19건의 병목·가설·액션·결과·레슨런은 <a href="https://byuel0915-pixel.github.io/byuel_marketing/data-room.html">데이터룸</a>에서 확인할 수 있습니다.</p>
+  </section>
+
+  <section class="sec">
+    <h2>Skills</h2>
+    <div class="sk"><div><b>퍼포먼스 광고</b><p>Meta · Google · TikTok · Apple Search Ads · Appier · 카카오모먼트 (5개 매체 독립 운용)</p></div><div><b>CRM</b><p>FlareLane · 카카오 알림톡 · 브랜드메시지 · 문자(SMS) · 앱푸시 · 인앱메시지 시나리오 설계</p></div><div><b>데이터 분석</b><p>BigQuery(SQL) · Airbridge · GA4 · Mixpanel · Looker Studio · Excel</p></div><div><b>AI · 자동화</b><p>Claude Code · Meta Graph API · Google Apps Script · 댓글→DM 자동발송 파이프라인</p></div><div><b>콘텐츠 제작</b><p>숏폼·릴스 · 상세페이지 · 배너 · Premiere Pro · Figma · Photoshop</p></div><div><b>온드미디어</b><p>Instagram · X · 네이버 블로그 시딩 · 인플루언서 섭외·관리</p></div></div>
+  </section>
+
+  <section class="sec">
+    <h2>Education</h2>
+    
+<div class="rows">
+  <div class="row2"><div class="l"><b>인하대학교</b> <span>문화콘텐츠문화경영학과 졸업</span></div><div class="r">~ 2026.02</div></div>
+</div>
+
+  </section>
+
+  <section class="sec">
+    <h2>Awards · Certificates</h2>
+    
+<div class="rows">
+  <div class="row2"><div class="l"><b>2023 ICC Project 인기상</b> <span>인천 원도심 ‘항미단길’ 개선 프로젝트 · 팀장</span></div><div class="r">2023.08</div></div>
+  <div class="row2"><div class="l"><b>아트링커 서포터즈 10기 우수 서포터즈</b> <span>플랫폼 홍보 콘텐츠(릴스·카드뉴스) 기획·제작 · 팀장</span></div><div class="r">2025.01</div></div>
+  <div class="row2"><div class="l"><b>SMAT 2급(실무자)</b></div><div class="r">2021.12</div></div>
+  <div class="row2"><div class="l"><b>매경테스트 우수</b></div><div class="r">2021.02</div></div>
+</div>
+<p class="mini">대외활동 — 인하대 스트릿댄스 동아리 F.L.EX. 힙합팀장(릴스 누적 조회 4만) · 인하대 With-I 전공진로교육단 3기 · 2023 CCC 커튼콜 공모전 환경 앱 ‘Ciking’ 기획 · 2023 그린 이니셔티브 60초 영화 연출</p>
+
+  </section>
+</main>
+</body>
+</html>
