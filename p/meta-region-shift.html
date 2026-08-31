@@ -1,0 +1,92 @@
+<!doctype html><html lang="ko"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>메타 지역별 집행 비중 — 재설계 전후 | 박성진</title>
+<meta name="description" content="메타 계정 지역별 집행 비중과 CTR — 26.05.20~06.18(전) vs 26.07.01~08.25(후)">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="../assets/chart.css">
+<style>
+.wrap{padding:12px 14px}
+.gx{display:grid;grid-template-columns:1.25fr 1fr;gap:14px;margin:0}
+.mp{border:1px solid var(--line,#E8E8E6);border-radius:11px;padding:11px 12px 13px}
+.mt{font-size:12.5px;font-weight:800;letter-spacing:-.01em;margin:0 0 2px}
+.ms{font-size:10.5px;font-weight:600;color:var(--ink-3);margin:0 0 11px}
+.rw{margin-bottom:9px}
+.lb{font-size:11px;font-weight:700;color:var(--ink-2);display:flex;justify-content:space-between;margin-bottom:3px}
+.lb b{font-weight:800;font-feature-settings:'tnum'}
+.tr{position:relative;height:11px;background:#F4F4F2;border-radius:3px;overflow:hidden;margin-bottom:3px}
+.bar{position:absolute;left:0;top:0;height:100%;border-radius:3px}
+.bk{background:#C9CCD3}.bb{background:#2563EB}.br{background:#DC2626}.bg{background:#16A34A}
+.dl{font-size:11px;font-weight:800;font-feature-settings:'tnum'}
+.dl.dn{color:#16A34A}.dl.up{color:#DC2626}.dl.nt{color:#8A8F98}
+.lgd{display:flex;gap:14px;margin:0 0 11px;font-size:10.5px;font-weight:700;color:var(--ink-2)}
+.lgd i{display:inline-block;width:11px;height:8px;border-radius:2px;margin-right:5px;vertical-align:0}
+.sc{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:11px}
+.st{border:1px solid var(--line,#E8E8E6);border-radius:10px;padding:10px 11px;text-align:center}
+.st .sv{font-size:19px;font-weight:900;letter-spacing:-.03em;font-feature-settings:'tnum'}
+.st .sn{font-size:10.5px;font-weight:700;color:var(--ink-3);margin-top:3px}
+@media(max-width:700px){.gx{grid-template-columns:1fr;gap:10px}}
+</style>
+</head><body><div class="wrap">
+<div class="card pad chart">
+  <div class="gx">
+
+    <div class="mp">
+      <p class="mt">지역별 집행 비중</p><p class="ms">메타 계정 전체 집행액 기준</p>
+      <div class="lgd"><span><i class="bk"></i>재설계 전</span><span><i class="bb"></i>재설계 후</span></div>
+
+      <div class="rw"><span class="lb">서울 <b>55.5% → 41.2%</b></span>
+        <div class="tr"><i class="bar bk" style="width:100%"></i></div>
+        <div class="tr"><i class="bar bb" style="width:74.2%"></i></div>
+        <p class="dl dn">−14.3%p</p></div>
+
+      <div class="rw"><span class="lb">경기 <b>18.5% → 33.1%</b></span>
+        <div class="tr"><i class="bar bk" style="width:33.3%"></i></div>
+        <div class="tr"><i class="bar bb" style="width:59.6%"></i></div>
+        <p class="dl up">+14.6%p</p></div>
+
+      <div class="rw"><span class="lb">인천 <b>11.5% → 8.5%</b></span>
+        <div class="tr"><i class="bar bk" style="width:20.7%"></i></div>
+        <div class="tr"><i class="bar bb" style="width:15.3%"></i></div>
+        <p class="dl nt">−3.0%p</p></div>
+
+      <div class="rw"><span class="lb">대전 <b>7.8% → 7.4%</b></span>
+        <div class="tr"><i class="bar bk" style="width:14.1%"></i></div>
+        <div class="tr"><i class="bar bb" style="width:13.3%"></i></div>
+        <p class="dl nt">−0.4%p</p></div>
+
+      <div class="rw"><span class="lb">충북 <b>5.9% → 5.7%</b></span>
+        <div class="tr"><i class="bar bk" style="width:10.6%"></i></div>
+        <div class="tr"><i class="bar bb" style="width:10.3%"></i></div>
+        <p class="dl nt">−0.2%p</p></div>
+
+      <div class="rw" style="margin-bottom:0"><span class="lb">충남 <b>0.9% → 3.9%</b></span>
+        <div class="tr"><i class="bar bk" style="width:1.6%"></i></div>
+        <div class="tr"><i class="bar bb" style="width:7.0%"></i></div>
+        <p class="dl up">+3.0%p</p></div>
+    </div>
+
+    <div class="mp">
+      <p class="mt">서울 CTR과 집행 비중</p><p class="ms">집행이 가장 많던 지역이 CTR은 가장 낮았음</p>
+
+      <div class="rw"><span class="lb">서울 CTR <b>1.262%</b></span>
+        <div class="tr" style="height:13px"><i class="bar br" style="width:67.2%"></i></div></div>
+      <div class="rw"><span class="lb">인천 CTR <b>1.291%</b></span>
+        <div class="tr" style="height:13px"><i class="bar bk" style="width:68.7%"></i></div></div>
+      <div class="rw"><span class="lb">경기 CTR <b>1.333%</b></span>
+        <div class="tr" style="height:13px"><i class="bar bk" style="width:70.9%"></i></div></div>
+      <div class="rw"><span class="lb">대전 CTR <b>1.401%</b></span>
+        <div class="tr" style="height:13px"><i class="bar bk" style="width:74.6%"></i></div></div>
+      <div class="rw"><span class="lb">충북 CTR <b>1.474%</b></span>
+        <div class="tr" style="height:13px"><i class="bar bk" style="width:78.5%"></i></div></div>
+      <div class="rw" style="margin-bottom:0"><span class="lb">충남 CTR <b>1.879%</b></span>
+        <div class="tr" style="height:13px"><i class="bar bg" style="width:100%"></i></div></div>
+
+      <div class="sc">
+        <div class="st"><div class="sv" style="color:#16A34A">−14.3%p</div><div class="sn">서울 집행 비중</div></div>
+        <div class="st"><div class="sv" style="color:#2563EB">+23.1%</div><div class="sn">계정 일평균 집행액</div></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+</div></body></html>
