@@ -20,6 +20,12 @@
 .tab[aria-selected="true"] .k{color:var(--green)}
 .tab[aria-selected="true"] .s{color:var(--green)}
 .pane[hidden]{display:none}
+/* ?f=a · ?f=b — 퍼널 하나만 보여주는 단일 모드 */
+.solo .tabs{margin-bottom:10px}
+.solo .tab{border:none;background:none;padding:0;cursor:default}
+.solo .tab .k{font-size:14.5px;color:var(--ink-1)}
+.solo .tab .s{font-size:11.5px;color:var(--ink-3);margin-top:2px}
+.solo .tab[aria-selected="false"]{display:none}
 
 /* 타임라인 */
 .tl{position:relative;margin:12px 0 4px;padding:0 42px}
@@ -114,6 +120,12 @@
       t.setAttribute('aria-selected', on ? 'true' : 'false');
       document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
     });
+  }
+  var only = (new URLSearchParams(location.search).get('f') || '').toLowerCase();
+  if (only === 'a' || only === 'b') {
+    document.querySelector('.wrap').classList.add('solo');
+    show('tab-' + only);
+    return;
   }
   tabs.forEach(function(t){
     t.addEventListener('click', function(){ show(t.id); });
