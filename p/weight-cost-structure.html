@@ -1,49 +1,55 @@
 <!doctype html><html lang="ko"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>무게 허들 상향 — 재원 구조 | 박성진</title>
-<meta name="description" content="혜택 대상을 줄이고 단가를 키운 재원 재배치 구조 비교표">
+<meta name="description" content="혜택 대상을 줄이고 단가를 키운 재원 재배치 구조 비교">
 <link rel="stylesheet" href="../assets/style.css">
 <link rel="stylesheet" href="../assets/chart.css">
 <style>
-.wrap{padding:14px 16px}
-.mtx td.num{font-feature-settings:'tnum';font-weight:700;font-size:14.5px}
-.mtx td.delta{font-weight:800;font-size:14.5px}
-.up{color:var(--green)} .dn{color:var(--red)} .flat{color:var(--ink-3)}
-.mtx tr.hi td{background:#F0FDF4}
-.cond{font-size:11.5px;color:var(--ink-3);font-weight:600;display:block;margin-top:2px}
+.wrap{padding:12px 14px}
+.hd h3{margin:0;font-size:15px;font-weight:800;letter-spacing:-.02em}
+.hd .dir{display:block;font-size:11px;font-weight:600;color:var(--ink-3);margin-top:2px}
+.lgd{display:flex;gap:14px;margin:10px 0 2px;font-size:11px;font-weight:700;color:var(--ink-2);flex-wrap:wrap}
+.lgd i{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:5px;vertical-align:-1px}
+.gx{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:12px 0 4px}
+.mp{border:1px solid var(--line,#E8E8E6);border-radius:11px;padding:10px 11px 12px}
+.mt{font-size:12px;font-weight:800;letter-spacing:-.01em;margin:0 0 2px}
+.ms{font-size:10.5px;font-weight:600;color:var(--ink-3);margin:0 0 10px;line-height:1.45;min-height:30px}
+.rw{margin-bottom:9px}
+.lb{font-size:10.5px;font-weight:700;color:var(--ink-2);display:block;margin-bottom:3px}
+.tr{position:relative;height:20px;background:#F4F4F2;border-radius:4px;overflow:hidden}
+.bar{position:absolute;left:0;top:0;height:100%;border-radius:4px}
+.bk{background:#C9CCD3}.bg{background:#16A34A}.br{background:#DC2626}.bn{background:#9AA0AA}
+.vl{position:absolute;right:7px;top:0;line-height:20px;font-size:11px;font-weight:800;color:#1A1A18;font-feature-settings:'tnum'}
+.vl.on{color:#fff}
+.dl{font-size:11px;font-weight:800;margin-top:5px;font-feature-settings:'tnum'}
+.dl.g{color:#16A34A}.dl.r{color:#DC2626}.dl.n{color:var(--ink-3)}
+.ft{margin-top:12px;font-size:11.5px;font-weight:600;color:var(--ink-3);line-height:1.65}
+@media(max-width:760px){.gx{grid-template-columns:1fr;gap:9px}}
 </style>
 </head><body><div class="wrap">
-<div class="card pad">
-<div class="ct2"><h3>혜택 대상은 절반, 원가는 사실상 그대로</h3><span class="dir">같은 재원으로 더 강한 앵커</span></div>
-<table class="mtx" style="margin-top:10px">
-<tr>
-  <th>지표</th>
-  <th>8kg 초과 · 500원<span class="cond">프로모션 전 07.17~21</span></th>
-  <th>12kg 초과 · 1,000원<span class="cond">프로모션 중 07.24~28</span></th>
-  <th>차이</th>
-</tr>
-<tr>
-  <td>1인당 할인 단가</td><td class="num">500원</td><td class="num">1,000원</td>
-  <td class="delta flat">2배</td>
-</tr>
-<tr>
-  <td>혜택 대상 유저 비중</td><td class="num">31.72%</td><td class="num">17.56%</td>
-  <td class="delta dn">−14.16%p<span class="cond">절반으로 축소</span></td>
-</tr>
-<tr>
-  <td>혜택 대상 주문 비중</td><td class="num">29.89%</td><td class="num">16.54%</td>
-  <td class="delta dn">−13.35%p</td>
-</tr>
-<tr class="hi">
-  <td>주문당 할인 원가<span class="cond">회사가 실제로 쓴 돈</span></td><td class="num">기준</td><td class="num">+10.7%</td>
-  <td class="delta flat">+10.7%<span class="cond">사실상 동결</span></td>
-</tr>
-<tr class="hi">
-  <td>객단가 (AOV) 지수</td><td class="num">100</td><td class="num">104.5</td>
-  <td class="delta up">+4.50%p 상당<span class="cond">+4.50%</span></td>
-</tr>
-</table>
-<p class="note">할인 단가를 2배로 올렸는데 주문당 원가가 10.7%만 늘어난 이유는 <b>대상을 절반으로 줄였기 때문</b>입니다. 회사가 쓴 돈은 그대로인데 받는 사람에게는 혜택이 두 배로 보이는 구조입니다.</p>
+<div class="card pad chart">
+  <div class="hd"><h3>혜택 대상은 절반, 원가는 사실상 그대로</h3><span class="dir">같은 재원으로 더 강한 앵커 · 프로모션 전(07.17~21) vs 중(07.24~28)</span></div>
+  <div class="lgd"><span><i class="bk"></i>프로모션 전 (8kg 초과 · 500원)</span><span><i class="bg"></i>프로모션 중 (12kg 초과 · 1,000원)</span></div>
+  <div class="gx">
+    <div class="mp">
+      <p class="mt">① 1인당 할인 단가</p><p class="ms">받는 사람 입장에서 본 혜택 크기</p>
+      <div class="rw"><span class="lb">프로모션 전</span><div class="tr"><i class="bar bk" style="width:50%"></i><span class="vl">500원</span></div></div>
+      <div class="rw"><span class="lb">프로모션 중</span><div class="tr"><i class="bar bg" style="width:100%"></i><span class="vl on">1,000원</span></div></div>
+      <p class="dl g">2배</p>
+    </div>
+    <div class="mp">
+      <p class="mt">② 혜택 대상 유저 비중</p><p class="ms">할인을 받는 사람의 비율</p>
+      <div class="rw"><span class="lb">프로모션 전</span><div class="tr"><i class="bar bk" style="width:100%"></i><span class="vl">31.72%</span></div></div>
+      <div class="rw"><span class="lb">프로모션 중</span><div class="tr"><i class="bar bn" style="width:55.4%"></i><span class="vl">17.56%</span></div></div>
+      <p class="dl n">−14.16%p · 절반으로 축소</p>
+    </div>
+    <div class="mp">
+      <p class="mt">③ 주문당 할인 원가</p><p class="ms">회사가 실제로 쓴 돈 · 지수</p>
+      <div class="rw"><span class="lb">프로모션 전</span><div class="tr"><i class="bar bk" style="width:90.3%"></i><span class="vl">100</span></div></div>
+      <div class="rw"><span class="lb">프로모션 중</span><div class="tr"><i class="bar bn" style="width:100%"></i><span class="vl on">110.7</span></div></div>
+      <p class="dl n">+10.7% · 사실상 동결</p>
+    </div>
+  </div>
+  <p class="ft">할인 단가를 2배로 올렸는데 주문당 원가가 10.7%만 늘어난 이유는 <b>대상을 절반으로 줄였기 때문</b>입니다. 회사가 쓴 돈은 그대로인데 받는 사람에게는 혜택이 두 배로 보이는 구조이고, 그 상태에서 객단가는 4.50% 올랐습니다.</p>
 </div>
-<div class="insight" style="margin-top:14px"><div class="ic">💡</div><div class="tx"><b>재원을 늘린 게 아니라 재배치한 것입니다.</b> 주문당 원가를 10.7% 더 쓰고 객단가를 4.50% 올렸으니, 쓴 돈 대비 31배가 돌아왔습니다.</div></div>
 </div></body></html>

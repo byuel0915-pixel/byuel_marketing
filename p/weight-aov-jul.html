@@ -1,54 +1,61 @@
 <!doctype html><html lang="ko"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>무게 허들 상향 — 7월 객단가·배출량·매출 | 박성진</title>
-<meta name="description" content="12kg 허들 상향 프로모션 전후 객단가·주문당 배출량·기간 매출 비교표">
+<title>무게 허들 상향 — 7월 전후 비교 | 박성진</title>
+<meta name="description" content="12kg 허들 상향 프로모션 전후의 객단가·주문당 배출량·12kg 초과 비중·기간 매출 비교">
 <link rel="stylesheet" href="../assets/style.css">
 <link rel="stylesheet" href="../assets/chart.css">
 <style>
-.wrap{padding:14px 16px}
-.mtx td.num{font-feature-settings:'tnum';font-weight:700;font-size:14.5px}
-.mtx td.delta{font-weight:800;font-size:14.5px;font-feature-settings:'tnum'}
-.up{color:var(--green)} .dn{color:var(--red)} .flat{color:var(--ink-3)}
-.mtx tr.hi td{background:#F0FDF4}
-.cond{font-size:11.5px;color:var(--ink-3);font-weight:600;display:block;margin-top:2px}
+.wrap{padding:12px 14px}
+.hd h3{margin:0;font-size:15px;font-weight:800;letter-spacing:-.02em}
+.hd .dir{display:block;font-size:11px;font-weight:600;color:var(--ink-3);margin-top:2px}
+.lgd{display:flex;gap:14px;margin:10px 0 2px;font-size:11px;font-weight:700;color:var(--ink-2);flex-wrap:wrap}
+.lgd i{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:5px;vertical-align:-1px}
+.gx{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:12px 0 4px}
+.mp{border:1px solid var(--line,#E8E8E6);border-radius:11px;padding:10px 11px 12px}
+.mt{font-size:12px;font-weight:800;letter-spacing:-.01em;margin:0 0 2px}
+.ms{font-size:10.5px;font-weight:600;color:var(--ink-3);margin:0 0 10px;line-height:1.45;min-height:30px}
+.rw{margin-bottom:9px}
+.lb{font-size:10.5px;font-weight:700;color:var(--ink-2);display:block;margin-bottom:3px}
+.tr{position:relative;height:20px;background:#F4F4F2;border-radius:4px;overflow:hidden}
+.bar{position:absolute;left:0;top:0;height:100%;border-radius:4px}
+.bk{background:#C9CCD3}.bg{background:#16A34A}.br{background:#DC2626}.bn{background:#9AA0AA}
+.vl{position:absolute;right:7px;top:0;line-height:20px;font-size:11px;font-weight:800;color:#1A1A18;font-feature-settings:'tnum'}
+.vl.on{color:#fff}
+.dl{font-size:11px;font-weight:800;margin-top:5px;font-feature-settings:'tnum'}
+.dl.g{color:#16A34A}.dl.r{color:#DC2626}.dl.n{color:var(--ink-3)}
+.ft{margin-top:12px;font-size:11.5px;font-weight:600;color:var(--ink-3);line-height:1.65}
+@media(max-width:760px){.gx{grid-template-columns:1fr;gap:9px}}
 </style>
 </head><body><div class="wrap">
-<div class="card pad">
-<div class="ct2"><h3>허들을 올렸는데 객단가·배출량·매출이 같이 올랐다</h3><span class="dir">07.17~21 vs 07.24~28 · 같은 요일 5일 · 추가 예산 0원</span></div>
-<table class="mtx" style="margin-top:10px">
-<tr>
-  <th>지표</th>
-  <th>프로모션 전<span class="cond">8kg 초과 · 500원 할인</span></th>
-  <th>프로모션 중<span class="cond">12kg 초과 · 1,000원 할인</span></th>
-  <th>차이</th>
-</tr>
-<tr class="hi">
-  <td>객단가<span class="cond">주문 1건당 실제 결제 금액</span></td>
-  <td class="num">100</td><td class="num">104.5</td>
-  <td class="delta up">+4.50%</td>
-</tr>
-<tr class="hi">
-  <td>주문당 배출량<span class="cond">한 번에 얼마나 버렸나</span></td>
-  <td class="num">7.286kg</td><td class="num">7.677kg</td>
-  <td class="delta up">+5.36%<span class="cond">+0.391kg</span></td>
-</tr>
-<tr>
-  <td>12kg 초과 주문 비중<span class="cond">허들을 넘긴 주문의 비율</span></td>
-  <td class="num">14.49%</td><td class="num">16.54%</td>
-  <td class="delta up">+2.05%p</td>
-</tr>
-<tr>
-  <td>주문 수</td>
-  <td class="num">100</td><td class="num">107.0</td>
-  <td class="delta up">+7.0%</td>
-</tr>
-<tr class="hi">
-  <td>기간 매출<span class="cond">5일 합산 실결제액</span></td>
-  <td class="num">100</td><td class="num">111.9</td>
-  <td class="delta up">+11.9%</td>
-</tr>
-</table>
-<p class="note">우려는 <b>'허들이 올라가면 할인을 포기하고 적게 버려서 객단가가 떨어진다'</b>였습니다. 실제로는 12kg을 넘긴 주문 비중과 주문당 배출량이 함께 올라 <b>버리는 행동 자체가 움직였고</b>, 객단가와 매출이 따라 올랐습니다.</p>
-<p class="note" style="font-size:11.5px">※ 할인 재원은 기존 8kg 예산을 그대로 옮긴 것이라 <b>순증 비용은 0원</b>입니다. 객단가·주문 수·기간 매출은 프로모션 전을 100으로 둔 지수입니다.</p>
+<div class="card pad chart">
+  <div class="hd"><h3>허들을 올렸는데 객단가·배출량·매출이 같이 올랐다</h3><span class="dir">07.17~21 vs 07.24~28 · 같은 요일 5일 · 추가 예산 0원</span></div>
+  <div class="lgd"><span><i class="bk"></i>프로모션 전 (8kg 초과 · 500원)</span><span><i class="bg"></i>프로모션 중 (12kg 초과 · 1,000원)</span></div>
+  <div class="gx">
+    <div class="mp">
+      <p class="mt">① 객단가</p><p class="ms">주문 1건당 결제 금액 · 높을수록 좋음</p>
+      <div class="rw"><span class="lb">프로모션 전</span><div class="tr"><i class="bar bk" style="width:95.7%"></i><span class="vl">100</span></div></div>
+      <div class="rw"><span class="lb">프로모션 중</span><div class="tr"><i class="bar bg" style="width:100%"></i><span class="vl on">104.5</span></div></div>
+      <p class="dl g">+4.50%</p>
+    </div>
+    <div class="mp">
+      <p class="mt">② 주문당 배출량</p><p class="ms">한 번에 얼마나 버렸나 · 높을수록 좋음</p>
+      <div class="rw"><span class="lb">프로모션 전</span><div class="tr"><i class="bar bk" style="width:94.9%"></i><span class="vl">7.286kg</span></div></div>
+      <div class="rw"><span class="lb">프로모션 중</span><div class="tr"><i class="bar bg" style="width:100%"></i><span class="vl on">7.677kg</span></div></div>
+      <p class="dl g">+5.36%</p>
+    </div>
+    <div class="mp">
+      <p class="mt">③ 12kg 초과 주문 비중</p><p class="ms">허들을 넘긴 주문의 비율</p>
+      <div class="rw"><span class="lb">프로모션 전</span><div class="tr"><i class="bar bk" style="width:87.6%"></i><span class="vl">14.49%</span></div></div>
+      <div class="rw"><span class="lb">프로모션 중</span><div class="tr"><i class="bar bg" style="width:100%"></i><span class="vl on">16.54%</span></div></div>
+      <p class="dl g">+2.05%p</p>
+    </div>
+    <div class="mp">
+      <p class="mt">④ 기간 매출</p><p class="ms">5일 합산 실결제액 · 지수</p>
+      <div class="rw"><span class="lb">프로모션 전</span><div class="tr"><i class="bar bk" style="width:89.4%"></i><span class="vl">100</span></div></div>
+      <div class="rw"><span class="lb">프로모션 중</span><div class="tr"><i class="bar bg" style="width:100%"></i><span class="vl on">111.9</span></div></div>
+      <p class="dl g">+11.9%</p>
+    </div>
+  </div>
+  <p class="ft">우려는 <b>“허들이 올라가면 할인을 포기하고 적게 버려서 객단가가 떨어진다”</b>였습니다. 실제로는 12kg을 넘긴 주문 비중과 주문당 배출량이 함께 올라 <b>버리는 행동 자체가 움직였고</b>, 객단가와 매출이 따라 올랐습니다. 할인 재원은 기존 8kg 예산을 그대로 옮긴 것이라 순증 비용은 0원입니다.</p>
 </div>
 </div></body></html>

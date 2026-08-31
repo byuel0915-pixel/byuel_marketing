@@ -1,50 +1,55 @@
 <!doctype html><html lang="ko"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>무게 허들 상향 — 7월·11월 재현 | 박성진</title>
-<meta name="description" content="성수기(7월)와 비수기(11월) 두 시점에서 같은 설계를 반복한 결과 비교표">
+<meta name="description" content="성수기(7월)와 비수기(11월) 두 시점에서 같은 설계를 반복한 결과 비교">
 <link rel="stylesheet" href="../assets/style.css">
 <link rel="stylesheet" href="../assets/chart.css">
 <style>
-.wrap{padding:14px 16px}
-.mtx td.num{font-feature-settings:'tnum';font-weight:700;font-size:14.5px}
-.mtx td.delta{font-weight:800;font-size:14.5px;font-feature-settings:'tnum'}
-.up{color:var(--green)} .dn{color:var(--red)} .flat{color:var(--ink-3)}
-.mtx tr.hi td{background:#F0FDF4}
-.cond{font-size:11.5px;color:var(--ink-3);font-weight:600;display:block;margin-top:2px}
+.wrap{padding:12px 14px}
+.hd h3{margin:0;font-size:15px;font-weight:800;letter-spacing:-.02em}
+.hd .dir{display:block;font-size:11px;font-weight:600;color:var(--ink-3);margin-top:2px}
+.lgd{display:flex;gap:14px;margin:10px 0 2px;font-size:11px;font-weight:700;color:var(--ink-2);flex-wrap:wrap}
+.lgd i{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:5px;vertical-align:-1px}
+.gx{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:12px 0 4px}
+.mp{border:1px solid var(--line,#E8E8E6);border-radius:11px;padding:10px 11px 12px}
+.mt{font-size:12px;font-weight:800;letter-spacing:-.01em;margin:0 0 2px}
+.ms{font-size:10.5px;font-weight:600;color:var(--ink-3);margin:0 0 10px;line-height:1.45;min-height:30px}
+.rw{margin-bottom:9px}
+.lb{font-size:10.5px;font-weight:700;color:var(--ink-2);display:block;margin-bottom:3px}
+.tr{position:relative;height:20px;background:#F4F4F2;border-radius:4px;overflow:hidden}
+.bar{position:absolute;left:0;top:0;height:100%;border-radius:4px}
+.bk{background:#C9CCD3}.bg{background:#16A34A}.br{background:#DC2626}.bn{background:#9AA0AA}
+.vl{position:absolute;right:7px;top:0;line-height:20px;font-size:11px;font-weight:800;color:#1A1A18;font-feature-settings:'tnum'}
+.vl.on{color:#fff}
+.dl{font-size:11px;font-weight:800;margin-top:5px;font-feature-settings:'tnum'}
+.dl.g{color:#16A34A}.dl.r{color:#DC2626}.dl.n{color:var(--ink-3)}
+.ft{margin-top:12px;font-size:11.5px;font-weight:600;color:var(--ink-3);line-height:1.65}
+@media(max-width:760px){.gx{grid-template-columns:1fr;gap:9px}}
 </style>
 </head><body><div class="wrap">
-<div class="card pad">
-<div class="ct2"><h3>성수기와 비수기, 두 번 모두 같은 방향</h3><span class="dir">7월 07.17~21 vs 07.24~28 · 11월 11.06~12 vs 11.13~19</span></div>
-<table class="mtx" style="margin-top:10px">
-<tr>
-  <th>지표</th>
-  <th>7월 (성수기)<span class="cond">프로모션 전 → 중</span></th>
-  <th>11월 (비수기)<span class="cond">프로모션 전 → 중</span></th>
-  <th>재현 여부</th>
-</tr>
-<tr class="hi">
-  <td>객단가<span class="cond">주문 1건당 실제 결제 금액</span></td>
-  <td class="num up">+4.50%</td><td class="num up">+2.85%</td>
-  <td class="delta up">두 번 다 상승</td>
-</tr>
-<tr class="hi">
-  <td>12kg 초과 주문 비중</td>
-  <td class="num up">14.49% → 16.54%<span class="cond">+2.05%p</span></td>
-  <td class="num up">14.51% → 15.71%<span class="cond">+1.20%p</span></td>
-  <td class="delta up">두 번 다 상승</td>
-</tr>
-<tr>
-  <td>증분 매출 ÷ 증분 비용<span class="cond">쓴 돈 대비 돌아온 돈</span></td>
-  <td class="num">14.7배</td><td class="num">8.6배</td>
-  <td class="delta up">합산 10.7배</td>
-</tr>
-<tr>
-  <td>증분 비용의 정체</td>
-  <td class="num">알림톡 발송비만</td><td class="num">알림톡 발송비만</td>
-  <td class="delta flat">할인 재원은 기존 예산 이전</td>
-</tr>
-</table>
-<p class="note">7월 단독으로는 <b>'여름 대청소 수요 아니냐'</b>는 반론을 막을 수 없었습니다. 수요가 평탄한 11월에 같은 설계를 반복해 <b>객단가와 12kg 초과 비중이 모두 같은 방향으로 재현</b>된 뒤에야 조직이 결과를 신뢰했습니다.</p>
-<p class="note" style="font-size:11.5px">※ 증분 매출 = (프로모션 중 객단가 − 프로모션 전 객단가) × 프로모션 중 주문 수. 증분 비용은 알림톡 발송비만 잡았고(건당 5.8원), 할인 재원은 기존 8kg 예산을 옮긴 것이라 산입하지 않았습니다.</p>
+<div class="card pad chart">
+  <div class="hd"><h3>성수기와 비수기, 두 번 모두 같은 방향</h3><span class="dir">7월 07.17~21 vs 07.24~28 · 11월 11.06~12 vs 11.13~19</span></div>
+  <div class="lgd"><span><i class="bk"></i>7월 (성수기)</span><span><i class="bg"></i>11월 (비수기)</span></div>
+  <div class="gx">
+    <div class="mp">
+      <p class="mt">① 객단가 상승폭</p><p class="ms">프로모션 전 대비 · 높을수록 좋음</p>
+      <div class="rw"><span class="lb">7월 (성수기)</span><div class="tr"><i class="bar bk" style="width:100%"></i><span class="vl">+4.50%</span></div></div>
+      <div class="rw"><span class="lb">11월 (비수기)</span><div class="tr"><i class="bar bg" style="width:63.3%"></i><span class="vl">+2.85%</span></div></div>
+      <p class="dl g">두 번 다 상승</p>
+    </div>
+    <div class="mp">
+      <p class="mt">② 12kg 초과 주문 비중 상승폭</p><p class="ms">버리는 행동이 실제로 움직였는가</p>
+      <div class="rw"><span class="lb">7월 (성수기)</span><div class="tr"><i class="bar bk" style="width:100%"></i><span class="vl">+2.05%p</span></div></div>
+      <div class="rw"><span class="lb">11월 (비수기)</span><div class="tr"><i class="bar bg" style="width:58.5%"></i><span class="vl">+1.20%p</span></div></div>
+      <p class="dl g">두 번 다 상승</p>
+    </div>
+    <div class="mp">
+      <p class="mt">③ 증분 매출 ÷ 증분 비용</p><p class="ms">쓴 돈 대비 돌아온 돈</p>
+      <div class="rw"><span class="lb">7월 (성수기)</span><div class="tr"><i class="bar bk" style="width:100%"></i><span class="vl">14.7배</span></div></div>
+      <div class="rw"><span class="lb">11월 (비수기)</span><div class="tr"><i class="bar bg" style="width:58.5%"></i><span class="vl">8.6배</span></div></div>
+      <p class="dl g">합산 10.7배</p>
+    </div>
+  </div>
+  <p class="ft">7월 단독으로는 <b>“여름 대청소 수요 아니냐”</b>는 반론을 막을 수 없었습니다. 수요가 평탄한 11월에 같은 설계를 반복해 객단가와 12kg 초과 비중이 모두 같은 방향으로 재현된 뒤에야 조직이 결과를 신뢰했습니다. 증분 비용은 알림톡 발송비만이며, 할인 재원은 기존 8kg 예산을 옮긴 것이라 산입하지 않았습니다.</p>
 </div>
 </div></body></html>
