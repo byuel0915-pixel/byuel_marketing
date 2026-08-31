@@ -4,46 +4,57 @@
 <meta name="description" content="'방문요금 0원'이 구매 CVR·CAC에서 앞설 것이라는 가설 1을 검증한 결과">
 <link rel="stylesheet" href="../assets/style.css">
 <style>
-  .wrap{padding:14px 16px}
-  .ct{display:flex;align-items:baseline;justify-content:space-between;gap:9px;margin-bottom:4px}
-  .ct h3{margin:0;font-size:15px;font-weight:800;letter-spacing:-.015em}
-  .ct .dir{font-size:11px;font-weight:700;color:var(--ink-3);white-space:nowrap}
-  .grp{margin:0 0 16px}
-  .grp:last-of-type{margin-bottom:6px}
-  .bar-row{grid-template-columns:74px 1fr;gap:10px;margin:6px 0}
-  .bar-row .name{font-size:12px}
-  .bar-track{height:28px}
-  .bar-fill{font-size:12.5px;padding-right:10px}
-  .verdict{display:flex;align-items:center;gap:8px;margin-bottom:14px;padding:9px 12px;
-    background:var(--red-soft);border-radius:9px;font-size:13px;font-weight:700;color:var(--red)}
-  .verdict .tag{font-size:11px;font-weight:800;background:var(--red);color:#fff;padding:2px 8px;border-radius:5px}
-  .hyp{font-size:12.5px;color:var(--ink-2);border-left:3px solid var(--line);padding-left:11px;margin:0 0 14px}
-  .note{margin-top:12px}
-  @media(max-width:520px){.bar-row{grid-template-columns:62px 1fr;gap:7px}.bar-row .name{font-size:10.5px}.ct{flex-direction:column;align-items:flex-start;gap:2px}}
+  .wrap{padding:10px 12px}
+  .card.pad{padding:14px 16px}
+  .verdict{display:flex;align-items:center;gap:8px;margin-bottom:9px;padding:7px 11px;
+    background:var(--red-soft);border-radius:9px;font-size:12.5px;font-weight:700;color:var(--red);line-height:1.35}
+  .verdict .tag{font-size:10.5px;font-weight:800;background:var(--red);color:#fff;padding:2px 7px;border-radius:5px;white-space:nowrap}
+  .hyp{font-size:12px;color:var(--ink-2);border-left:3px solid var(--line);padding-left:10px;margin:0 0 11px;line-height:1.5}
+  .hyp .sub{color:var(--ink-3);font-size:11px}
+  .mets{display:grid;grid-template-columns:repeat(3,1fr);gap:8px 14px}
+  .grp{margin:0}
+  .ct{margin-bottom:5px}
+  .ct h3{margin:0;font-size:12.5px;font-weight:800;letter-spacing:-.015em;line-height:1.3}
+  .ct .dir{display:block;font-size:10px;font-weight:700;color:var(--ink-3);line-height:1.3;margin-top:1px}
+  .bar-row{grid-template-columns:50px 1fr;gap:7px;margin:4px 0}
+  .bar-row .name{font-size:10.5px}
+  .bar-track{height:22px;border-radius:6px;overflow:visible}
+  .bar-fill{font-size:11px;padding-right:7px;border-radius:6px}
+  /* 막대가 너무 짧아 숫자가 잘리는 경우 라벨을 막대 밖으로 */
+  .bar-fill.out{justify-content:flex-start;padding-right:0}
+  .bar-fill.out span{position:absolute;left:100%;margin-left:6px;white-space:nowrap;
+    font-size:11px;font-weight:800;color:var(--red)}
+  .note{margin-top:10px;font-size:11.5px;line-height:1.55}
+  @media(max-width:640px){
+    .mets{grid-template-columns:1fr;gap:11px}
+    .bar-row{grid-template-columns:56px 1fr}
+  }
 </style>
 </head><body><div class="wrap">
 <div class="card pad chart">
 
   <div class="verdict"><span class="tag">가설 1 기각</span>단기 지표에서 '기본요금'이 이겼습니다 — 예측과 반대</div>
 
-  <p class="hyp"><b>가설 1 (단기)</b> — '방문요금 0원'이 더 직관적이므로 <b>구매 CVR이 높고 구매 CAC가 낮을 것이다.</b><br><span style="color:var(--ink-3);font-size:11.5px">리타겟 캠페인이라 타겟이 이미 앱 보유자입니다. 앱 설치 수는 판정 지표에서 제외했습니다. 광고비는 기본요금이 9.2% 더 집행됐습니다.</span></p>
+  <p class="hyp"><b>가설 1 (단기)</b> — '방문요금 0원'이 더 직관적이므로 <b>구매 CVR이 높고 구매 CAC가 낮을 것이다.</b><br><span class="sub">리타겟이라 타겟이 이미 앱 보유자 → 앱 설치 수는 판정에서 제외. 광고비는 기본요금이 9.2% 더 집행.</span></p>
 
-  <div class="grp">
-    <div class="ct"><h3>① 구매 CPA</h3><span class="dir">낮을수록 좋음 · 에어브릿지 기준</span></div>
-    <div class="bar-row"><div class="name">기본요금</div><div class="bar-track"><div class="bar-fill bf-green" style="width:74.8%">기준</div></div></div>
-    <div class="bar-row"><div class="name">방문요금</div><div class="bar-track"><div class="bar-fill bf-red" style="width:100%">+33.6%</div></div></div>
-  </div>
+  <div class="mets">
+    <div class="grp">
+      <div class="ct"><h3>① 구매 CPA</h3><span class="dir">낮을수록 좋음 · 에어브릿지</span></div>
+      <div class="bar-row"><div class="name">기본요금</div><div class="bar-track"><div class="bar-fill bf-green" style="width:74.8%">기준</div></div></div>
+      <div class="bar-row"><div class="name">방문요금</div><div class="bar-track"><div class="bar-fill bf-red" style="width:100%">+33.6%</div></div></div>
+    </div>
 
-  <div class="grp">
-    <div class="ct"><h3>② 구매 건수</h3><span class="dir">많을수록 좋음 · 광고비는 거의 동일</span></div>
-    <div class="bar-row"><div class="name">기본요금</div><div class="bar-track"><div class="bar-fill bf-green" style="width:100%">308건</div></div></div>
-    <div class="bar-row"><div class="name">방문요금</div><div class="bar-track"><div class="bar-fill bf-red" style="width:68.5%">211건</div></div></div>
-  </div>
+    <div class="grp">
+      <div class="ct"><h3>② 구매 건수</h3><span class="dir">광고비 거의 동일 · 상대 비교</span></div>
+      <div class="bar-row"><div class="name">기본요금</div><div class="bar-track"><div class="bar-fill bf-green" style="width:100%">1.46배</div></div></div>
+      <div class="bar-row"><div class="name">방문요금</div><div class="bar-track"><div class="bar-fill bf-red" style="width:68.5%">기준</div></div></div>
+    </div>
 
-  <div class="grp">
-    <div class="ct"><h3>③ 계정 평균 대비 구매 CPA</h3><span class="dir">많이 낮을수록 좋음 · 계정 전체 평균 = 0%</span></div>
-    <div class="bar-row"><div class="name">기본요금</div><div class="bar-track"><div class="bar-fill bf-green" style="width:100%">−30.5%</div></div></div>
-    <div class="bar-row"><div class="name">방문요금</div><div class="bar-track"><div class="bar-fill bf-red" style="width:23.3%">−7.1%</div></div></div>
+    <div class="grp">
+      <div class="ct"><h3>③ 계정 평균 대비 CPA</h3><span class="dir">계정 전체 평균 = 0%</span></div>
+      <div class="bar-row"><div class="name">기본요금</div><div class="bar-track"><div class="bar-fill bf-green" style="width:100%">−30.5%</div></div></div>
+      <div class="bar-row"><div class="name">방문요금</div><div class="bar-track"><div class="bar-fill bf-red out" style="width:23.3%"><span>−7.1%</span></div></div></div>
+    </div>
   </div>
 
   <p class="note">직관적일 것으로 예측한 <b>'방문요금'이 단기 지표 전부에서 뒤졌습니다.</b> 같은 광고비로 기본요금이 구매를 <b>1.46배</b> 더 만들었고, 계정 평균과 비교하면 격차는 더 벌어집니다. <a href="pricing-wording-ab.html" style="font-weight:700;color:var(--blue);text-decoration:none">전체 데이터 →</a></p>
