@@ -8,10 +8,18 @@
 @media (max-width:820px){.dp-wrap{grid-template-columns:1fr}}
 .dp-frame{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:10px;box-shadow:var(--shadow)}
 .dp-lab{font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--blue,#2563EB);margin:0 0 8px 2px}
-.fig{position:relative;width:100%;height:600px;border-radius:12px;overflow:hidden;background:#F2F4F7}
+.fig{position:relative;width:100%;height:268px;border-radius:12px;overflow:hidden;background:#F2F4F7;
+  transition:height .18s ease}
 .fig iframe{width:100%;height:100%;border:0;display:block;position:relative;z-index:1}
-.fig .fb{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;
-  gap:10px;text-align:center;padding:24px;color:var(--ink-3);font-size:12.5px;font-weight:600;line-height:1.6}
+/* Figma는 파일 접근 권한이 없으면 로그인 화면을 띄우므로, 기본은 안내 카드로 두고 클릭할 때만 불러옵니다 */
+.figcta{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;
+  width:100%;height:100%;border:0;background:linear-gradient(180deg,#F8FAFC,#EDF1F7);
+  cursor:pointer;font-family:inherit;padding:22px;text-align:center}
+.figcta .fi{font-size:25px;line-height:1}
+.figcta b{font-size:14px;font-weight:800;color:var(--ink)}
+.figcta .fd{font-size:12px;font-weight:600;color:var(--ink-3);line-height:1.6;max-width:290px}
+.figcta .go{margin-top:5px;font-size:12.5px;font-weight:800;color:#fff;background:#2563EB;border-radius:9px;padding:8px 16px}
+.figcta:hover .go{background:#1D4ED8}
 .dp-hint{font-size:11.5px;color:var(--ink-3);font-weight:600;text-align:center;margin:9px 0 2px}
 .dp-hint a{color:var(--blue,#2563EB);font-weight:800}
 .shot{width:100%;height:auto;display:block;border-radius:12px;border:1px solid var(--line)}
@@ -27,11 +35,15 @@
   <div>
     <p class="dp-lab">① 50% 할인 상세페이지</p>
     <div class="dp-frame">
-      <div class="fig">
-        <div class="fb">디자인 원본이 열리지 않으면 아래 링크로 확인해 주세요.</div>
-        <iframe src="https://embed.figma.com/design/ZyhApL7For4R0zHobFn6ra/%EB%B0%95%EC%84%B1%EC%A7%84-%EA%B0%9C%EC%9D%B8?node-id=623-1107&amp;embed-host=share" allowfullscreen title="참여 캠페인 상세페이지"></iframe>
+      <div class="fig" id="figbox">
+        <button class="figcta" type="button" id="figcta">
+          <span class="fi">🖼️</span>
+          <b>50% 할인 상세페이지</b>
+          <span class="fd">참여 캠페인이 태우던 랜딩입니다. 눌러서 이 자리에 원본을 불러옵니다.</span>
+          <span class="go">여기서 열기</span>
+        </button>
       </div>
-      <p class="dp-hint">프레임 안에서 스크롤·확대할 수 있습니다 · <a href="https://www.figma.com/design/ZyhApL7For4R0zHobFn6ra/%EB%B0%95%EC%84%B1%EC%A7%84-%EA%B0%9C%EC%9D%B8?node-id=623-1107" target="_blank" rel="noopener">Figma 원본 열기 ↗</a></p>
+      <p class="dp-hint">Figma 원본이라 접근 권한이 없으면 로그인 화면이 뜹니다 · <a href="https://www.figma.com/design/ZyhApL7For4R0zHobFn6ra/%EB%B0%95%EC%84%B1%EC%A7%84-%EA%B0%9C%EC%9D%B8?node-id=623-1107" target="_blank" rel="noopener">Figma에서 열기 ↗</a></p>
     </div>
   </div>
 
@@ -53,4 +65,14 @@
   </div>
 
 </div>
+<script>
+(function(){
+  var btn = document.getElementById('figcta'), box = document.getElementById('figbox');
+  if(!btn || !box) return;
+  btn.addEventListener('click', function(){
+    box.style.height = '600px';
+    box.innerHTML = '<iframe src="https://embed.figma.com/design/ZyhApL7For4R0zHobFn6ra/%EB%B0%95%EC%84%B1%EC%A7%84-%EA%B0%9C%EC%9D%B8?node-id=623-1107&amp;embed-host=share" allowfullscreen title="참여 캠페인 상세페이지"></iframe>';
+  });
+})();
+</script>
 </div></body></html>
