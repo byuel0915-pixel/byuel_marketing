@@ -3,28 +3,69 @@
 <title>4월 컨셉 A/B — 유저 가치 | 박성진</title>
 <meta name="description" content="전환 유저 1인당 결제 금액과 배출 무게">
 <link rel="stylesheet" href="../assets/style.css">
-<link rel="stylesheet" href="../assets/chart.css">
-<style>.wrap{padding:14px 16px}</style>
+<link rel="stylesheet" href="../assets/chart.css?v=2">
+<style>
+  .wrap{padding:10px 12px}
+  .card.pad{padding:13px 15px}
+  .hd{font-size:13px;font-weight:800;color:var(--ink-1);margin:0 0 10px;line-height:1.35}
+  .hd em{font-style:normal;font-weight:700;color:var(--ink-3);font-size:11.5px}
+  .g2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .box{border:1px solid var(--line);border-radius:12px;padding:10px 12px 11px}
+  .bh{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:7px}
+  .bh .t{font-size:12px;font-weight:800;color:var(--ink-1)}
+  .chip{font-size:10.5px;font-weight:800;padding:2px 7px;border-radius:5px;white-space:nowrap}
+  .chip.ok{background:var(--green-soft);color:var(--green)}
+  .chip.no{background:var(--red-soft);color:var(--red)}
+  .sub{font-size:10.5px;font-weight:800;color:var(--ink-3);margin:8px 0 3px}
+  .cr{grid-template-columns:58px 1fr 60px;gap:7px;margin:3px 0}
+  .cl{font-size:11px}
+  .ct{height:22px;border-radius:6px}
+  .cf{font-size:11px;padding-right:7px;border-radius:6px}
+  .cd{font-size:12px}
+  .ftn{margin-top:8px;font-size:10.5px;font-weight:600;color:var(--ink-3);line-height:1.5}
+  @media(max-width:620px){.g2{grid-template-columns:1fr}}
+</style>
 </head><body><div class="wrap">
 <div class="card pad">
 
-<div class="ct2" style="margin:4px 0 10px"><h3 style="font-size:13px;color:var(--ink-2)">1인당 결제 금액 — 봄맞이 대비 · 광고 유입</h3></div>
-<div class="cmp">
-  <div class="cr"><div class="cl">지구의날<small>전환 25명</small></div><div class="ct"><div class="cf g" style="width:100%">+4.7%</div></div><div class="cd g">우세<small>고가치 유저</small></div></div>
-  <div class="cr"><div class="cl">봄맞이<small>전환 38명</small></div><div class="ct"><div class="cf k" style="width:95.5%">기준</div></div><div class="cd k">기준</div></div>
-</div>
-<div class="ct2" style="margin:20px 0 10px"><h3 style="font-size:13px;color:var(--ink-2)">1인당 배출 무게 — 광고 유입</h3></div>
-<div class="cmp">
-  <div class="cr"><div class="cl">지구의날<small>총 514.4kg · 중앙값 13.93kg</small></div><div class="ct"><div class="cf g" style="width:100%">20.58kg</div></div><div class="cd g">+0.70kg<small>+3.5%</small></div></div>
-  <div class="cr"><div class="cl">봄맞이<small>총 755.4kg · 중앙값 12.31kg</small></div><div class="ct"><div class="cf k" style="width:96.6%">19.88kg</div></div><div class="cd k">기준</div></div>
-</div>
-<div class="ct2" style="margin:20px 0 10px"><h3 style="font-size:13px;color:var(--ink-2)">가입 후 미이용 집단 — 반대로 나온다 (ARPU는 봄맞이 대비)</h3></div>
-<div class="cmp">
-  <div class="cr"><div class="cl">봄맞이 ARPU<small>전환 59명</small></div><div class="ct"><div class="cf b" style="width:100%">기준</div></div><div class="cd b">우세<small>대조군 승</small></div></div>
-  <div class="cr"><div class="cl">지구의날 ARPU<small>전환 55명</small></div><div class="ct"><div class="cf r" style="width:86.9%">−13.1%</div></div><div class="cd r">열위</div></div>
-  <div class="cr"><div class="cl">봄맞이 배출</div><div class="ct"><div class="cf b" style="width:100%">18.80kg</div></div><div class="cd b">+3.77kg<small>대조군 승</small></div></div>
-  <div class="cr"><div class="cl">지구의날 배출</div><div class="ct"><div class="cf r" style="width:79.9%">15.03kg</div></div><div class="cd r">−20.1%</div></div>
-</div>
-</div>
+<p class="hd">전환 유저 1인당 결제 금액·배출량 <em>· 전환율과 같은 방향으로 움직였습니다</em></p>
 
+<div class="g2">
+  <div class="box">
+    <div class="bh"><span class="t">광고로 새로 들어온 유저</span><span class="chip ok">둘 다 상승</span></div>
+
+    <p class="sub">1인당 결제 금액</p>
+    <div class="cmp">
+      <div class="cr"><div class="cl">지구의날</div><div class="ct"><div class="cf g" style="width:100%">+4.7%</div></div><div class="cd g">우세</div></div>
+      <div class="cr"><div class="cl">봄맞이</div><div class="ct"><div class="cf k" style="width:95.5%">기준</div></div><div class="cd k">기준</div></div>
+    </div>
+
+    <p class="sub">1인당 배출량</p>
+    <div class="cmp">
+      <div class="cr"><div class="cl">지구의날</div><div class="ct"><div class="cf g" style="width:100%">20.58kg</div></div><div class="cd g">+3.5%</div></div>
+      <div class="cr"><div class="cl">봄맞이</div><div class="ct"><div class="cf k" style="width:96.6%">19.88kg</div></div><div class="cd k">기준</div></div>
+    </div>
+
+    <p class="ftn">중앙값도 13.93kg vs 12.31kg — 헤비유저 몇 명이 만든 평균이 아닙니다</p>
+  </div>
+
+  <div class="box">
+    <div class="bh"><span class="t">가입만 하고 안 쓰던 유저</span><span class="chip no">둘 다 하락</span></div>
+
+    <p class="sub">1인당 결제 금액</p>
+    <div class="cmp">
+      <div class="cr"><div class="cl">지구의날</div><div class="ct"><div class="cf r" style="width:86.9%">−13.1%</div></div><div class="cd r">열위</div></div>
+      <div class="cr"><div class="cl">봄맞이</div><div class="ct"><div class="cf b" style="width:100%">기준</div></div><div class="cd b">기준</div></div>
+    </div>
+
+    <p class="sub">1인당 배출량</p>
+    <div class="cmp">
+      <div class="cr"><div class="cl">지구의날</div><div class="ct"><div class="cf r" style="width:79.9%">15.03kg</div></div><div class="cd r">−20.1%</div></div>
+      <div class="cr"><div class="cl">봄맞이</div><div class="ct"><div class="cf b" style="width:100%">18.80kg</div></div><div class="cd b">기준</div></div>
+    </div>
+
+    <p class="ftn">전환율(−4.0%)과 같은 방향 — 세 지표가 전부 대조군 우세</p>
+  </div>
+</div>
+</div>
 </div></body></html>

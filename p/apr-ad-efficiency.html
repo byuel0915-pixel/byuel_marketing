@@ -1,28 +1,54 @@
 <!doctype html><html lang="ko"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>4월 컨셉 A/B — 광고 효율 | 박성진</title>
-<meta name="description" content="지구의날과 봄맞이 캠페인의 광고비와 구매 CPA">
+<meta name="description" content="지구의날과 봄맞이 캠페인의 광고비 배분과 구매 CPA">
 <link rel="stylesheet" href="../assets/style.css">
-<link rel="stylesheet" href="../assets/chart.css">
-<style>.wrap{padding:14px 16px}</style>
+<link rel="stylesheet" href="../assets/chart.css?v=2">
+<style>
+  .wrap{padding:10px 12px}
+  .card.pad{padding:13px 15px}
+  .hd{font-size:13px;font-weight:800;color:var(--ink-1);margin:0 0 10px;line-height:1.35}
+  .hd em{font-style:normal;font-weight:700;color:var(--ink-3);font-size:11.5px}
+  .g2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .box{border:1px solid var(--line);border-radius:12px;padding:10px 12px 11px}
+  .bh{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:9px}
+  .bh .t{font-size:12px;font-weight:800;color:var(--ink-1)}
+  .chip{font-size:10.5px;font-weight:800;padding:2px 7px;border-radius:5px;white-space:nowrap}
+  .chip.amb{background:#FEF3C7;color:#B45309}
+  .chip.no{background:var(--red-soft);color:var(--red)}
+  .cr{grid-template-columns:58px 1fr 60px;gap:7px;margin:4px 0}
+  .cl{font-size:11px}
+  .ct{height:24px;border-radius:6px}
+  .cf{font-size:11px;padding-right:7px;border-radius:6px}
+  .cd{font-size:12.5px}
+  .ftn{margin-top:9px;font-size:10.5px;font-weight:600;color:var(--ink-3);line-height:1.5}
+  @media(max-width:620px){.g2{grid-template-columns:1fr}}
+</style>
 </head><body><div class="wrap">
 <div class="card pad">
 
-<div class="ct2" style="margin:4px 0 10px"><h3 style="font-size:13px;color:var(--ink-2)">구매 CPA — 봄맞이 대비 · 낮을수록 좋음</h3></div>
-<div class="cmp">
-  <div class="cr"><div class="cl">봄맞이<small>광고비 30% · 구매 25명</small></div><div class="ct"><div class="cf g" style="width:95.8%">기준</div></div><div class="cd k">기준</div></div>
-  <div class="cr"><div class="cl">지구의날<small>광고비 70% · 구매 56명</small></div><div class="ct"><div class="cf r" style="width:100%">+4.4%</div></div><div class="cd r">열위<small>CPA 상승</small></div></div>
-</div>
-<div class="ct2" style="margin:20px 0 10px"><h3 style="font-size:13px;color:var(--ink-2)">광고비 배분 — 지구의날에 2.3배를 태웠다</h3></div>
-<div class="cmp">
-  <div class="cr"><div class="cl">지구의날<small>캠페인 4개</small></div><div class="ct"><div class="cf a" style="width:100%">전체의 70.0%</div></div><div class="cd a">2.3배<small>더 태움</small></div></div>
-  <div class="cr"><div class="cl">봄맞이<small>캠페인 2개</small></div><div class="ct"><div class="cf b" style="width:42.8%">전체의 30.0%</div></div><div class="cd k">기준</div></div>
-</div>
-<div class="ct2" style="margin:20px 0 10px"><h3 style="font-size:13px;color:var(--ink-2)">메타 자체 리포트의 구매 과대집계 배율</h3></div>
-<div class="cmp">
-  <div class="cr"><div class="cl">봄맞이<small>메타 2,155건 vs MMP 25명</small></div><div class="ct"><div class="cf r" style="width:100%">86배</div></div><div class="cd r">과대<small>판단 불가</small></div></div>
-  <div class="cr"><div class="cl">지구의날<small>메타 3,927건 vs MMP 56명</small></div><div class="ct"><div class="cf r" style="width:81.4%">70배</div></div><div class="cd r">과대<small>판단 불가</small></div></div>
-</div>
+<p class="hd">광고 효율 — 지구의날에 2.3배를 태우고도 CPA는 나빴습니다 <em>· 에어브릿지 MMP 기준</em></p>
+
+<div class="g2">
+  <div class="box">
+    <div class="bh"><span class="t">광고비 배분</span><span class="chip amb">2.3배</span></div>
+    <div class="cmp">
+      <div class="cr"><div class="cl">지구의날</div><div class="ct"><div class="cf a" style="width:100%">70.0%</div></div><div class="cd a">더 태움</div></div>
+      <div class="cr"><div class="cl">봄맞이</div><div class="ct"><div class="cf b" style="width:42.8%">30.0%</div></div><div class="cd k">기준</div></div>
+    </div>
+    <p class="ftn">캠페인 4개 vs 2개 · 전체 집행비 대비 비중</p>
+  </div>
+
+  <div class="box">
+    <div class="bh"><span class="t">구매 CPA <span style="font-weight:700;color:var(--ink-3)">(낮을수록 좋음)</span></span><span class="chip no">열위</span></div>
+    <div class="cmp">
+      <div class="cr"><div class="cl">지구의날</div><div class="ct"><div class="cf r" style="width:100%">+4.4%</div></div><div class="cd r">비쌈</div></div>
+      <div class="cr"><div class="cl">봄맞이</div><div class="ct"><div class="cf k" style="width:95.8%">기준</div></div><div class="cd k">기준</div></div>
+    </div>
+    <p class="ftn">돈을 2.3배 쓰고도 1건당 비용은 더 들었습니다</p>
+  </div>
 </div>
 
+<p class="ftn">메타 자체 리포트는 구매를 70~86배 부풀려 잡아, 광고 지표는 전부 에어브릿지 기준으로만 판단했습니다.</p>
+</div>
 </div></body></html>

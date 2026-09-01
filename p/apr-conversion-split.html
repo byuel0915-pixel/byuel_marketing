@@ -3,21 +3,50 @@
 <title>4월 컨셉 A/B — 첫 이용 전환율 | 박성진</title>
 <meta name="description" content="광고 유입과 가입 후 미이용 두 집단의 첫 이용 전환율">
 <link rel="stylesheet" href="../assets/style.css">
-<link rel="stylesheet" href="../assets/chart.css">
-<style>.wrap{padding:14px 16px}</style>
+<link rel="stylesheet" href="../assets/chart.css?v=2">
+<style>
+  .wrap{padding:10px 12px}
+  .card.pad{padding:13px 15px}
+  .hd{font-size:13px;font-weight:800;color:var(--ink-1);margin:0 0 10px;line-height:1.35}
+  .hd em{font-style:normal;font-weight:700;color:var(--ink-3);font-size:11.5px}
+  .g2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .box{border:1px solid var(--line);border-radius:12px;padding:10px 12px 11px}
+  .bh{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:9px}
+  .bh .t{font-size:12px;font-weight:800;color:var(--ink-1)}
+  .chip{font-size:10.5px;font-weight:800;padding:2px 7px;border-radius:5px;white-space:nowrap}
+  .chip.ok{background:var(--green-soft);color:var(--green)}
+  .chip.no{background:var(--red-soft);color:var(--red)}
+  .cr{grid-template-columns:58px 1fr 60px;gap:7px;margin:4px 0}
+  .cl{font-size:11px}
+  .ct{height:24px;border-radius:6px}
+  .cf{font-size:11px;padding-right:7px;border-radius:6px}
+  .cd{font-size:12.5px}
+  .ftn{margin-top:8px;font-size:10.5px;font-weight:600;color:var(--ink-3);line-height:1.5}
+  @media(max-width:620px){.g2{grid-template-columns:1fr}}
+</style>
 </head><body><div class="wrap">
 <div class="card pad">
 
-<div class="ct2" style="margin:4px 0 10px"><h3 style="font-size:13px;color:var(--ink-2)">프로모션 기간 광고 유입 — 성공 기준 통과</h3></div>
-<div class="cmp">
-  <div class="cr"><div class="cl">지구의날 (베리언트)<small>발급 42명 → 첫 이용 25명</small></div><div class="ct"><div class="cf g" style="width:100%">59.52%</div></div><div class="cd g">+28.4%<small>대조군 대비 상대 개선</small></div></div>
-  <div class="cr"><div class="cl">봄맞이 (컨트롤)<small>발급 82명 → 첫 이용 38명</small></div><div class="ct"><div class="cf k" style="width:77.9%">46.34%</div></div><div class="cd k">기준</div></div>
-</div>
-<div class="ct2" style="margin:20px 0 10px"><h3 style="font-size:13px;color:var(--ink-2)">가입 후 한 번도 안 쓴 집단 — 기준 미달</h3></div>
-<div class="cmp">
-  <div class="cr"><div class="cl">봄맞이 (컨트롤)<small>발급 140명 → 첫 이용 59명</small></div><div class="ct"><div class="cf b" style="width:100%">42.14%</div></div><div class="cd b">기준<small>대조군 승</small></div></div>
-  <div class="cr"><div class="cl">지구의날 (베리언트)<small>발급 136명 → 첫 이용 55명</small></div><div class="ct"><div class="cf r" style="width:96.0%">40.44%</div></div><div class="cd r">−4.0%</div></div>
-</div>
-</div>
+<p class="hd">첫 이용 전환율 — 환경(지구의날) vs 일반 할인(봄맞이) <em>· 할인은 양쪽 다 20%로 고정</em></p>
 
+<div class="g2">
+  <div class="box">
+    <div class="bh"><span class="t">광고로 새로 들어온 유저</span><span class="chip ok">가설 참</span></div>
+    <div class="cmp">
+      <div class="cr"><div class="cl">지구의날</div><div class="ct"><div class="cf g" style="width:100%">59.5%</div></div><div class="cd g">+28.4%</div></div>
+      <div class="cr"><div class="cl">봄맞이</div><div class="ct"><div class="cf k" style="width:77.9%">46.3%</div></div><div class="cd k">기준</div></div>
+    </div>
+    <p class="ftn">성공 기준(+10%)을 크게 넘겼습니다 · 표본 42명 / 82명</p>
+  </div>
+
+  <div class="box">
+    <div class="bh"><span class="t">가입만 하고 안 쓰던 유저</span><span class="chip no">가설 거짓</span></div>
+    <div class="cmp">
+      <div class="cr"><div class="cl">지구의날</div><div class="ct"><div class="cf r" style="width:96.0%">40.4%</div></div><div class="cd r">−4.0%</div></div>
+      <div class="cr"><div class="cl">봄맞이</div><div class="ct"><div class="cf b" style="width:100%">42.1%</div></div><div class="cd b">기준</div></div>
+    </div>
+    <p class="ftn">여기서는 대조군이 이겼습니다 · 표본 136명 / 140명</p>
+  </div>
+</div>
+</div>
 </div></body></html>
