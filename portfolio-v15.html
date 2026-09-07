@@ -686,6 +686,9 @@ a.frame:hover .shot{border-color:var(--blue);box-shadow:0 3px 14px rgba(37,99,23
   .printnote{ display:none; }
   .dataroom{ box-shadow:none; }
   .frames{ height:clamp(120px,23vh,190px) !important; }
+  /* 영상 소재는 인쇄에서 재생이 안 돼 빈 프레임으로 남는다 — 숨긴다 */
+  .frame.vid{ display:none !important; }
+  .frames:not(:has(.frame:not(.vid))){ display:none !important; }
   .cover,.outro,.growth-card,.mk,.pill,.role-card,.stack-card,.dataroom,.lbl{
     -webkit-print-color-adjust:exact; print-color-adjust:exact;
   }
