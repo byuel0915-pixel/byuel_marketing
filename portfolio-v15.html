@@ -931,32 +931,32 @@ body.printpreview #jump{ display:none; }
   <div class="proj-grid">
     <div class="pcol">
       <div class="tagrow"><span class="pill">CRM · 리텐션</span><span class="pill alt">퍼널 설계</span><span class="pill alt">발송 인프라</span><span class="pill own">기여도 90%</span></div>
-      <h2 class="ptitle">발송일만 바꿔 <u>재주문율 +5.5%p</u></h2>
+      <h2 class="ptitle">빈 구간을 메워 <u>재주문율 +5.5%p</u></h2>
       <p class="plede">기존 CRM은 가입일과 마지막 주문일 기준으로만 돌았습니다. <b>전환이 갈리는 두 구간에는 발송이 아예 없었습니다.</b></p>
       <div class="blocks">
         <div class="blk b1"><span class="lbl">병목</span><p>봉투 신청 → 첫 결제의 <b>D4~D12가 공백</b>이었고(미전환 43.6%), 첫 결제 → 2회차는 시나리오 자체가 없었습니다.</p></div>
         <div class="blk b2"><span class="lbl">실행</span><ul><li><b>이탈 지점을 수치로 정의</b> — '전일 대비 &minus;20% 연속 + 회복 없음', 3개 코호트 교차 검증</li><li><b>세그먼트 재정의</b> — 반복 빈도가 아니라 <span class="kw">첫 배출 무게</span>로 나눴습니다</li><li><b>인프라 직접 세팅</b> — 문안 6종 재기획, 플레어레인 도입부터 발신번호 연동까지</li></ul></div>
-        <div class="blk b3"><span class="lbl">결과</span><ul><li>D+3은 봉투 도착 전이라 증분 0. <b>D+8</b>이 D14 전환율 <b>+2.1%p</b></li><li>리마인드만 보낸 셀이 재주문율 <b>+5.5%p</b> · 2차 신청률 <b>+3.0%p</b></li><li>쿠폰을 얹은 셀은 <span class="neg">대조군보다 낮았습니다</span> — 가장 손쉬운 처방을 기각</li></ul></div>
+        <div class="blk b3"><span class="lbl">결과</span><ul><li>D+3은 봉투 도착 전이라 증분 0. <b>D+8</b>이 D14 전환율 <b>+2.1%p</b></li><li>재구매 구간은 <b>쿠폰을 얹은 셀</b>이 재주문율 <b>+5.5%p</b> · 2차 신청률 <b>+3.0%p</b></li><li>리마인드만 보낸 셀은 <span class="neg">대조군과 차이가 없었습니다</span> — 퍼널마다 레버가 달랐습니다</li></ul></div>
       </div>
-      <div class="lesson"><span>레슨런</span>1차 결론을 5일 뒤 스스로 뒤집었습니다. <b>이탈 지점을 눈대중이 아니라 수치로 정의</b>하고 다시 검증한 뒤 발송일을 옮겼습니다.</div>
+      <div class="lesson"><span>레슨런</span><b>같은 가설이 퍼널마다 다르게 판정됐습니다.</b> 봉투 퍼널은 타이밍이, 재구매 퍼널은 쿠폰이 레버였습니다. '할인은 안 통한다'로 일반화하지 않고 구간마다 다시 검증했습니다.</div>
     </div>
     <div class="rcol">
-      <div class="mkpi"><div class="mk"><b>+5.5%p</b><span>재주문율<br>추가 할인 비용 0원</span></div><div class="mk sub"><b>+3.0%p</b><span>2차 수거 신청률</span></div></div>
+      <div class="mkpi"><div class="mk"><b>+5.5%p</b><span>재주문율<br>쿠폰 원가 빼고 순증 +78만원</span></div><div class="mk sub"><b>+3.0%p</b><span>2차 수거 신청률</span></div></div>
       <div class="mchart">
         <div class="ch">첫 결제 → 2회차 3셀 실험 <em>대조군 대비</em></div>
         <div class="cg">
         <div class="cgt">1 → 2회차 재주문율 <em>결제 기준</em></div>
-        <div class="cr cf-g"><span class="cl">리마인드만</span><span class="ctk"><i style="width:100%"></i></span><span class="cv">30.3%</span></div>
+        <div class="cr cf-g"><span class="cl">리마인드+쿠폰</span><span class="ctk"><i style="width:100%"></i></span><span class="cv">30.3%</span></div>
         <div class="cr cf-k"><span class="cl">대조군</span><span class="ctk"><i style="width:81.8%"></i></span><span class="cv">24.8%</span></div>
-        <div class="cr cf-r"><span class="cl">리마인드+쿠폰<small>기각</small></span><span class="ctk"><i style="width:79.5%"></i></span><span class="cv">24.1%</span></div>
+        <div class="cr cf-r"><span class="cl">리마인드만<small>증분 없음</small></span><span class="ctk"><i style="width:79.5%"></i></span><span class="cv">24.1%</span></div>
         </div>
         <div class="cg">
         <div class="cgt">2차 수거 신청률 <em></em></div>
-        <div class="cr cf-g"><span class="cl">리마인드만<small>n=931</small></span><span class="ctk"><i style="width:100%"></i></span><span class="cv">35.3%</span></div>
+        <div class="cr cf-g"><span class="cl">리마인드+쿠폰<small>n=931</small></span><span class="ctk"><i style="width:100%"></i></span><span class="cv">35.3%</span></div>
         <div class="cr cf-k"><span class="cl">대조군<small>n=980</small></span><span class="ctk"><i style="width:91.5%"></i></span><span class="cv">32.3%</span></div>
-        <div class="cr cf-r"><span class="cl">리마인드+쿠폰<small>n=888</small></span><span class="ctk"><i style="width:85.3%"></i></span><span class="cv">30.1%</span></div>
+        <div class="cr cf-r"><span class="cl">리마인드만<small>n=888</small></span><span class="ctk"><i style="width:85.3%"></i></span><span class="cv">30.1%</span></div>
         </div>
-        <p class="cnote">가장 손쉬운 <b>쿠폰안이 대조군보다 낮았습니다.</b> 같은 문구도 D+3엔 증분 0, D+8에만 올랐습니다.</p>
+        <p class="cnote">봉투 퍼널은 <b>D+3엔 증분 0, D+8에만</b> 올랐고, 재구매 퍼널은 <b>쿠폰이 레버</b>였습니다. 무게별 D6·D11 분기는 설계했으나 자동 발송 미구축으로 미집행.</p>
         </div>
       <p class="printnote">차트: /p/funnel-crm-part-b.html</p>
       <div class="rfoot"><a class="dataroom" href="https://byuel0915-pixel.github.io/byuel_marketing/p/funnel-crm-part-b.html" target="_blank" rel="noopener">데이터룸 바로가기 ↗</a></div>
